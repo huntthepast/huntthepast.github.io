@@ -1,0 +1,2205 @@
+/* Framework Oneday CSS
+-----------------------------------------------*/
+/* Berikut ini merupakan framework utama untuk mendesain website Oneday Enterprise beserta manual penggunaan*/
+/* Dibuat oleh : Amarta Sanca Lazuardi*/
+
+
+/* GLOBAL Setup
+-----------------------------------------------*/
+/* Digunakan untuk persiapan awal sebelum kode dimulai */
+/* Peringatan jika dihapus maka css mungkin akan kurang stabil */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+
+/* Pallete Color
+-----------------------------------------------*/
+    /* Var warna Neutral- */
+    --od-color-neutral1: #F9FAFB;
+    --od-color-neutral2: #F2F4F7;
+    --od-color-neutral3: #E4E7EC;
+    --od-color-neutral4: #D0D5DD;
+    --od-color-neutral5: #98A2B3;
+    --od-color-neutral6: #667085;
+    --od-color-neutral7: #475467;
+    --od-color-neutral8: #344054;
+    --od-color-neutral9: #1D2939;
+    --od-color-neutral10: #101828;
+    
+    /* Var warna Error-Merah */
+    --od-color-error1: #FEF3F2;
+    --od-color-error2: #FEE4E2;
+    --od-color-error3: #FECDCA;
+    --od-color-error4: #FDA29B;
+    --od-color-error5: #F97066;
+    --od-color-error6: #F04438;
+    --od-color-error7: #D92D20;
+    --od-color-error8: #B42318;
+    --od-color-error9: #912018;
+    --od-color-error10: #7A271A;
+
+    /* Var warna Warning-Kuning */
+    --od-color-warning1: #FFFAEB;
+    --od-color-warning2: #FEF0C7;
+    --od-color-warning3: #FEDF89;
+    --od-color-warning4: #FEC84B;
+    --od-color-warning5: #FDB022;
+    --od-color-warning6: #F79009;
+    --od-color-warning7: #DC6803;
+    --od-color-warning8: #B54708;
+    --od-color-warning9: #93370D;
+    --od-color-warning10: #7A2E0E;
+
+    /* Var warna Warning-Kuning */
+    --od-color-success1: #ECFDF3;
+    --od-color-success2: #D1FADF;
+    --od-color-success3: #A6F4C5;
+    --od-color-success4: #6CE9A6;
+    --od-color-success5: #32D583;
+    --od-color-success6: #12B76A;
+    --od-color-success7: #039855;
+    --od-color-success8: #027A48;
+    --od-color-success9: #05603A;
+    --od-color-success10: #054F31;
+
+/* Rule of 8
+-----------------------------------------------*/
+    /* Pengukuran Standar margin dan padding */
+    --od-ro8-8: 8px;
+    --od-ro8-16: 16px;
+    --od-ro8-24: 24px;
+    --od-ro8-32: 32px;
+    --od-ro8-40: 40px;
+    --od-ro8-48: 48px;
+    --od-ro8-56: 56px;
+    --od-ro8-64: 64px;
+    --od-ro8-72: 72px;
+    --od-ro8-80: 80px;
+
+    --od-ro8-space: 150px;
+
+/* Custom Componen
+-----------------------------------------------*/
+    /* Digunakan untuk mengatur custom komponen */
+    --od-ck-main1: white;
+    --od-ck-bgn1: black;
+    --od-ck-bdr1: black;
+    --od-ck-box1: rgba(153, 145, 145, 0.5);
+
+    --od-ck-main1-hv: white;
+    --od-ck-bgn1-hv: rgba(0, 0, 0, 0%);
+    --od-ck-bdr1-hv: white;
+
+    --od-ck-main1-fc: yellow;
+    --od-ck-bgn1-fc: yellow;
+    --od-ck-bdr1-fc: yellow;
+
+    --od-ck-main1-ac: red;
+    --od-ck-bgn1-ac: red;
+    --od-ck-bdr1-ac: red;
+
+    --od-ck-main2: white;
+    --od-ck-bgn2: black;
+    --od-ck-bdr2: black;
+    --od-ck-box2: rgba(153, 145, 145, 0.5);
+
+    --od-ck-main2-hv: white;
+    --od-ck-bgn2-hv: rgba(0, 0, 0, 0%);
+    --od-ck-bdr2-hv: white;
+
+    --od-ck-main2-fc: yellow;
+    --od-ck-bgn2-fc: yellow;
+    --od-ck-bdr2-fc: yellow;
+
+    --od-ck-main2-ac: red;
+    --od-ck-bgn2-ac: red;
+    --od-ck-bdr2-ac: red;
+
+    --od-ck-main3: white;
+    --od-ck-bgn3: black;
+    --od-ck-bdr3: black;
+    --od-ck-box3: rgba(153, 145, 145, 0.5);
+
+    --od-ck-main3-hv: white;
+    --od-ck-bgn3-hv: rgba(0, 0, 0, 0%);
+    --od-ck-bdr3-hv: white;
+
+    --od-ck-main3-fc: yellow;
+    --od-ck-bgn3-fc: yellow;
+    --od-ck-bdr3-fc: yellow;
+
+    --od-ck-main3-ac: red;
+    --od-ck-bgn3-ac: red;
+    --od-ck-bdr3-ac: red;
+
+    --od-ck-main4: white;
+    --od-ck-bgn4: black;
+    --od-ck-bdr4: black;
+    --od-ck-box4: rgba(153, 145, 145, 0.5);
+
+    --od-ck-main4-hv: white;
+    --od-ck-bgn4-hv: rgba(0, 0, 0, 0%);
+    --od-ck-bdr4-hv: white;
+
+    --od-ck-main4-fc: yellow;
+    --od-ck-bgn4-fc: yellow;
+    --od-ck-bdr4-fc: yellow;
+
+    --od-ck-main4-ac: red;
+    --od-ck-bgn4-ac: red;
+    --od-ck-bdr4-ac: red;
+
+    --od-ck-main5: white;
+    --od-ck-bgn5: black;
+    --od-ck-bdr5: black;
+    --od-ck-box5: rgba(153, 145, 145, 0.5);
+
+    --od-ck-main5-hv: white;
+    --od-ck-bgn5-hv: rgba(0, 0, 0, 0%);
+    --od-ck-bdr5-hv: white;
+
+    --od-ck-main5-fc: yellow;
+    --od-ck-bgn5-fc: yellow;
+    --od-ck-bdr5-fc: yellow;
+
+    --od-ck-main5-ac: red;
+    --od-ck-bgn5-ac: red;
+    --od-ck-bdr5-ac: red;
+
+    --od-ck-main6: white;
+    --od-ck-bgn6: black;
+    --od-ck-bdr6: black;
+    --od-ck-box6: rgba(153, 145, 145, 0.5);
+
+    --od-ck-main6-hv: white;
+    --od-ck-bgn6-hv: rgba(0, 0, 0, 0%);
+    --od-ck-bdr6-hv: white;
+
+    --od-ck-main6-fc: yellow;
+    --od-ck-bgn6-fc: yellow;
+    --od-ck-bdr6-fc: yellow;
+
+    --od-ck-main6-ac: red;
+    --od-ck-bgn6-ac: red;
+    --od-ck-bdr6-ac: red;
+
+    --od-ck-main7: white;
+    --od-ck-bgn7: black;
+    --od-ck-bdr7: black;
+    --od-ck-box7: rgba(153, 145, 145, 0.5);
+
+    --od-ck-main7-hv: white;
+    --od-ck-bgn7-hv: rgba(0, 0, 0, 0%);
+    --od-ck-bdr7-hv: white;
+
+    --od-ck-main7-fc: yellow;
+    --od-ck-bgn7-fc: yellow;
+    --od-ck-bdr7-fc: yellow;
+
+    --od-ck-main7-ac: red;
+    --od-ck-bgn7-ac: red;
+    --od-ck-bdr7-ac: red;
+
+    --od-ck-main8: white;
+    --od-ck-bgn8: black;
+    --od-ck-bdr8: black;
+    --od-ck-box8: rgba(153, 145, 145, 0.5);
+
+    --od-ck-main8-hv: white;
+    --od-ck-bgn8-hv: rgba(0, 0, 0, 0%);
+    --od-ck-bdr8-hv: white;
+
+    --od-ck-main8-fc: yellow;
+    --od-ck-bgn8-fc: yellow;
+    --od-ck-bdr8-fc: yellow;
+
+    --od-ck-main8-ac: red;
+    --od-ck-bgn8-ac: red;
+    --od-ck-bdr8-ac: red;
+
+    --od-ck-main9: white;
+    --od-ck-bgn9: black;
+    --od-ck-bdr9: black;
+    --od-ck-box9: rgba(153, 145, 145, 0.5);
+
+    --od-ck-main9-hv: white;
+    --od-ck-bgn9-hv: rgba(0, 0, 0, 0%);
+    --od-ck-bdr9-hv: white;
+
+    --od-ck-main9-fc: yellow;
+    --od-ck-bgn9-fc: yellow;
+    --od-ck-bdr9-fc: yellow;
+
+    --od-ck-main9-ac: red;
+    --od-ck-bgn9-ac: red;
+    --od-ck-bdr9-ac: red;
+
+    --od-ck-main10: white;
+    --od-ck-bgn10: black;
+    --od-ck-bdr10: black;
+    --od-ck-box10: rgba(153, 145, 145, 0.5);
+
+    --od-ck-main10-hv: white;
+    --od-ck-bgn10-hv: rgba(0, 0, 0, 0%);
+    --od-ck-bdr10-hv: white;
+
+    --od-ck-main10-fc: yellow;
+    --od-ck-bgn10-fc: yellow;
+    --od-ck-bdr10-fc: yellow;
+
+    --od-ck-main10-ac: red;
+    --od-ck-bgn10-ac: red;
+    --od-ck-bdr10-ac: red;
+}
+
+/* Font Size [FS]
+------------------------------*/
+/* Digunakan untuk mengatur ukuran teks sesuai standar design di figma */
+
+.od-fs-display1 {
+    font-style: normal;
+    font-size: 76px;
+    line-height: 110%;
+}
+.od-fs-display2 {
+    font-style: normal;
+    font-size: 61px;
+    line-height: 120%;
+}
+.od-fs-display3 {
+    font-style: normal;
+    font-size: 49px;
+    line-height: 130%;
+}
+.od-fs-h1 {
+    font-style: normal;
+    font-size: 39px;
+    line-height: 140%;
+}
+.od-fs-h2 {
+    font-style: normal;
+    font-size: 31px;
+    line-height: 140%;
+}
+.od-fs-h3 {
+    font-style: normal;
+    font-size: 25px;
+    line-height: 150%;
+}
+.od-fs-h4 {
+    font-style: normal;
+    font-size: 20px;
+    line-height: 150%;
+}
+.od-fs-h5 {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+}
+.od-fs-h6 {
+    font-style: normal;
+    font-size: 13px;
+    line-height: 160%;
+}
+.od-fs-h7 {
+    font-style: normal;
+    font-size: 10px;
+    line-height: 160%;
+}
+.od-fs-body {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+}
+.od-fs-body2 {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 150%;
+}
+.od-fs-caption {
+    font-style: normal;
+    font-size: 12px;
+    line-height: 150%;
+}
+.od-fs-caption2 {
+    font-style: normal;
+    font-size: 10px;
+    line-height: 150%;
+}
+
+
+/* Bold Weight [Bold]
+------------------------------*/
+/* Digunakan untuk mengatur ukuran ketebalan teks sesuai dengan figma */
+
+.od-fw-light {
+    font-weight: lighter;
+}
+.od-fw-400 {
+    font-weight: 400;
+}
+.od-fw-600 {
+    font-weight: 600;
+}
+.od-fw-700 {
+    font-weight: 700;
+}
+.od-fw-bold {
+    font-weight: bold;
+}
+.od-fw-bolder {
+    font-weight: bolder;
+}
+
+/* Font Family [FF]
+------------------------------*/
+/* Digunakan untuk mengubah jenis font */
+
+.od-ff-poppins {
+    font-family: 'Poppins';
+}
+.od-ff-monteserrat {
+    font-family: 'Montserrat';
+}
+.od-ff-roboto {
+    font-family: 'Roboto';
+}
+.od-ff-source-sans-pro {
+    font-family: 'Source Sans Pro';
+}
+.od-ff-playfair-display {
+    font-family: 'Playfair Display';
+}
+
+/* Font Color [FC]
+------------------------------*/
+/* Digunakan untuk mengubah warna font */
+
+/* Neutral : Warna putih hingga hitam */
+.od-fc-neutral-1 {
+    color: #F9FAFB;
+}
+.od-fc-neutral-2 {
+    color: #F2F4F7;
+}
+.od-fc-neutral-3 {
+    color: #E4E7EC;
+}
+.od-fc-neutral-4 {
+    color: #D0D5DD;
+}
+.od-fc-neutral-5 {
+    color: #98A2B3;
+}
+.od-fc-neutral-6 {
+    color: #667085;
+}
+.od-fc-neutral-7 {
+    color: #475467;
+}
+.od-fc-neutral-8 {
+    color: #344054;
+}
+.od-fc-neutral-9 {
+    color: #1D2939;
+}
+.od-fc-neutral-10 {
+    color: #101828;
+}
+
+/* Error : Warna putih hingga merah */
+.od-fc-error-1 {
+    color: #FEF3F2;
+}
+.od-fc-error-2 {
+    color: #FEE4E2;
+}
+.od-fc-error-3 {
+    color: #FECDCA;
+}
+.od-fc-error-4 {
+    color: #FDA29B;
+}
+.od-fc-error-5 {
+    color: #F97066;
+}
+.od-fc-error-6 {
+    color: #F04438;
+}
+.od-fc-error-7 {
+    color: #D92D20;
+}
+.od-fc-error-8 {
+    color: #B42318;
+}
+.od-fc-error-9 {
+    color: #912018;
+}
+.od-fc-error-10 {
+    color: #7A271A;
+}
+
+/* Warning : Warna putih hingga kuning */
+.od-fc-warning-1 {
+    color: #FFFAEB;
+}
+.od-fc-warning-2 {
+    color: #FEF0C7;
+}
+.od-fc-warning-3 {
+    color: #FEDF89;
+}
+.od-fc-warning-4 {
+    color: #FEC84B;
+}
+.od-fc-warning-5 {
+    color: #FDB022;
+}
+.od-fc-warning-6 {
+    color: #F79009;
+}
+.od-fc-warning-7 {
+    color: #DC6803;
+}
+.od-fc-warning-8 {
+    color: #B54708;
+}
+.od-fc-warning-9 {
+    color: #93370D;
+}
+.od-fc-warning-10 {
+    color: #7A2E0E;
+}
+
+/* Success : Warna putih hingga hijau */
+.od-fc-success-1 {
+    color: #ECFDF3;
+}
+.od-fc-success-2 {
+    color: #D1FADF;
+}
+.od-fc-success-3 {
+    color: #A6F4C5;
+}
+.od-fc-success-4 {
+    color: #6CE9A6;
+}
+.od-fc-success-5 {
+    color: #32D583;
+}
+.od-fc-success-6 {
+    color: #12B76A;
+}
+.od-fc-success-7 {
+    color: #039855;
+}
+.od-fc-success-8 {
+    color: #027A48;
+}
+.od-fc-success-9 {
+    color: #05603A;
+}
+.od-fc-success-10 {
+    color: #054F31;
+}
+
+/* Alignment [ALIGN]
+------------------------------*/
+/* Digunakan untuk membuat mengubah penataan text */
+.od-align-left {
+    text-align: left;
+}
+.od-align-right {
+    text-align: right;
+}
+.od-align-center {
+    text-align: center;
+}
+.od-align-justify {
+    text-align: justify;
+}
+
+/* Button [BTN]
+------------------------------*/
+/* Digunakan untuk membuat button */
+
+/* Button Merah */
+.od-btn-error-1 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error1);
+
+    color: var(--od-color-error10);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-error-1:hover {
+    border: 2px solid var(--od-color-error1);
+    color: var(--od-color-error1);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-error-1:focus {
+    box-shadow: 0px 0px 0px 4px rgba(240, 68, 56, 0.5);}
+
+.od-btn-error-2 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error2);
+    
+    color: var(--od-color-error9);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-error-2:hover {
+    border: 2px solid var(--od-color-error2);
+    color: var(--od-color-error2);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-error-2:focus {
+    box-shadow: 0px 0px 0px 4px rgba(240, 68, 56, 0.5);}
+
+.od-btn-error-3 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error3);
+    
+    color: var(--od-color-error8);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-error-3:hover {
+    border: 2px solid var(--od-color-error3);
+    color: var(--od-color-error3);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-error-3:focus {
+    box-shadow: 0px 0px 0px 4px rgba(240, 68, 56, 0.5);}
+
+.od-btn-error-4 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error4);
+    
+    color: var(--od-color-error7);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-error-4:hover {
+    border: 2px solid var(--od-color-error4);
+    color: var(--od-color-error4);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-error-4:focus {
+    box-shadow: 0px 0px 0px 4px rgba(240, 68, 56, 0.5);}
+
+.od-btn-error-5 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error5);
+    
+    color: var(--od-color-error1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-error-5:hover {
+    border: 2px solid var(--od-color-error5);
+    color: var(--od-color-error5);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-error-5:focus {
+    box-shadow: 0px 0px 0px 4px rgba(240, 68, 56, 0.5);}
+
+.od-btn-error-6 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error6);
+    
+    color: var(--od-color-error1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-error-6:hover {
+    border: 2px solid var(--od-color-error6);
+    color: var(--od-color-error6);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-error-6:focus {
+    box-shadow: 0px 0px 0px 4px rgba(240, 68, 56, 0.5);}
+
+.od-btn-error-7 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error7);
+    
+    color: var(--od-color-error1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-error-7:hover {
+    border: 2px solid var(--od-color-error7);
+    color: var(--od-color-error7);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-error-7:focus {
+    box-shadow: 0px 0px 0px 4px rgba(240, 68, 56, 0.5);}
+
+.od-btn-error-8 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error8);
+    
+    color: var(--od-color-error1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-error-8:hover {
+    border: 2px solid var(--od-color-error8);
+    color: var(--od-color-error8);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-error-8:focus {
+    box-shadow: 0px 0px 0px 4px rgba(240, 68, 56, 0.5);}
+
+.od-btn-error-9 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error9);
+    
+    color: var(--od-color-error1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-error-9:hover {
+    border: 2px solid var(--od-color-error9);
+    color: var(--od-color-error9);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-error-9:focus {
+    box-shadow: 0px 0px 0px 4px rgba(240, 68, 56, 0.5);}
+
+.od-btn-error-10 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error10);
+    
+    color: var(--od-color-error1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-error-10:hover {
+    border: 2px solid var(--od-color-error10);
+    color: var(--od-color-error10);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-error-10:focus {
+    box-shadow: 0px 0px 0px 4px rgba(240, 68, 56, 0.5);}
+
+
+/* Button Hitam dan Abu-bu */
+.od-btn-neutral-1 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral1);
+    
+    color: var(--od-color-neutral10);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-neutral-1:hover {
+    border: 2px solid var(--od-color-neutral1);
+    color: var(--od-color-neutral1);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-neutral-1:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-neutral-2 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral2);
+    
+    color: var(--od-color-neutral9);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-neutral-2:hover {
+    border: 2px solid var(--od-color-neutral2);
+    color: var(--od-color-neutral2);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-neutral-2:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-neutral-3 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral3);
+    
+    color: var(--od-color-neutral8);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-neutral-3:hover {
+    border: 2px solid var(--od-color-neutral3);
+    color: var(--od-color-neutral3);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-neutral-3:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-neutral-4 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral4);
+    
+    color: var(--od-color-neutral7);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-neutral-4:hover {
+    border: 2px solid var(--od-color-neutral4);
+    color: var(--od-color-neutral4);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-neutral-4:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-neutral-5 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral5);
+    
+    color: var(--od-color-neutral1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-neutral-5:hover {
+    border: 2px solid var(--od-color-neutral5);
+    color: var(--od-color-neutral5);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-neutral-5:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-neutral-6 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral6);
+    
+    color: var(--od-color-neutral1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-neutral-6:hover {
+    border: 2px solid var(--od-color-neutral6);
+    color: var(--od-color-neutral6);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-neutral-6:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-neutral-7 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral7);
+    
+    color: var(--od-color-neutral1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-neutral-7:hover {
+    border: 2px solid var(--od-color-neutral7);
+    color: var(--od-color-neutral7);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-neutral-7:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-neutral-8 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral8);
+    
+    color: var(--od-color-error1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-neutral-8:hover {
+    border: 2px solid var(--od-color-neutral8);
+    color: var(--od-color-neutral8);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-neutral-8:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-neutral-9 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral9);
+    
+    color: var(--od-color-neutral1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-neutral-9:hover {
+    border: 2px solid var(--od-color-neutral9);
+    color: var(--od-color-neutral9);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-neutral-9:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-neutral-10 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral10);
+    
+    color: var(--od-color-neutral1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-neutral-10:hover {
+    border: 2px solid var(--od-color-neutral10);
+    color: var(--od-color-neutral10);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-neutral-10:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+/* Button Kuning */
+.od-btn-warning-1 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning1);
+    
+    color: var(--od-color-warning10);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-warning-1:hover {
+    border: 2px solid var(--od-color-warning1);
+    color: var(--od-color-warning1);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-warning-1:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-warning-2 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning2);
+    
+    color: var(--od-color-warning9);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-warning-2:hover {
+    border: 2px solid var(--od-color-warning2);
+    color: var(--od-color-warning2);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-warning-2:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-warning-3 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning3);
+    
+    color: var(--od-color-warning8);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-warning-3:hover {
+    border: 2px solid var(--od-color-warning3);
+    color: var(--od-color-warning3);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-warning-3:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-warning-4 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning4);
+    
+    color: var(--od-color-warning7);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-warning-4:hover {
+    border: 2px solid var(--od-color-warning4);
+    color: var(--od-color-warning4);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-warning-4:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-warning-5 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning5);
+    
+    color: var(--od-color-warning1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-warning-5:hover {
+    border: 2px solid var(--od-color-warning5);
+    color: var(--od-color-warning5);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-warning-5:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-warning-6 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning6);
+    
+    color: var(--od-color-warning1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-warning-6:hover {
+    border: 2px solid var(--od-color-warning6);
+    color: var(--od-color-warning6);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-warning-6:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-warning-7 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning7);
+    
+    color: var(--od-color-warning1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-warning-7:hover {
+    border: 2px solid var(--od-color-warning7);
+    color: var(--od-color-warning7);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-warning-7:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-warning-8 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning8);
+    
+    color: var(--od-color-warning1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-warning-8:hover {
+    border: 2px solid var(--od-color-warning8);
+    color: var(--od-color-warning8);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-warning-8:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-warning-9 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning9);
+    
+    color: var(--od-color-warning1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-warning-9:hover {
+    border: 2px solid var(--od-color-warning9);
+    color: var(--od-color-warning9);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-warning-9:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-warning-10 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning10);
+    
+    color: var(--od-color-warning1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-warning-10:hover {
+    border: 2px solid var(--od-color-warning10);
+    color: var(--od-color-warning10);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-warning-10:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+/* Button Hijau*/
+.od-btn-success-1 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success1);
+    
+    color: var(--od-color-success10);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-success-1:hover {
+    border: 2px solid var(--od-color-success1);
+    color: var(--od-color-success1);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-success-1:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-success-2 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success2);
+    
+    color: var(--od-color-success9);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-success-2:hover {
+    border: 2px solid var(--od-color-success2);
+    color: var(--od-color-success2);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-success-2:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-success-3 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success3);
+    
+    color: var(--od-color-success8);
+    color: var(--od-color-success8);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-success-3:hover {
+    border: 2px solid var(--od-color-success3);
+    color: var(--od-color-success3);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-success-3:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-success-4 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success4);
+    
+    color: var(--od-color-success7);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-success-4:hover {
+    border: 2px solid var(--od-color-success4);
+    color: var(--od-color-success4);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-success-4:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-success-5 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success5);
+    
+    color: var(--od-color-success1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-success-5:hover {
+    border: 2px solid var(--od-color-success5);
+    color: var(--od-color-success5);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-success-5:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-success-6 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success6);
+    
+    color: var(--od-color-success1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-success-6:hover {
+    border: 2px solid var(--od-color-success6);
+    color: var(--od-color-success6);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-success-6:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-success-7 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success7);
+    
+    color: var(--od-color-success1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-success-7:hover {
+    border: 2px solid var(--od-color-success7);
+    color: var(--od-color-success7);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-success-7:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-success-8 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success8);
+    
+    color: var(--od-color-success1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-success-8:hover {
+    border: 2px solid var(--od-color-success8);
+    color: var(--od-color-success8);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-success-8:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-success-9 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success9);
+    
+    color: var(--od-color-success1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-success-9:hover {
+    border: 2px solid var(--od-color-success9);
+    color: var(--od-color-success9);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-success-9:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-success-10 {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success10);
+    
+    color: var(--od-color-success1);
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-success-10:hover {
+    border: 2px solid var(--od-color-success10);
+    color: var(--od-color-success10);
+    background-color: rgba(249, 250, 251, 0);}
+.od-btn-success-10:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+/* Button Custom*/
+.od-btn-custom-1 {
+    border: 2px solid var(--od-ck-bdr1);
+    background-color: var(--od-ck-bgn1);
+    color: var(--od-ck-main1);
+
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-custom-1:hover {
+    border: 2px solid var(--od-ck-bdr1-hv);
+    background-color: var(--od-ck-bgn1-hv);
+    color: var(--od-ck-main1-hv);}
+.od-btn-custom-1:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box1)}
+
+.od-btn-custom-2 {
+    border: 2px solid var(--od-ck-bdr2);
+    background-color: var(--od-ck-bgn2);
+    color: var(--od-ck-main2);
+
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-custom-2:hover {
+    border: 2px solid var(--od-ck-bdr2-hv);
+    background-color: var(--od-ck-bgn1-hv);
+    color: var(--od-ck-main1-hv);}
+.od-btn-custom-2:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box1)}
+
+.od-btn-custom-3 {
+    border: 2px solid var(--od-ck-bdr3);
+    background-color: var(--od-ck-bgn3);
+    color: var(--od-ck-main3);
+
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-custom-3:hover {
+    border: 2px solid var(--od-ck-bdr3-hv);
+    background-color: var(--od-ck-bgn3-hv);
+    color: var(--od-ck-main3-hv);}
+.od-btn-custom-3:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box3)}
+
+.od-btn-custom-4 {
+    border: 2px solid var(--od-ck-bdr4);
+    background-color: var(--od-ck-bgn4);
+    color: var(--od-ck-main4);
+
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-custom-4:hover {
+    border: 2px solid var(--od-ck-bdr4-hv);
+    background-color: var(--od-ck-bgn4-hv);
+    color: var(--od-ck-main4-hv);}
+.od-btn-custom-4:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box4)}
+
+.od-btn-custom-5 {
+    border: 2px solid var(--od-ck-bdr5);
+    background-color: var(--od-ck-bgn5);
+    color: var(--od-ck-main5);
+
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-custom-5:hover {
+    border: 2px solid var(--od-ck-bdr5-hv);
+    background-color: var(--od-ck-bgn5-hv);
+    color: var(--od-ck-main5-hv);}
+.od-btn-custom-5:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box5)}
+
+.od-btn-custom-6 {
+    border: 2px solid var(--od-ck-bdr6);
+    background-color: var(--od-ck-bgn6);
+    color: var(--od-ck-main6);
+
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-custom-6:hover {
+    border: 2px solid var(--od-ck-bdr6-hv);
+    background-color: var(--od-ck-bgn6-hv);
+    color: var(--od-ck-main6-hv);}
+.od-btn-custom-6:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box6)}
+
+.od-btn-custom-7 {
+    border: 2px solid var(--od-ck-bdr7);
+    background-color: var(--od-ck-bgn7);
+    color: var(--od-ck-main7);
+
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-custom-7:hover {
+    border: 2px solid var(--od-ck-bdr7-hv);
+    background-color: var(--od-ck-bgn7-hv);
+    color: var(--od-ck-main7-hv);}
+.od-btn-custom-7:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box7)}
+
+.od-btn-custom-8 {
+    border: 2px solid var(--od-ck-bdr8);
+    background-color: var(--od-ck-bgn8);
+    color: var(--od-ck-main7);
+
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-custom-8:hover {
+    border: 2px solid var(--od-ck-bdr8-hv);
+    background-color: var(--od-ck-bgn8-hv);
+    color: var(--od-ck-main8-hv);}
+.od-btn-custom-8:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box8)}
+
+.od-btn-custom-9 {
+    border: 2px solid var(--od-ck-bdr9);
+    background-color: var(--od-ck-bgn9);
+    color: var(--od-ck-main9);
+
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-custom-9:hover {
+    border: 2px solid var(--od-ck-bdr9-hv);
+    background-color: var(--od-ck-bgn9-hv);
+    color: var(--od-ck-main9-hv);}
+.od-btn-custom-9:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box9)}
+
+.od-btn-custom-10 {
+    border: 2px solid var(--od-ck-bdr10);
+    background-color: var(--od-ck-bgn10);
+    color: var(--od-ck-main10);
+
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-custom-10:hover {
+    border: 2px solid var(--od-ck-bdr10-hv);
+    background-color: var(--od-ck-bgn10-hv);
+    color: var(--od-ck-main10-hv);}
+.od-btn-custom-10:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box10)}
+
+
+/* Button [BTN-Outline]
+------------------------------*/
+/* Digunakan untuk membuat button dengan outline */
+
+/* Button Outline Merah */
+.od-btn-outline-error-1 {
+    border: 2px solid var(--od-color-error1);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-error1);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-error-1:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error1);
+    color: var(--od-color-error10);}
+.od-btn-outline-error-1:focus {
+    box-shadow: 0px 0px 0px 4px rgba(217, 45, 32, 0.5);}
+
+.od-btn-outline-error-2 {
+    border: 2px solid var(--od-color-error2);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-error2);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-error-2:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error2);
+    color: var(--od-color-error9);}
+.od-btn-outline-error-2:focus {
+    box-shadow: 0px 0px 0px 4px rgba(217, 45, 32, 0.5);}
+
+.od-btn-outline-error-3 {
+    border: 2px solid var(--od-color-error3);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-error3);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-error-3:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error3);
+    color: var(--od-color-error8);}
+.od-btn-outline-error-3:focus {
+    box-shadow: 0px 0px 0px 4px rgba(217, 45, 32, 0.5);}
+
+.od-btn-outline-error-4 {
+    border: 2px solid var(--od-color-error4);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-error4);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-error-4:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error4);
+    color: var(--od-color-error7);}
+.od-btn-outline-error-4:focus {
+    box-shadow: 0px 0px 0px 4px rgba(217, 45, 32, 0.5);}
+
+.od-btn-outline-error-5 {
+    border: 2px solid var(--od-color-error5);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-error5);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-error-5:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error5);
+    color: var(--od-color-error1);}
+.od-btn-outline-error-5:focus {
+    box-shadow: 0px 0px 0px 4px rgba(217, 45, 32, 0.5);}
+
+.od-btn-outline-error-6 {
+    border: 2px solid var(--od-color-error6);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-error6);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-error-6:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error6);
+    color: var(--od-color-error1);}
+.od-btn-outline-error-6:focus {
+    box-shadow: 0px 0px 0px 4px rgba(217, 45, 32, 0.5);}
+
+.od-btn-outline-error-7 {
+    border: 2px solid var(--od-color-error7);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-error7);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-error-7:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error7);
+    color: var(--od-color-error1);}
+.od-btn-outline-error-7:focus {
+    box-shadow: 0px 0px 0px 4px rgba(217, 45, 32, 0.5);}
+
+.od-btn-outline-error-8 {
+    border: 2px solid var(--od-color-error8);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-error8);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-error-8:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error8);
+    color: var(--od-color-error1);}
+.od-btn-outline-error-8:focus {
+    box-shadow: 0px 0px 0px 4px rgba(217, 45, 32, 0.5);}
+
+.od-btn-outline-error-9 {
+    border: 2px solid var(--od-color-error9);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-error9);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-error-9:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error9);
+    color: var(--od-color-error1);}
+.od-btn-outline-error-9:focus {
+    box-shadow: 0px 0px 0px 4px rgba(217, 45, 32, 0.5);}
+
+.od-btn-outline-error-10 {
+    border: 2px solid var(--od-color-error10);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-error10);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-error-10:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-error10);
+    color: var(--od-color-error1);}
+.od-btn-outline-error-10:focus {
+    box-shadow: 0px 0px 0px 4px rgba(217, 45, 32, 0.5);}
+
+/* Button Outline Neutral */
+.od-btn-outline-neutral-1 {
+    border: 2px solid var(--od-color-neutral1);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-neutral1);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-neutral-1:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral1);
+    color: var(--od-color-neutral10);}
+.od-btn-outline-neutral-1:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-outline-neutral-2 {
+    border: 2px solid var(--od-color-neutral2);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-neutral2);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-neutral-2:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral2);
+    color: var(--od-color-neutral9);}
+.od-btn-outline-neutral-2:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-outline-neutral-3 {
+    border: 2px solid var(--od-color-neutral3);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-neutral3);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-neutral-3:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral3);
+    color: var(--od-color-neutral8);}
+.od-btn-outline-neutral-3:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-outline-neutral-4 {
+    border: 2px solid var(--od-color-neutral4);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-neutral4);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-neutral-4:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral4);
+    color: var(--od-color-neutral7);}
+.od-btn-outline-neutral-4:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-outline-neutral-5 {
+    border: 2px solid var(--od-color-neutral5);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-neutral5);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-neutral-5:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral5);
+    color: var(--od-color-neutral1);}
+.od-btn-outline-neutral-5:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-outline-neutral-6 {
+    border: 2px solid var(--od-color-neutral6);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-neutral6);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-neutral-6:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral6);
+    color: var(--od-color-neutral1);}
+.od-btn-outline-neutral-6:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-outline-neutral-7 {
+    border: 2px solid var(--od-color-neutral7);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-neutral7);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-neutral-7:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral7);
+    color: var(--od-color-neutral1);}
+.od-btn-outline-neutral-7:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-outline-neutral-8 {
+    border: 2px solid var(--od-color-neutral8);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-neutral8);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-neutral-8:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral8);
+    color: var(--od-color-neutral1);}
+.od-btn-outline-neutral-8:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-outline-neutral-9 {
+    border: 2px solid var(--od-color-neutral9);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-neutral9);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-neutral-9:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral9);
+    color: var(--od-color-neutral1);}
+.od-btn-outline-neutral-9:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+.od-btn-outline-neutral-10 {
+    border: 2px solid var(--od-color-neutral10);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-neutral10);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-neutral-10:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-neutral10);
+    color: var(--od-color-neutral1);}
+.od-btn-outline-neutral-10:focus {
+    box-shadow: 0px 0px 0px 4px rgba(102, 112, 133, 0.5)}
+
+/* Button Outline Kuning */
+.od-btn-outline-warning-1 {
+    border: 2px solid var(--od-color-warning1);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-warning1);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-warning-1:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning1);
+    color: var(--od-color-warning10);}
+.od-btn-outline-warning-1:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-outline-warning-2 {
+    border: 2px solid var(--od-color-warning2);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-warning2);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-warning-2:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning2);
+    color: var(--od-color-warning9);}
+.od-btn-outline-warning-2:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-outline-warning-3 {
+    border: 2px solid var(--od-color-warning3);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-warning3);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-warning-3:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning3);
+    color: var(--od-color-warning8);}
+.od-btn-outline-warning-3:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-outline-warning-4 {
+    border: 2px solid var(--od-color-warning4);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-warning4);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-warning-4:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning4);
+    color: var(--od-color-7);}
+.od-btn-outline-warning-4:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-outline-warning-5 {
+    border: 2px solid var(--od-color-warning5);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-warning5);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-warning-5:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning5);
+    color: var(--od-color-warning1);}
+.od-btn-outline-warning-5:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-outline-warning-6 {
+    border: 2px solid var(--od-color-warning6);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-warning6);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-warning-6:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning6);
+    color: var(--od-color-warning1);}
+.od-btn-outline-warning-6:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-outline-warning-7 {
+    border: 2px solid var(--od-color-warning7);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-warning7);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-warning-7:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning7);
+    color: var(--od-color-warning1);}
+.od-btn-outline-warning-7:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-outline-warning-8 {
+    border: 2px solid var(--od-color-warning8);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-warning8);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-warning-8:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning8);
+    color: var(--od-color-warning1);}
+.od-btn-outline-warning-8:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-outline-warning-9 {
+    border: 2px solid var(--od-color-warning9);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-warning9);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-warning-9:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning9);
+    color: var(--od-color-warning1);}
+.od-btn-outline-warning-9:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+.od-btn-outline-warning-10 {
+    border: 2px solid var(--od-color-warning10);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-warning10);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-warning-10:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-warning10);
+    color: var(--od-color-warning1);}
+.od-btn-outline-warning-10:focus {
+    box-shadow: 0px 0px 0px 4px rgba(247, 144, 9, 0.5);}
+
+/* Button Outline Hijau */
+.od-btn-outline-success-1 {
+    border: 2px solid var(--od-color-success1);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-success1);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-success-1:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success1);
+    color: var(--od-color-success10);}
+.od-btn-outline-success-1:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-outline-success-2 {
+    border: 2px solid var(--od-color-success2);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-success2);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-success-2:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success2);
+    color: var(--od-color-success9);}
+.od-btn-outline-success-2:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-outline-success-3 {
+    border: 2px solid var(--od-color-success3);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-success3);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-success-3:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success3);
+    color: var(--od-color-success8);}
+.od-btn-outline-success-3:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-outline-success-4 {
+    border: 2px solid var(--od-color-success4);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-success4);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-success-4:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success4);
+    color: var(--od-color-success7);}
+.od-btn-outline-success-4:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-outline-success-5 {
+    border: 2px solid var(--od-color-success5);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-success5);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-success-5:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success5);
+    color: var(--od-color-success1);}
+.od-btn-outline-success-5:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-outline-success-6 {
+    border: 2px solid var(--od-color-success6);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-success6);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-success-6:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success6);
+    color: var(--od-color-success1);}
+.od-btn-outline-success-6:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-outline-success-7 {
+    border: 2px solid var(--od-color-success7);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-success7);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-success-7:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success7);
+    color: var(--od-color-success1);}
+.od-btn-outline-success-7:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-outline-success-8 {
+    border: 2px solid var(--od-color-success8);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-success8);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-success-8:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success8);
+    color: var(--od-color-success1);}
+.od-btn-outline-success-8:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-outline-success-9 {
+    border: 2px solid var(--od-color-success9);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-success9);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-success-9:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success9);
+    color: var(--od-color-success1);}
+.od-btn-outline-success-9:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+.od-btn-outline-success-10 {
+    border: 2px solid var(--od-color-success10);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-color-success10);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-success-10:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-color-success10);
+    color: var(--od-color-success1);}
+.od-btn-outline-success-10:focus {
+    box-shadow: 0px 0px 0px 4px rgba(18, 183, 106, 1);}
+
+/* Button Outline Custom */
+.od-btn-outline-custom-1 {
+    border: 2px solid var(--od-ck-bdr1);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-ck-bdr1);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-custom-1:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-ck-bgn1);
+    color: var(--od-ck-main1);}
+.od-btn-outline-custom-1:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box1)}
+
+.od-btn-outline-custom-2 {
+    border: 2px solid var(--od-ck-bdr2);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-ck-bdr2);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-custom-2:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-ck-bgn2);
+    color: var(--od-ck-main2);}
+.od-btn-outline-custom-2:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box2)}
+
+.od-btn-outline-custom-3 {
+    border: 2px solid var(--od-ck-bdr3);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-ck-bdr3);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-custom-3:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-ck-bgn3);
+    color: var(--od-ck-main3);}
+.od-btn-outline-custom-3:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box3)}
+
+.od-btn-outline-custom-4 {
+    border: 2px solid var(--od-ck-bdr4);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-ck-bdr4);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-custom-4:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-ck-bgn4);
+    color: var(--od-ck-main4);}
+.od-btn-outline-custom-4:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box4)}
+
+.od-btn-outline-custom-5 {
+    border: 2px solid var(--od-ck-bdr5);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-ck-bdr5);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-custom-5:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-ck-bgn5);
+    color: var(--od-ck-main5);}
+.od-btn-outline-custom-5:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box5)}
+
+.od-btn-outline-custom-6 {
+    border: 2px solid var(--od-ck-bdr6);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-ck-bdr6);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-custom-6:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-ck-bgn6);
+    color: var(--od-ck-main6);}
+.od-btn-outline-custom-6:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box6)}
+
+.od-btn-outline-custom-7 {
+    border: 2px solid var(--od-ck-bdr7);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-ck-bdr7);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-custom-7:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-ck-bgn7);
+    color: var(--od-ck-main7);}
+.od-btn-outline-custom-7:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box7)}
+
+.od-btn-outline-custom-8 {
+    border: 2px solid var(--od-ck-bdr8);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-ck-bdr8);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-custom-8:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-ck-bgn8);
+    color: var(--od-ck-main8);}
+.od-btn-outline-custom-8:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box8)}
+
+.od-btn-outline-custom-9 {
+    border: 2px solid var(--od-ck-bdr9);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-ck-bdr9);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-custom-9:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-ck-bgn9);
+    color: var(--od-ck-main9);}
+.od-btn-outline-custom-9:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box9)}
+
+.od-btn-outline-custom-10 {
+    border: 2px solid var(--od-ck-bdr10);
+    background-color: rgba(0, 0, 0, 0%);
+    color: var(--od-ck-bdr10);
+    
+    font-family: 'Poppins';
+    font-weight: bold;
+
+    transition-duration: 0.2s;}
+.od-btn-outline-custom-10:hover {
+    border:  2px solid rgba(0, 0, 0, 0%);
+    background-color: var(--od-ck-bgn10);
+    color: var(--od-ck-main10);}
+.od-btn-outline-custom-10:focus {
+    box-shadow: 0px 0px 0px 4px var(--od-ck-box10)}
+
+/* Button SIZE [BTN-SIZE]
+------------------------------*/
+/* Digunakan untuk mengubah ukuran button */
+
+.od-btn-size-lg {
+    width: 120px auto;
+    height: 62px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    font-size: 25px;
+    line-height: 150%;
+}
+.od-btn-size-md {
+    width: 102px auto;
+    height: 54px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    font-size: 20px;
+    line-height: 150%;
+}
+.od-btn-size-sm {
+    width: 88px auto;
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    font-size: 16px;
+    line-height: 150%;
+}
+
+/* Border [BORDER]
+------------------------------*/
+/* Digunakan untuk mengganti design border */
+
+.od-border-circle {
+    border-radius: 50%;
+}
+.od-border-smooth-square {
+    border: 20px 20px 20px 20px;
+}
+.od-border-parallelogram {
+    border-radius: 0px 50px 0px 50px;
+}
+.od-border-parallelogram:hover {
+    border-radius: 0px 2em 0px 2em;
+}

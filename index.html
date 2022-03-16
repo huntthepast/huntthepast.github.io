@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/Oneday.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="icon" type="image/png" href="img/Htp Logo.png"/>
+    <title>Hunt The Past Website</title>
+</head>
+<body class="bg-[#143C82]">
+    <header class="container mx-auto">
+        <div class="flex justify-between h-32 bg-[#FCF9F9]">
+            <div class="grid content-center">
+                <img src="img/Htp Logo Slim v2.png" class="object-contain h-32 w-auto ml-4" alt="">
+            </div>
+            <div class="flex justify-end mr-4 mt-3 md:mt-16">
+                <div class="grid grid-cols-3 md:grid-cols-6">
+                    <a href="https://web.facebook.com/sanca.lazuardi/" target="_blank" class="flex justify-center mr-2"><button type="button" class="bg-gray-100 hover:bg-[#4267B2] text-black hover:text-white w-12 h-12 rounded-md"><i class="fab fa-facebook-f"></i></button></a>
+                    <a href="https://www.instagram.com/hunt_the_past/" target="_blank" class="flex justify-center mr-2"><button type="button" class="bg-gray-100 hover:bg-[#833ab4] text-black hover:text-white w-12 h-12 rounded-md"><i class="fa-brands fa-instagram"></i></button></a>
+                    <a href="https://twitter.com/HuntPast" target="_blank" class="flex justify-center mr-2"><button type="button" class="bg-gray-100 hover:bg-[#1DA1F2] text-black hover:text-white w-12 h-12 rounded-md"><i class="fa-brands fa-twitter"></i></button></a>
+                    <a href="https://www.youtube.com/channel/UC7saRgGNZRBoydGa_uxOC8A" target="_blank" class="flex justify-center mr-2"><button type="button" class="bg-gray-100 hover:bg-[#FF0000] text-black hover:text-white w-12 h-12 rounded-md"><i class="fa-brands fa-youtube"></i></button></a>
+                    <a href="https://hunt-the-past.itch.io/" target="_blank" class="flex justify-center mr-2"><button type="button" class="bg-gray-100 hover:bg-[#fa5c5c] fill-black hover:fill-white w-12 h-12 rounded-md"><svg xmlns="http://www.w3.org/2000/svg" class="mx-auto" height="18px" width="auto" viewBox="0 0 245.371 220.736"><path d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08C57.534 94.073 72.867 94.073 76.7 94.073zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z"/></svg></button></a>
+                    <a href="https://huntmygame.blogspot.com/" target="_blank" class="flex justify-center mr-2"><button type="button" class="bg-gray-100 hover:bg-[#FF0000] fill-black hover:fill-white w-12 h-12 rounded-md">
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="mx-auto" width="24px" height="auto" viewBox="0 0 903.000000 717.000000" preserveAspectRatio="xMidYMid meet">
+                            <g transform="translate(0.000000,717.000000) scale(0.100000,-0.100000)" stroke="none"><path d="M20 5875 l0 -1265 1000 0 1000 0 0 103 0 104 444 7 c244 3 640 3 880 0 l436 -7 0 -104 0 -103 90 0 90 0 0 95 0 95 225 0 225 0 0 -95 0 -95 243 2 242 3 3 93 3 92 209 0 210 0 0 -95 0 -95 75 0 75 0 0 100 0 100 263 0 c144 0 387 -3 540 -7 l277 -6 0 -94 0 -93 1225 0 1225 0 0 1265 0 1265 -4490 0 -4490 0 0 -1265z m5068 773 c82 -222 196 -528 252 -680 57 -153 107 -278 112 -278 4 0 8 306 8 680 l0 680 190 0 190 0 0 -1085 0 -1085 -234 0 -234 0 -30 88 c-199 592 -387 1139 -393 1147 -5 5 -9 -263 -9 -608 l0 -617 -210 0 -210 0 0 1073 c0 591 3 1077 7 1080 3 4 97 7 209 7 l202 0 150 -402z m2380 395 l302 -6 0 -149 0 -148 -328 0 -329 0 -6 -517 c-4 -285 -7 -701 -7 -925 l0 -408 -189 0 -189 0 6 914 5 913 -341 -5 -342 -5 0 166 0 167 203 3 c466 6 933 7 1215 0z m-5690 -425 l2 -418 260 0 260 0 0 420 0 420 190 0 190 0 0 -1080 0 -1080 -190 0 -190 0 0 505 0 505 -260 0 -260 0 0 -505 0 -505 -210 0 -210 0 0 1073 c0 591 3 1077 7 1081 4 3 97 5 207 4 l201 -3 3 -417z m1516 416 c14 -6 16 -81 16 -756 0 -535 3 -762 12 -795 26 -103 126 -158 293 -158 77 0 98 4 147 27 68 31 99 74 125 168 17 60 18 123 17 793 l-1 727 185 0 185 0 -7 -781 c-7 -728 -8 -785 -27 -857 -51 -200 -195 -407 -340 -487 l-54 -30 -260 0 c-260 0 -260 0 -315 26 -147 70 -271 230 -332 429 l-23 75 -3 813 -3 812 185 0 c101 0 191 -3 200 -6z"/><path d="M2188 4793 l-138 -4 0 -154 0 -155 335 0 335 0 0 -915 0 -915 185 0 185 0 0 925 0 925 335 0 335 0 0 143 0 144 -202 6 c-193 7 -1079 6 -1370 0z"/><path d="M3987 4773 c-4 -3 -7 -489 -7 -1080 l0 -1073 200 0 200 0 2 503 3 502 268 3 267 2 0 -505 0 -505 185 0 185 0 0 1080 0 1080 -185 0 -185 0 -2 -422 -3 -423 -265 0 -265 0 -3 423 -2 422 -193 0 c-107 0 -197 -3 -200 -7z"/><path d="M5500 3705 l0 -1075 505 0 505 0 0 170 0 170 -305 0 -305 0 0 335 0 335 310 0 310 0 0 150 0 150 -310 0 -310 0 0 273 0 274 227 6 c124 4 266 7 315 7 l88 0 0 140 0 140 -515 0 -515 0 0 -1075z"/><path d="M56 2733 l-39 -4 6 -781 c4 -430 7 -1037 7 -1350 l0 -568 4485 0 4485 0 0 1355 0 1355 -1230 0 -1230 0 0 -70 0 -70 -535 0 -535 0 0 70 0 70 -75 0 -75 0 0 -70 0 -70 -210 0 -210 0 0 70 0 70 -245 0 -245 0 0 -70 0 -70 -225 0 -225 0 0 70 0 70 -425 0 -425 0 0 -60 0 -60 -207 2 -208 3 -3 58 -3 57 -1297 -2 c-713 -1 -1315 -3 -1336 -5z m3887 -779 l326 -441 7 -640 7 -640 -188 -7 c-113 -4 -192 -3 -198 3 -5 5 -8 187 -6 450 l4 441 -287 0 -288 0 0 -445 0 -445 -210 0 -210 0 0 633 0 632 343 467 c318 433 343 466 358 450 9 -9 163 -216 342 -458z m3820 449 c4 -2 7 -74 7 -159 l0 -154 -335 0 -335 0 0 -925 0 -925 -195 0 -195 0 0 915 0 915 -335 0 -335 0 0 170 0 170 303 3 c354 4 1409 -3 1420 -10z m-5222 -15 c191 -85 261 -390 154 -674 -111 -296 -408 -505 -788 -555 l-97 -12 0 -464 0 -463 -202 2 -203 3 0 1093 0 1094 550 -4 c481 -3 555 -6 586 -20z m3289 -153 l0 -155 -500 0 -500 0 0 -250 0 -250 490 0 490 0 0 -537 c0 -296 -3 -602 -7 -680 l-6 -143 -649 0 -648 0 0 171 0 170 465 -3 465 -3 0 338 0 337 -465 0 -465 0 0 580 0 580 665 0 665 0 0 -155z"/><path d="M3478 1717 l-147 -232 140 -3 c76 -1 202 -1 279 0 l140 3 -126 220 c-69 121 -129 225 -132 232 -4 6 -71 -89 -154 -220z"/> <path d="M1870 2081 l-55 -6 -3 -333 -2 -334 67 7 c261 28 519 216 564 411 21 93 -23 174 -120 217 -91 40 -280 56 -451 38z"/></g>
+                        </svg>
+                    </button></a>
+                    </div>
+            </div>
+        </div>
+    </header>
+    <section class="container mx-auto sticky top-0 z-20 bg-gray-100">
+        <div class="md:flex md:justify-between md:h-16 md:mr-5">
+            <div class="flex justify-between md:hidden">
+                <p class="text-black text-md ml-5 od-fw-700 od-ff-poppins mt-3 md:mt-0">Hunt The Past Main Website</p>
+                <button type="button" data-collapse-toggle="elementId" class="bg-black hover:bg-gray-100 border-2 border-black hover:border-black od-btn-size-sm hover:text-black"><i class="fas fa-bars"></i></button>
+            </div>
+            <div class="grid place-content-center">
+                <p class="text-black text-xl ml-5 od-fw-700 od-ff-poppins mt-5 md:mt-0 hidden md:block">Hunt The Past Main Website</p>
+            </div>
+            <div class="hidden md:grid md:grid-cols-4 gap-3 md:gap-4 mt-5 md:mt-0 content-center">
+                <a href="#" class="flex justify-center text-lg od-ff-poppins od-fw-600 text-black hover:text-yellow-400 border-b-2 border-b-gray-100 ">Home</a>
+                <a href="#" class="flex justify-center text-lg od-ff-poppins od-fw-600 text-black hover:text-yellow-400 border-b-2 border-b-gray-100 ">Games</a>
+                <a href="#" class="flex justify-center text-lg od-ff-poppins od-fw-600 text-black hover:text-yellow-400 border-b-2 border-b-gray-100 ">Blog</a>
+                <a href="#" class="flex justify-center text-lg od-ff-poppins od-fw-600 text-black hover:text-yellow-400 border-b-2 border-b-gray-100 ">About</a>
+            </div>
+            <div id="elementId" class="hidden md:hidden bg-slate-300">
+                <div class="grid content-center gap-2">
+                    <a href="#" class="flex justify-center text-lg od-ff-poppins od-fw-600 text-black hover:text-gray-100 hover:bg-black">Home</a>
+                    <a href="#" class="flex justify-center text-lg od-ff-poppins od-fw-600 text-black hover:text-gray-100 hover:bg-black">Games</a>
+                    <a href="#" class="flex justify-center text-lg od-ff-poppins od-fw-600 text-black hover:text-gray-100 hover:bg-black">Blog</a>
+                    <a href="#" class="flex justify-center text-lg od-ff-poppins od-fw-600 text-black hover:text-gray-100 hover:bg-black">About</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto">
+        <div id="default-carousel" data-carousel="slide" class="relative">
+
+            <!-- Carousel wrapper -->
+            <div class="overflow-hidden relative h-56 sm:h-64 xl:h-80 2xl:h-96">
+        
+                 <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="img/Banner http wide.png" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                </div>
+        
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+                    <img src="img/Banner http wide.png" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                </div>
+        
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+                    <img src="img/Banner http wide.png" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                </div>
+        
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+                    <img src="img/Banner http wide.png" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                </div>
+        
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="">
+                    <img src="img/Banner http wide.png" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+                </div>
+            </div>
+        
+            <!-- Slider indicators -->
+            <div class="flex absolute bottom-5 left-1/2 space-x-3 -translate-x-1/2">
+                <button type="button" class="w-3 h-3 bg-white rounded-full dark:bg-gray-800" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+            </div>
+        
+            <!-- Slider controls -->
+            <button type="button" class="flex absolute top-0 left-0 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    <span class="hidden">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="flex absolute top-0 right-0 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    <span class="hidden">Next</span>
+                </span>
+            </button>
+        </div>
+    </section>
+
+    <section class="mt-10 lg:mt-[150px]">
+        <div class="container mx-auto">
+            <div class="flex justify-center ml-24 mr-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="grid gap-4 place-content-center">
+                        <p class="text-4xl lg:text-5xl" style="font-family: 'gotham'; font-weight: bolder;">Selamat Datang Ke Website Saya</p>
+                        <p class="od-fs-h5 od-ff-poppins lg:mr-32 mt-4 od-align-justify">Hunt the Past merupakan website pribadi dimana anda dapat melihat portofolio serta segala bentuk kerjaan saya.
+                            Silahkan periksa juga beberapa link social media saya untuk melihat karya terbaru saya
+                        </p>
+                        <div class="flex justify-start mr-4">
+                            <a href="https://web.facebook.com/sanca.lazuardi/" target="_blank" class="flex justify-center mr-2"><button type="button" class="bg-gray-100 hover:bg-[#4267B2] text-black hover:text-white w-12 h-12 rounded-md"><i class="fab fa-facebook-f"></i></button></a>
+                            <a href="https://www.instagram.com/hunt_the_past/" target="_blank" class="flex justify-center mr-2"><button type="button" class="bg-gray-100 hover:bg-[#833ab4] text-black hover:text-white w-12 h-12 rounded-md"><i class="fa-brands fa-instagram"></i></button></a>
+                            <a href="https://twitter.com/HuntPast" target="_blank" class="flex justify-center mr-2"><button type="button" class="bg-gray-100 hover:bg-[#1DA1F2] text-black hover:text-white w-12 h-12 rounded-md"><i class="fa-brands fa-twitter"></i></button></a>
+                            <a href="https://www.youtube.com/channel/UC7saRgGNZRBoydGa_uxOC8A" target="_blank" class="flex justify-center mr-2"><button type="button" class="bg-gray-100 hover:bg-[#FF0000] text-black hover:text-white w-12 h-12 rounded-md"><i class="fa-brands fa-youtube"></i></button></a>
+                            <a href="https://hunt-the-past.itch.io/" target="_blank" class="flex justify-center mr-2"><button type="button" class="bg-gray-100 hover:bg-[#fa5c5c] fill-black hover:fill-white w-12 h-12 rounded-md"><svg xmlns="http://www.w3.org/2000/svg" class="mx-auto" height="18px" width="auto" viewBox="0 0 245.371 220.736"><path d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08C57.534 94.073 72.867 94.073 76.7 94.073zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z"/></svg></button></a>
+                            <a href="https://huntmygame.blogspot.com/" target="_blank" class="flex justify-center mr-2"><button type="button" class="bg-gray-100 hover:bg-[#FF0000] fill-black hover:fill-white w-12 h-12 rounded-md">
+                                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="mx-auto" width="24px" height="auto" viewBox="0 0 903.000000 717.000000" preserveAspectRatio="xMidYMid meet">
+                                    <g transform="translate(0.000000,717.000000) scale(0.100000,-0.100000)" stroke="none"><path d="M20 5875 l0 -1265 1000 0 1000 0 0 103 0 104 444 7 c244 3 640 3 880 0 l436 -7 0 -104 0 -103 90 0 90 0 0 95 0 95 225 0 225 0 0 -95 0 -95 243 2 242 3 3 93 3 92 209 0 210 0 0 -95 0 -95 75 0 75 0 0 100 0 100 263 0 c144 0 387 -3 540 -7 l277 -6 0 -94 0 -93 1225 0 1225 0 0 1265 0 1265 -4490 0 -4490 0 0 -1265z m5068 773 c82 -222 196 -528 252 -680 57 -153 107 -278 112 -278 4 0 8 306 8 680 l0 680 190 0 190 0 0 -1085 0 -1085 -234 0 -234 0 -30 88 c-199 592 -387 1139 -393 1147 -5 5 -9 -263 -9 -608 l0 -617 -210 0 -210 0 0 1073 c0 591 3 1077 7 1080 3 4 97 7 209 7 l202 0 150 -402z m2380 395 l302 -6 0 -149 0 -148 -328 0 -329 0 -6 -517 c-4 -285 -7 -701 -7 -925 l0 -408 -189 0 -189 0 6 914 5 913 -341 -5 -342 -5 0 166 0 167 203 3 c466 6 933 7 1215 0z m-5690 -425 l2 -418 260 0 260 0 0 420 0 420 190 0 190 0 0 -1080 0 -1080 -190 0 -190 0 0 505 0 505 -260 0 -260 0 0 -505 0 -505 -210 0 -210 0 0 1073 c0 591 3 1077 7 1081 4 3 97 5 207 4 l201 -3 3 -417z m1516 416 c14 -6 16 -81 16 -756 0 -535 3 -762 12 -795 26 -103 126 -158 293 -158 77 0 98 4 147 27 68 31 99 74 125 168 17 60 18 123 17 793 l-1 727 185 0 185 0 -7 -781 c-7 -728 -8 -785 -27 -857 -51 -200 -195 -407 -340 -487 l-54 -30 -260 0 c-260 0 -260 0 -315 26 -147 70 -271 230 -332 429 l-23 75 -3 813 -3 812 185 0 c101 0 191 -3 200 -6z"/><path d="M2188 4793 l-138 -4 0 -154 0 -155 335 0 335 0 0 -915 0 -915 185 0 185 0 0 925 0 925 335 0 335 0 0 143 0 144 -202 6 c-193 7 -1079 6 -1370 0z"/><path d="M3987 4773 c-4 -3 -7 -489 -7 -1080 l0 -1073 200 0 200 0 2 503 3 502 268 3 267 2 0 -505 0 -505 185 0 185 0 0 1080 0 1080 -185 0 -185 0 -2 -422 -3 -423 -265 0 -265 0 -3 423 -2 422 -193 0 c-107 0 -197 -3 -200 -7z"/><path d="M5500 3705 l0 -1075 505 0 505 0 0 170 0 170 -305 0 -305 0 0 335 0 335 310 0 310 0 0 150 0 150 -310 0 -310 0 0 273 0 274 227 6 c124 4 266 7 315 7 l88 0 0 140 0 140 -515 0 -515 0 0 -1075z"/><path d="M56 2733 l-39 -4 6 -781 c4 -430 7 -1037 7 -1350 l0 -568 4485 0 4485 0 0 1355 0 1355 -1230 0 -1230 0 0 -70 0 -70 -535 0 -535 0 0 70 0 70 -75 0 -75 0 0 -70 0 -70 -210 0 -210 0 0 70 0 70 -245 0 -245 0 0 -70 0 -70 -225 0 -225 0 0 70 0 70 -425 0 -425 0 0 -60 0 -60 -207 2 -208 3 -3 58 -3 57 -1297 -2 c-713 -1 -1315 -3 -1336 -5z m3887 -779 l326 -441 7 -640 7 -640 -188 -7 c-113 -4 -192 -3 -198 3 -5 5 -8 187 -6 450 l4 441 -287 0 -288 0 0 -445 0 -445 -210 0 -210 0 0 633 0 632 343 467 c318 433 343 466 358 450 9 -9 163 -216 342 -458z m3820 449 c4 -2 7 -74 7 -159 l0 -154 -335 0 -335 0 0 -925 0 -925 -195 0 -195 0 0 915 0 915 -335 0 -335 0 0 170 0 170 303 3 c354 4 1409 -3 1420 -10z m-5222 -15 c191 -85 261 -390 154 -674 -111 -296 -408 -505 -788 -555 l-97 -12 0 -464 0 -463 -202 2 -203 3 0 1093 0 1094 550 -4 c481 -3 555 -6 586 -20z m3289 -153 l0 -155 -500 0 -500 0 0 -250 0 -250 490 0 490 0 0 -537 c0 -296 -3 -602 -7 -680 l-6 -143 -649 0 -648 0 0 171 0 170 465 -3 465 -3 0 338 0 337 -465 0 -465 0 0 580 0 580 665 0 665 0 0 -155z"/><path d="M3478 1717 l-147 -232 140 -3 c76 -1 202 -1 279 0 l140 3 -126 220 c-69 121 -129 225 -132 232 -4 6 -71 -89 -154 -220z"/> <path d="M1870 2081 l-55 -6 -3 -333 -2 -334 67 7 c261 28 519 216 564 411 21 93 -23 174 -120 217 -91 40 -280 56 -451 38z"/></g>
+                                </svg>
+                            </button></a>
+                        </div>
+                    </div>
+                    <div class="mt-10 lg:mt-0">
+                        <img src="img/Banner htp.png" class="object-fill h-full w-full" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-10 lg:mt-[150px]">
+        <div class="container mx-auto">
+            <div class="bg-white text-black overflow-hidden lg:h-[600px]">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="lg:p-5 lg:mt-20">
+                        <div class="flex justify-center w-full lg:w-[58rem] lg:h-64 lg:skew-x-[24deg] lg:overflow-hidden relative lg:right-28">
+                            <img src="img/Banner http wide.png" class="object-contain h-full w-auto lg:-skew-x-[24deg]" alt="">
+                        </div>
+                        <div id="game" class="ml-5 duration-700 ease-in-out">
+                            <p class="od-fs-h1 mt-5" style="font-family: 'gotham'; font-weight: bolder;">Games</p>
+                            <p class="od-fs-h5 od-ff-poppins mr-12 mt-4 md:text-justify">
+                                Ini adalah kumpulan games yang telah saya buat. Kebanyakan dari game ini dibuat untuk mengikuti lomba gamejam yang sering saya temui di itch.io dan semuanya dapat kalian mainkan secara gratis di website tersebut.
+                            </p>
+                        </div>
+                        <div id="blog" class="hidden ml-5 duration-700 ease-in-out">
+                            <p class="od-fs-h1 mt-5" style="font-family: 'gotham'; font-weight: bolder;">Blog</p>
+                            <p class="od-fs-h5 od-ff-poppins mr-12 mt-4 md:text-justify">
+                                Ini adalah blog pribadi dimana saya kadang membuat post mengenai game development. Perlu di ingat saya sangat jarang membuat post baru saat ini.
+                            </p>
+                        </div>
+                        <div id="portofolio" class="hidden ml-5 duration-700 ease-in-out">
+                            <p class="od-fs-h1 mt-5" style="font-family: 'gotham'; font-weight: bolder;">About</p>
+                            <p class="od-fs-h5 od-ff-poppins mr-12 mt-4 md:text-justify">
+                                Berikut ini adalah beberapa hal yang telah saya kerjakan serta profil saya secara lengkap.
+                            </p>
+                        </div>
+                        <div id="other" class="hidden ml-5 duration-700 ease-in-out">
+                            <p class="od-fs-h1 mt-5" style="font-family: 'gotham'; font-weight: bolder;">Other</p>
+                            <p class="od-fs-h5 od-ff-poppins mr-12 mt-4 md:text-justify">
+                                Berikut ini beberapa hal yang telah saya buat yang tidak termasuk games serta beberapa hal yang tidak pernah saya selesaikan.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 m-2 mt-4 mb-4 lg:hidden">
+                            <button type="button" class="od-btn-outline-neutral-10 od-btn-size-sm" onclick="mainbtn('game')">Games</button>
+                            <button type="button" class="od-btn-outline-neutral-10 od-btn-size-sm" onclick="mainbtn('blog')">Blog</button>
+                            <button type="button" class="od-btn-outline-neutral-10 od-btn-size-sm" onclick="mainbtn('portofolio')">About</button>
+                            <button type="button" class="od-btn-outline-neutral-10 od-btn-size-sm" onclick="mainbtn('other')">Other</button>
+                        </div>
+                    </div>
+                    <div class="w-full h-[605px] relative -right-16 skew-x-[24deg] bg-white hidden lg:block">
+                        <div class="bg-black h-full w-24 relative right-16">h</div>
+                        <div class="grid gap-10 relative -top-[27rem]">
+                            <label class="cursor-pointer" onclick="mainbtn('game')">
+                                <div onmouseover="//btnHover()" class="bg-white hover:bg-black text-black hover:text-white border-b-4 border-b-black hover:border-b-white w-[1800px] od-btn-size-lg">
+                                    <p class="-skew-x-[24deg] od-fs-h1 w-full h-full ml-4" style="font-family: 'gotham'; font-weight: bolder;">Games</p>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer" onclick="mainbtn('blog')">
+                                <div onmouseover="//btnHover()" class="bg-white hover:bg-black text-black hover:text-white border-b-4 border-b-black hover:border-b-white w-[1800px] od-btn-size-lg">
+                                    <p class="-skew-x-[24deg] od-fs-h1 w-full h-full ml-4" style="font-family: 'gotham'; font-weight: bolder;">Blog</p>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer" onclick="mainbtn('portofolio')">
+                                <div onmouseover="//btnHover()" class="bg-white hover:bg-black text-black hover:text-white border-b-4 border-b-black hover:border-b-white w-[1800px] od-btn-size-lg">
+                                    <p class="-skew-x-[24deg] od-fs-h1 w-full h-full ml-4" style="font-family: 'gotham'; font-weight: bolder;">About</p>
+                                </div>
+                            </label>
+                            <label class="cursor-pointer" onclick="mainbtn('other')">
+                                <div onmouseover="//btnHover()" class="bg-white hover:bg-black text-black hover:text-white border-b-4 border-b-black hover:border-b-white w-[1800px] od-btn-size-lg">
+                                    <p class="-skew-x-[24deg] od-fs-h1 w-full h-full ml-4" style="font-family: 'gotham'; font-weight: bolder;">Other</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Last Content-->
+    <section class="container mx-auto bg-black pt-[24px]">
+        <div id="content_game">
+            <div class="grid place-content-center">
+                <div class="flex justify-center">
+                    <div class="flex justify-center w-[32rem]">
+                        <p class="text-2xl md:text-5xl" style="font-family: 'gotham'; font-weight: bolder;">Games</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-6 place-content-center gap-5 mt-4 border-t-4 pt-7 border-t-white">
+                        <iframe src="https://itch.io/embed/1135785?bg_color=6B1FB1&amp;fg_color=ffffff&amp;link_color=eb43ae&amp;border_color=573b80" width="167" height="167" frameborder="0"><a href="https://hunt-the-past.itch.io/dream-eater">Dream Eater by Hunt The Past</a></iframe>
+                        <iframe src="https://itch.io/embed/784638?border_width=0&amp;bg_color=0e4c30&amp;fg_color=ffffff&amp;link_color=aaed27&amp;border_color=333333" width="167" height="165" frameborder="0"><a href="https://hunt-the-past.itch.io/oxygen-is-limited">Oxygen Is Limited by Hunt The Past</a></iframe>
+                        <iframe src="https://itch.io/embed/751555?bg_color=5AB9A8&amp;fg_color=2D1B00&amp;link_color=C4F0C2&amp;border_color=418391" width="167" height="167" frameborder="0"><a href="https://hunt-the-past.itch.io/janitor-joe">Janitor Joe by Hunt The Past</a></iframe>
+                        <iframe src="https://itch.io/embed/731692?border_width=0&amp;bg_color=541078&amp;fg_color=feffff&amp;link_color=fa5c5c&amp;border_color=333333" width="167" height="165" frameborder="0"><a href="https://hunt-the-past.itch.io/disscaveira-2">Disscaveira 2 by Hunt The Past</a></iframe>
+                        <iframe src="https://itch.io/embed/553183?border_width=0" width="167" height="165" frameborder="0"><a href="https://hunt-the-past.itch.io/rocket-bunny">Rocket Bunny by Hunt The Past</a></iframe>
+                        <iframe src="https://itch.io/embed/481176?border_width=0&amp;bg_color=041bb1&amp;link_color=00c2de" width="167" height="165" frameborder="0"><a href="https://hunt-the-past.itch.io/mighty-no9">Mighty no.(9) by Hunt The Past</a></iframe>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="grid grid-cols-1 gap-5 md:grid-cols-2 place-content-center mt-10">
+                        <a href="#"><button type="button" class="od-btn-outline-neutral-1 od-btn-size-sm w-60">Find More</button></a>
+                        <a href="https://hunt-the-past.itch.io/" target="_blank"><button type="button" class="od-btn-outline-neutral-1 od-btn-size-sm w-60">Go to itch.io page</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Content Blog-->
+        <div id="content_blog" class="hidden">
+            <div class="grid place-content-center">
+                <div class="flex justify-center">
+                    <div class="flex justify-center w-[32rem]">
+                        <p class="text-2xl md:text-5xl" style="font-family: 'gotham'; font-weight: bolder;">Blog</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-[80%] md:w-[42rem] mt-4 border-t-4 pt-7 border-t-white" id="blog_content"></div>                    
+                </div>
+                <div class="flex justify-center mt-10">
+                    <button type="button" class="od-btn-outline-neutral-1 od-btn-size-sm w-60">Visit the Blog</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Content Portofolio-->
+        <div id="content_portofolio" class="hidden">
+            <div class="grid place-content-center">
+                <div class="flex justify-center">
+                    <div class="flex justify-center w-[32rem]">
+                        <p class="text-2xl md:text-5xl" style="font-family: 'gotham'; font-weight: bolder;">About</p>
+                    </div>
+                </div>
+                    <div class="grid place-content-center p-5">
+                        <div class="flex justify-center">
+                            <img src="img/foto.png" class="object-contain w-96 md:w-[42rem] h-auto border-t-4 pt-7 border-t-white" alt="">
+                        </div>
+                        <div class="mt-5 flex justify-center text-justify ml-14 mr-14 md:mr-40 md:ml-40">
+                            Halo salam kenal saya Amarta Sanca Lazuardi dan pembuat hunt the past.
+                            Saya telah membuat games selama 9 tahun mulai dari sd hingga sekarang kuliah.
+                            Selain itu saya juga sedang mempelajari web design dan bekerja sebagai full stack developer.
+                            Segala hal yang pernah saya buat dapat anda lihat di website ini serta akun social media saya.
+                        </div>
+                    </div>
+                <div class="flex justify-center mt-10">
+                    <button type="button" class="od-btn-outline-neutral-1 od-btn-size-sm w-60">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Content Other-->
+        <div id="content_other" class="hidden">
+            <div class="grid place-content-center">
+                <div class="flex justify-center">
+                    <div class="flex justify-center w-[32rem]">
+                        <p class="text-2xl md:text-5xl" style="font-family: 'gotham'; font-weight: bolder;">Other</p>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="grid place-content-center gap-5 mt-4 border-t-4 pt-7 border-t-white">
+                        <div class="flex justify-center">
+                            <p>Under Construction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-10">
+                    <button type="button" class="od-btn-outline-neutral-1 od-btn-size-sm w-60">Find More</button>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-10">
+        <div class="hidden">
+            <audio controls id="audio_accept">
+                <source src="sfx/Menu accept.wav" type="audio/wav">
+            </audio>
+            <audio controls id="audio_select">
+                <source src="sfx/Menu Select.wav" type="audio/wav">
+            </audio>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="container mx-auto bg-black p-5">
+        <div class="grid place-content-center md:flex md:justify-between ml-5 mr-5">
+            <div class="grid">
+                <img src="img/Htp logo dark.png" class="w-42 h-32" alt="">
+            </div>
+            <div class="grid place-content-center">
+                <p class="od-fs-h3 od-fw-600">Contact</p>
+                <ul>
+                    <li class="relative -right-1"><span class="mr-1"><i class="fa-solid fa-envelope"></i></span><span>retro.gamers.ready@gmail.com</span></li>
+                    <li><span class="mr-1"><i class="fa-brands fa-discord"></i></span><span>megabanana#4166</span></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/caae355a2b.js" crossorigin="anonymous"></script>
+    <script src="node_modules/flowbite/dist/flowbite.js"></script>
+    <script>
+        audio_select = document.getElementById('audio_select');
+        audio_accept = document.getElementById('audio_accept');
+        btn_game = document.getElementById('game').classList;
+        btn_blog = document.getElementById('blog').classList;
+        btn_portofolio = document.getElementById('portofolio').classList;
+        btn_other = document.getElementById('other').classList;
+
+        ctn_game = document.getElementById('content_game').classList;
+        ctn_blog = document.getElementById('content_blog').classList;
+        ctn_portofolio = document.getElementById('content_portofolio').classList;
+        ctn_other = document.getElementById('content_other').classList;
+        function mainbtn(data){
+            switch (data){
+                case 'game':
+                    btn_game.remove('hidden');
+                    ctn_game.remove('hidden');
+                    //audio_accept.play();
+
+                    btn_blog.add('hidden');
+                    btn_portofolio.add('hidden');
+                    btn_other.add('hidden');
+
+                    ctn_blog.add('hidden');
+                    ctn_portofolio.add('hidden');
+                    ctn_other.add('hidden');
+                    break;
+                case 'blog':
+                    if(btn_blog.contains('hidden')){
+                        btn_blog.remove('hidden');
+                        ctn_blog.remove('hidden');
+                        //audio_accept.play();
+                        
+                        btn_game.add('hidden');
+                        btn_portofolio.add('hidden');
+                        btn_other.add('hidden');
+
+                        ctn_game.add('hidden');
+                        ctn_portofolio.add('hidden');
+                        ctn_other.add('hidden');
+                    }
+                    break;
+                case 'portofolio':
+                    btn_portofolio.remove('hidden');
+                    ctn_portofolio.remove('hidden');
+                    //audio_accept.play();
+                    
+                    btn_game.add('hidden');
+                    btn_blog.add('hidden');
+                    btn_other.add('hidden');
+
+                    ctn_game.add('hidden');
+                    ctn_blog.add('hidden');
+                    ctn_other.add('hidden');
+                    break;
+                case 'other':
+                    if(btn_other.contains('hidden')){
+                        btn_other.remove('hidden');
+                        ctn_other.remove('hidden');
+                        //audio_accept.play();
+
+                        btn_game.add('hidden');
+                        btn_portofolio.add('hidden');
+                        btn_blog.add('hidden');
+
+                        ctn_game.add('hidden');
+                        ctn_blog.add('hidden');
+                        ctn_portofolio.add('hidden');
+                    }
+                    break;
+            }
+        }
+        var snd = new Audio("sfx/Menu Select.wav"); // buffers automatically when created
+        function btnHover(){
+            snd.play();
+        }
+    </script>
+    <script>
+        document.onreadystatechange = () => {
+        if (document.readyState === 'complete') {
+            document.getElementById('blog_content').innerHTML = '<iframe src ="https://huntmygame.blogspot.com/" width="100%" height="500"><p>Your browser does not support iFrames.</p> </iframe>';
+        }
+        };
+    </script>
+</body>
+</html>

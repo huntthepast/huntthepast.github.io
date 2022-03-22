@@ -1,3 +1,6 @@
-body {
+html,body {
     color: #FCF9F9;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
 }

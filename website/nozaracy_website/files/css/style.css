@@ -1,0 +1,45 @@
+/* Font Family */
+@font-face {
+    font-family: 'Satoshi-Variable';
+    src: url('../fonts/Satoshi-Variable.woff2') format('woff2'),
+         url('../fonts/Satoshi-Variable.woff') format('woff'),
+         url('../fonts/Satoshi-Variable.ttf') format('truetype');
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'Satoshi-Variable';
+    src: url('../fonts/Satoshi-VariableItalic.woff2') format('woff2'),
+          url('../fonts/Satoshi-VariableItalic.woff') format('woff'),
+          url('../fonts/Satoshi-VariableItalic.ttf') format('truetype');
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+  font-family: 'Pix-PixelFC';
+  src: url('../fonts/Pix-PixelFJ.woff2') format('woff2'),
+        url('../fonts/Pix-PixelFJ.woff') format('woff'),
+        url('../fonts/Pix-PixelFJ.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Standard */
+.title{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  opacity: 0;
+
+  display: grid;
+  place-content: center;
+  pointer-events: none;
+  overflow: hidden;
+
+  border: solid;
+  border-width: 0px;
+}

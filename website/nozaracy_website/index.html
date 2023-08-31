@@ -14,8 +14,8 @@
     <link rel="icon" type="image/x-icon" href="files/favicon.ico">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="files/css/style.css?version=1">
-    <link rel="stylesheet" href="files/css/tailwind.css?version=1">
+    <link rel="stylesheet" href="files/css/style.css?version=3">
+    <link rel="stylesheet" href="files/css/tailwind.css?version=3">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,19 +27,66 @@
     <!-- Javascript -->
 </head>
 <body class="grid p-[14px] pb-0 font-satoshiVariable text-white bg-tertiary-500 overflow-x-hidden">
-    <header class="container px-[66px] py-[14px] pb-[80px] bg-neutral-100 text-tertiary-500 rounded-3xl">
-        <div class="flex justify-between items-center">
-            <a href="/">
-                <img src="files/img/Nozaracy_Brand_Icon.png" width="133" height="30" alt="Brand Icon" />
-            </a>
-            <nav class="flex items-center p-[12px] pl-6 gap-x-6 text-white bg-tertiary-500 rounded-[344px]">
-                <a href="/">Service</a>
-                <a href="/">Service</a>
-                <a href="/">Works</a>
-                <a href="/" class="grid place-content-center px-[18px] py-[6px] text-tertiary-500 bg-secondary rounded-[545px]">
-                    Contact Us
+    <header class="fixed top-[30px] right-[66px] w-full flex z-40">
+        <div class="relative container flex justify-end">
+            <nav class="absolute right-0 flex items-center p-[14px] mx-auto gap-x-2 text-white bg-tertiary-500 rounded-[344px]">
+                <a href="/" data-text="Service" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:text-tertiary-500 hover:bg-secondary rounded-[545px] transition duration-300">
+                    <div class="absolute flex justify-center items-center w-full h-full">
+                        <span>S</span>
+                        <span>e</span>
+                        <span>r</span>
+                        <span>v</span>
+                        <span>i</span>
+                        <span>c</span>
+                        <span>e</span>
+                    </div>
+                </a>
+                <a href="/" data-text="Works" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:text-tertiary-500 hover:bg-secondary rounded-[545px] transition duration-300">
+                    <div class="absolute flex justify-center items-center w-full h-full">
+                        <span>W</span>
+                        <span>o</span>
+                        <span>r</span>
+                        <span>k</span>
+                        <span>s</span>
+                    </div>
+                </a>
+                <a href="/" data-text="Contact Us" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:text-tertiary-500 hover:bg-secondary rounded-[545px] transition duration-300">
+                    <div class="absolute flex justify-center items-center w-full h-full">
+                        <span>C</span>
+                        <span>o</span>
+                        <span>n</span>
+                        <span>t</span>
+                        <span>a</span>
+                        <span>c</span>
+                        <span>t</span>
+                        <span>&nbsp;</span>
+                        <span>U</span>
+                        <span>s</span>
+                    </div>
+                </a>
+                <a href="/" data-text="Contact Us" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:text-tertiary-500 hover:bg-secondary rounded-[545px] transition duration-300">
+                    <div class="absolute flex justify-center items-center w-full h-full">
+                        <span>C</span>
+                        <span>o</span>
+                        <span>n</span>
+                        <span>t</span>
+                        <span>a</span>
+                        <span>c</span>
+                        <span>t</span>
+                        <span>&nbsp;</span>
+                        <span>U</span>
+                        <span>s</span>
+                    </div>
                 </a>
             </nav>
+        </div>
+    </header>
+
+    <section class="relative container px-[66px] py-[14px] pb-[80px] bg-neutral-100 text-tertiary-500 rounded-3xl">
+        <div class="flex justify-between items-center">
+            <a href="/" class="p-[12px]">
+                <img src="files/img/Nozaracy_Brand_Icon.png" width="133" height="30" alt="Brand Icon" />
+            </a>
         </div>
         <div class="flex justify-between mt-[100px]">
             <div class="grid justify-center content-between py-6">
@@ -58,7 +105,7 @@
                 <p class="max-w-[296px] text-lg leading-[160%] tracking-[-0.36px]">by connecting the dots between users’ needs and the client’s business model.</p>
             </div>
         </div>
-    </header>
+    </section>
     
     <section class="container p-0 mt-[14px] bg-primary z-10 rounded-3xl">
         <div class="grid w-full h-[564px] rounded-3xl overflow-clip bg-cyan-300/20">
@@ -88,34 +135,43 @@
                 <p class="font-pixPixelFC text-lg text-secondary">ABOUT</p>
             </div>
             <div class="relative flex justify-end mr-[60px]">
-                <div class="translate-x-[160px] grid place-content-center gap-y-2 w-[300px] h-[300px] bg-tertiary-500 border border-solid border-white rounded-full z-30">
-                    <div class="relative flex justify-center">
-                        <h2 class="font-medium text-[80px] leading-none">3</h2>
-                        <p class="absolute right-7 font-medium text-lg">+</p>
+                <div class="relative group translate-x-[160px] grid gap-y-2 w-[300px] h-[300px] rounded-full z-30">
+                    <div class="conicBg rotating1 rotate-[30deg] w-[300px] h-[300px] rounded-full"></div>
+                    <div class="absolute top-[1px] left-[1px] grid place-content-center w-[298px] h-[298px] bg-tertiary-500 rounded-full">
+                        <div class="relative flex justify-center">
+                            <h2 class="font-medium text-[80px] leading-none group-hover:text-secondary transition duration-500">3</h2>
+                            <p class="absolute right-7 font-medium text-lg">+</p>
+                        </div>
+                        <p class="text-lg text-[#A3A3A3] text-center leading-[140%]">Years Experience</p>
                     </div>
-                    <p class="text-lg text-[#A3A3A3] text-center leading-[140%]">Years Experience</p>
                 </div>
-                <div class="translate-x-[80px] grid place-content-center gap-y-3 w-[300px] h-[300px] bg-tertiary-500 border border-solid border-white rounded-full z-20">
-                    <div class="relative flex justify-center">
-                        <h2 class="font-medium text-[80px] leading-none">40</h2>
-                        <p class="absolute -right-[15px] font-medium text-lg">+</p>
+                <div class="relative group translate-x-[80px] grid place-content-center gap-y-2 w-[300px] h-[300px] rounded-full z-20">
+                    <div class="conicBg rotating2 rotate-[50deg] w-[300px] h-[300px] rounded-full"></div>
+                    <div class="absolute top-[1px] left-[1px] grid place-content-center w-[298px] h-[298px] bg-tertiary-500 rounded-full">
+                        <div class="relative flex justify-center">
+                            <h2 class="font-medium text-[80px] leading-none group-hover:text-secondary transition duration-500">40</h2>
+                            <p class="absolute -right-[15px] font-medium text-lg">+</p>
+                        </div>
+                        <p class="text-lg text-[#A3A3A3] text-center leading-[140%]">Completed <br /> Projects</p>
                     </div>
-                    <p class="text-lg text-[#A3A3A3] text-center leading-[140%]">Completed <br /> Projects</p>
                 </div>
-                <div class="grid place-content-center gap-y-3 w-[300px] h-[300px] bg-tertiary-500 border border-solid border-white rounded-full">
-                    <div class="relative flex justify-center">
-                        <h2 class="font-medium text-[80px] leading-none">8</h2>
-                        <p class="absolute right-[20px] font-medium text-lg">+</p>
+                <div class="relative group grid place-content-center gap-y-2 w-[300px] h-[300px] rounded-full z-10">
+                    <div class="conicBg rotating3 rotate-[70deg] w-[300px] h-[300px] rounded-full"></div>
+                    <div class="absolute top-[1px] left-[1px] grid place-content-center w-[298px] h-[298px] bg-tertiary-500 rounded-full">
+                        <div class="relative flex justify-center">
+                            <h2 class="font-medium text-[80px] leading-none group-hover:text-secondary transition duration-500">8</h2>
+                            <p class="absolute right-[20px] font-medium text-lg">+</p>
+                        </div>
+                        <p class="text-lg text-[#A3A3A3] text-center leading-[140%]">Country Around <br /> The World</p>
                     </div>
-                    <p class="text-lg text-[#A3A3A3] text-center leading-[140%]">Country Around <br /> The World</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="container grid p-0 mt-[14px] text-tertiary-500 bg-neutral-100 rounded-3xl">
-        <div class="grid grid-cols-2 px-[66px]">
-            <div class="pt-[96px]">
+        <div class="grid grid-cols-2 content-start">
+            <div class="sticky top-0 w-full h-fit pl-[66px] pt-[70px] bg-orange-500/20">
                 <h1 class="relative text-7xl max-w-[650px]">
                     Our expertises we’re proud of Some of our 
                     <span class="absolute bottom-[12px] right-[58px] flex items-center gap-x-6 font-pixPixelFC text-[32px]">
@@ -133,92 +189,95 @@
                     </span>
                 </h1>
             </div>
-            <div class="grid content-start mt-[124px] overflow-clip">
-                <div class="flex justify-end mb-[60px]">
-                    <svg width="46" height="40" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.6665 -3.49691e-07L7.99984 -4.66255e-07L7.99984 16L5.33317 16L5.33317 18.6667L7.99984 18.6667L7.99984 21.3333L10.6665 21.3333L10.6665 18.6667L13.3332 18.6667L13.3332 16L10.6665 16L10.6665 -3.49691e-07ZM15.9998 13.3333L15.9998 16L13.3332 16L13.3332 13.3333L15.9998 13.3333ZM15.9998 13.3333L15.9998 10.6667L18.6665 10.6667L18.6665 13.3333L15.9998 13.3333ZM2.6665 13.3333L2.6665 16L5.33317 16L5.33317 13.3333L2.6665 13.3333ZM2.6665 13.3333L2.6665 10.6667L-0.000162591 10.6667L-0.000162707 13.3333L2.6665 13.3333Z" fill="#121212"/>
-                    </svg>
-                </div>
-                <div class="h-[1px] bg-[#A3A3A3]"></div>
-                <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
-                    <h2 class="font-pixPixelFC text-lg w-[128px]">01</h2>
-                    <p class="text-center font-medium text-[32px]">Website Design</p>
-
-                    <div class="title rounded-lg bg-purple-500 transition duration-200">
-                        <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+            <div class="flex justify-end pr-[120px] bg-cyan-300/20">
+                <div class="grid content-start mt-[124px] overflow-clip">
+                    <div class="flex justify-end mb-[60px]">
+                        <svg width="46" height="40" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.6665 -3.49691e-07L7.99984 -4.66255e-07L7.99984 16L5.33317 16L5.33317 18.6667L7.99984 18.6667L7.99984 21.3333L10.6665 21.3333L10.6665 18.6667L13.3332 18.6667L13.3332 16L10.6665 16L10.6665 -3.49691e-07ZM15.9998 13.3333L15.9998 16L13.3332 16L13.3332 13.3333L15.9998 13.3333ZM15.9998 13.3333L15.9998 10.6667L18.6665 10.6667L18.6665 13.3333L15.9998 13.3333ZM2.6665 13.3333L2.6665 16L5.33317 16L5.33317 13.3333L2.6665 13.3333ZM2.6665 13.3333L2.6665 10.6667L-0.000162591 10.6667L-0.000162707 13.3333L2.6665 13.3333Z" fill="#121212"/>
+                        </svg>
                     </div>
-                </div>
-                <div class="h-[1px] bg-[#A3A3A3]"></div>
-                <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
-                    <h2 class="font-pixPixelFC text-lg w-[128px]">02</h2>
-                    <p class="text-center font-medium text-[32px]">Mobile App</p>
-
-                    <div class="title rounded-lg bg-purple-500 transition duration-200">
-                        <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                    <div class="h-[1px] bg-[#A3A3A3]"></div>
+                    <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
+                        <h2 class="font-pixPixelFC text-lg w-[128px]">01</h2>
+                        <p class="text-center font-medium text-[32px]">Website Design</p>
+    
+                        <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
+                            <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                        </div>
                     </div>
-                </div>
-                <div class="h-[1px] bg-[#A3A3A3]"></div>
-                <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
-                    <h2 class="font-pixPixelFC text-lg w-[128px]">03</h2>
-                    <p class="text-center font-medium text-[32px]">Pitch Deck</p>
-
-                    <div class="title rounded-lg bg-purple-500 transition duration-200">
-                        <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                    <div class="h-[1px] bg-[#A3A3A3]"></div>
+                    <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
+                        <h2 class="font-pixPixelFC text-lg w-[128px]">02</h2>
+                        <p class="text-center font-medium text-[32px]">Mobile App</p>
+    
+                        <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
+                            <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                        </div>
                     </div>
-                </div>
-                <div class="h-[1px] bg-[#A3A3A3]"></div>
-                <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
-                    <h2 class="font-pixPixelFC text-lg w-[128px]">04</h2>
-                    <p class="text-center font-medium text-[32px]">Social Media Design</p>
-
-                    <div class="title rounded-lg bg-purple-500 transition duration-200">
-                        <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                    <div class="h-[1px] bg-[#A3A3A3]"></div>
+                    <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
+                        <h2 class="font-pixPixelFC text-lg w-[128px]">03</h2>
+                        <p class="text-center font-medium text-[32px]">Pitch Deck</p>
+    
+                        <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
+                            <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                        </div>
                     </div>
-                </div>
-                <div class="h-[1px] bg-[#A3A3A3]"></div>
-                <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
-                    <h2 class="font-pixPixelFC text-lg w-[128px]">05</h2>
-                    <p class="text-center font-medium text-[32px]">Branding</p>
-
-                    <div class="title rounded-lg bg-purple-500 transition duration-200">
-                        <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                    <div class="h-[1px] bg-[#A3A3A3]"></div>
+                    <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
+                        <h2 class="font-pixPixelFC text-lg w-[128px]">04</h2>
+                        <p class="text-center font-medium text-[32px]">Social Media Design</p>
+    
+                        <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
+                            <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                        </div>
                     </div>
-                </div>
-                <div class="h-[1px] bg-[#A3A3A3]"></div>
-                <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
-                    <h2 class="font-pixPixelFC text-lg w-[128px]">06</h2>
-                    <p class="text-center font-medium text-[32px]">3D Animation</p>
-
-                    <div class="title rounded-lg bg-purple-500 transition duration-200">
-                        <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                    <div class="h-[1px] bg-[#A3A3A3]"></div>
+                    <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
+                        <h2 class="font-pixPixelFC text-lg w-[128px]">05</h2>
+                        <p class="text-center font-medium text-[32px]">Branding</p>
+    
+                        <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
+                            <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                        </div>
                     </div>
-                </div>
-                <div class="h-[1px] bg-[#A3A3A3]"></div>
-                <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
-                    <h2 class="font-pixPixelFC text-lg w-[128px]">07</h2>
-                    <p class="text-center font-medium text-[32px]">Illustration</p>
-
-                    <div class="title rounded-lg bg-purple-500 transition duration-200">
-                        <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                    <div class="h-[1px] bg-[#A3A3A3]"></div>
+                    <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
+                        <h2 class="font-pixPixelFC text-lg w-[128px]">06</h2>
+                        <p class="text-center font-medium text-[32px]">3D Animation</p>
+    
+                        <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
+                            <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                        </div>
                     </div>
-                </div>
-                <div class="h-[1px] bg-[#A3A3A3]"></div>
-                <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
-                    <h2 class="font-pixPixelFC text-lg w-[128px]">08</h2>
-                    <p class="text-center font-medium text-[32px]">Development</p>
-
-                    <div class="title rounded-lg bg-purple-500 transition duration-200">
-                        <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                    <div class="h-[1px] bg-[#A3A3A3]"></div>
+                    <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
+                        <h2 class="font-pixPixelFC text-lg w-[128px]">07</h2>
+                        <p class="text-center font-medium text-[32px]">Illustration</p>
+    
+                        <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
+                            <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                        </div>
+                    </div>
+                    <div class="h-[1px] bg-[#A3A3A3]"></div>
+                    <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
+                        <h2 class="font-pixPixelFC text-lg w-[128px]">08</h2>
+                        <p class="text-center font-medium text-[32px]">Development</p>
+    
+                        <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
+                            <img src="files/img/HoverPlaceholder.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
         <div class="flex justify-between px-[66px] mt-[295px] font-medium text-2xl text-primary">
             <p>OUR</p>
             <p>SERVICES</p>
         </div>
         <div class="grid justify-center overflow-clip">
-            <h1 class="relative top-5 font-pixPixelFC text-[153px] text-primary">SERVICES</h1>
+            <h1 class="relative top-5 font-pixPixelFC text-[144px] text-primary">SERVICES</h1>
         </div>
     </section>
 
@@ -442,15 +501,15 @@
         </div>
     </footer>
 
-    <div>
+    <div class="container p-0">
         <div class="grid justify-center overflow-clip">
-            <h1 class="relative top-5 font-pixPixelFC text-[153px] text-white">CONTACT</h1>
+            <h1 class="relative top-5 font-pixPixelFC text-[144px] text-white">CONTACT</h1>
         </div>
     </div>
 
-    <script src="files/javascript/OnHoverBox.js"></script>
-    <script src="files/javascript/TextareaResizer.js"></script>
-    <script src="files/javascript/Package.js"></script>
+    <script src="files/javascript/OnHoverBox.js?version=3"></script>
+    <script src="files/javascript/TextareaResizer.js?version=3"></script>
+    <script src="files/javascript/Package.js?version=3"></script>
     <script>
         checkBtn('ServiceRadio', 'RadioShell');
         checkBtn('ServicePrice', 'PriceShell');

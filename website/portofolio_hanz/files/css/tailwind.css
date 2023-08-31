@@ -801,6 +801,11 @@ video {
        column-gap: 1.25rem;
 }
 
+.gap-x-6 {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
 .gap-x-\[140px\] {
   -moz-column-gap: 140px;
        column-gap: 140px;
@@ -832,9 +837,9 @@ video {
   row-gap: 2rem;
 }
 
-.gap-x-6 {
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
+.gap-x-\[290px\] {
+  -moz-column-gap: 290px;
+       column-gap: 290px;
 }
 
 .overflow-hidden {

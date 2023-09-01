@@ -14,8 +14,8 @@
     <link rel="icon" type="image/x-icon" href="files/favicon.ico">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="files/css/style.css?version=3">
-    <link rel="stylesheet" href="files/css/tailwind.css?version=3">
+    <link rel="stylesheet" href="files/css/style.css?version=4">
+    <link rel="stylesheet" href="files/css/tailwind.css?version=4">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -171,7 +171,7 @@
 
     <section class="container grid p-0 mt-[14px] text-tertiary-500 bg-neutral-100 rounded-3xl">
         <div class="grid grid-cols-2 content-start">
-            <div class="sticky top-0 w-full h-fit pl-[66px] pt-[70px] bg-orange-500/20">
+            <div class="sticky top-0 w-full h-fit pl-[66px] pt-[70px]">
                 <h1 class="relative text-7xl max-w-[650px]">
                     Our expertises we’re proud of Some of our 
                     <span class="absolute bottom-[12px] right-[58px] flex items-center gap-x-6 font-pixPixelFC text-[32px]">
@@ -189,7 +189,7 @@
                     </span>
                 </h1>
             </div>
-            <div class="flex justify-end pr-[120px] bg-cyan-300/20">
+            <div class="flex justify-end pr-[120px]">
                 <div class="grid content-start mt-[124px] overflow-clip">
                     <div class="flex justify-end mb-[60px]">
                         <svg width="46" height="40" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -402,102 +402,218 @@
                 <div class="grid gap-y-10">
                     <h2 class="text-2xl leading-[160%]">Service Needed :</h2>
                     <div class="flex flex-wrap gap-x-4 gap-y-6 max-w-[736px]">
-                        <label class="RadioShell grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                        <label data-text="Web Design" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
                             <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="web design" checked onclick="checkBtn('ServiceRadio', 'RadioShell')"/>
-                            Web Design 
+                            <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
+                                <span>W</span>
+                                <span>e</span>
+                                <span>b</span>
+                                <span>&nbsp;</span>
+                                <span>D</span>
+                                <span>e</span>
+                                <span>s</span>
+                                <span>i</span>
+                                <span>g</span>
+                                <span>n</span>
+                            </div>
                         </label>
                         
-                        <label class="RadioShell grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                        <label data-text="App Design" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
                             <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="app design" onclick="checkBtn('ServiceRadio', 'RadioShell')" />
-                            App Design
+                            <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
+                                <span>A</span>
+                                <span>p</span>
+                                <span>p</span>
+                                <span>&nbsp;</span>
+                                <span>D</span>
+                                <span>e</span>
+                                <span>s</span>
+                                <span>i</span>
+                                <span>g</span>
+                                <span>n</span>
+                            </div>
                         </label>
 
-                        <label class="RadioShell grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                        <label data-text="Branding" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
                             <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="branding" onclick="checkBtn('ServiceRadio', 'RadioShell')" />
-                            Branding
+                            <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
+                                <span>B</span>
+                                <span>r</span>
+                                <span>a</span>
+                                <span>n</span>
+                                <span>d</span>
+                                <span>i</span>
+                                <span>n</span>
+                                <span>g</span>
+                            </div>
                         </label>
 
-                        <label class="RadioShell grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                        <label data-text="Developer" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
                             <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="developer" onclick="checkBtn('ServiceRadio', 'RadioShell')" />
-                            Developer
+                            <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
+                                <span>D</span>
+                                <span>e</span>
+                                <span>v</span>
+                                <span>e</span>
+                                <span>l</span>
+                                <span>o</span>
+                                <span>p</span>
+                                <span>e</span>
+                                <span>r</span>
+                            </div>
                         </label>
 
-                        <label class="RadioShell grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                        <label data-text="Pitch Deck" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
                             <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="pitch deck" onclick="checkBtn('ServiceRadio', 'RadioShell')" />
-                            Pitch Deck
+                            <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
+                                <span>P</span>
+                                <span>i</span>
+                                <span>t</span>
+                                <span>c</span>
+                                <span>h</span>
+                                <span>&nbsp;</span>
+                                <span>D</span>
+                                <span>e</span>
+                                <span>c</span>
+                                <span>k</span>
+                            </div>
                         </label>
 
-                        <label class="RadioShell grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                        <label data-text="SAAS" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
                             <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="saas" onclick="checkBtn('ServiceRadio', 'RadioShell')" />
-                            SAAS
+                            <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
+                                <span>S</span>
+                                <span>A</span>
+                                <span>A</span>
+                                <span>S</span>
+                            </div>
                         </label>
 
-                        <label class="RadioShell grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                        <label data-text="Social Media Design" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
                             <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="social media design" onclick="checkBtn('ServiceRadio', 'RadioShell')" />
-                            Social Media Design
+                            <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
+                                <span>S</span>
+                                <span>o</span>
+                                <span>c</span>
+                                <span>i</span>
+                                <span>a</span>
+                                <span>l</span>
+                                <span>&nbsp;</span>
+                                <span>M</span>
+                                <span>e</span>
+                                <span>d</span>
+                                <span>i</span>
+                                <span>a</span>
+                                <span>&nbsp;</span>
+                                <span>D</span>
+                                <span>e</span>
+                                <span>s</span>
+                                <span>i</span>
+                                <span>g</span>
+                                <span>n</span>
+                            </div>
                         </label>
                     </div>
                 </div>
                 <div class="grid">
                     <h2 class="text-2xl leading-[160%]">Let us know about you</h2>
                     <div class="grid grid-cols-2 gap-x-10 mt-12 max-w-[736px]">
-                        <label>
-                            <h3 class="text-[#525252] text-2xl leading-[160%]">Full Name*</h3>
-                            <input type="text" class="grid w-full text-neutral-400 bg-transparent text-lg outline-none border-b border-solid border-[#737373]" />
-                        </label>
-                        <label>
-                            <h3 class="text-[#525252] text-2xl leading-[160%]">Email Address*</h3>
-                            <input type="email" class="grid w-full text-neutral-400 bg-transparent text-lg outline-none border-b border-solid border-[#737373]" />
-                        </label>
+                        <div class="relative group">
+                            <input type="text" id="fullname" required onchange="checkInputValue('fullname', 'fullname-label')" class="grid w-full py-1 text-neutral-400 bg-transparent text-lg outline-none border-b border-solid border-[#737373]">
+                            <label id="fullname-label" for="fullname" class="transform transition-all absolute top-0 left-0 flex items-center text-2xl text-[#525252] group-focus-within:text-xs group-focus-within:-translate-y-full">Fullname*</label>
+                        </div>
+                        <div class="relative group">
+                            <input type="email" id="gmail" required onchange="checkInputValue('gmail', 'gmail-label')" class="grid w-full py-1 text-neutral-400 bg-transparent text-lg outline-none border-b border-solid border-[#737373]">
+                            <label id="gmail-label" for="gmail" class="transform transition-all absolute top-0 left-0 flex items-center text-2xl text-[#525252] group-focus-within:text-xs group-focus-within:-translate-y-full">Email*</label>
+                        </div>
                     </div>
                 </div>
                 <div class="grid gap-y-10">
                     <h2 class="text-2xl leading-[160%]">Service Needed (USD):</h2>
                     <div class="flex flex-wrap gap-x-4 gap-y-6 max-w-[736px]">
-                        <label class="PriceShell grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                        <label data-text="Under $5K" class="PriceShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
                             <input type="radio" name="ServicePrice" class="absolute opacity-0" value="below $5k" checked onclick="checkBtn('ServicePrice', 'PriceShell')"/>
-                            Under $5K
+                            <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
+                                <span>U</span>
+                                <span>n</span>
+                                <span>d</span>
+                                <span>e</span>
+                                <span>r</span>
+                                <span>&nbsp;</span>
+                                <span>$</span>
+                                <span>5</span>
+                                <span>K</span>
+                            </div>
                         </label>
-                        <label class="PriceShell grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                        <label data-text="$5K - $15K" class="PriceShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
                             <input type="radio" name="ServicePrice" class="absolute opacity-0" value="$5k - $15k" onclick="checkBtn('ServicePrice', 'PriceShell')" />
-                            $5K - $15K
+                            <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
+                                <span>$</span>
+                                <span>5</span>
+                                <span>K</span>
+                                <span>&nbsp;</span>
+                                <span>-</span>
+                                <span>&nbsp;</span>
+                                <span>$</span>
+                                <span>1</span>
+                                <span>5</span>
+                                <span>K</span>
+                            </div>
                         </label>
-                        <label class="PriceShell grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                        <label data-text="$15K - $25K" class="PriceShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
                             <input type="radio" name="ServicePrice" class="absolute opacity-0" value="$15k - $25k" onclick="checkBtn('ServicePrice', 'PriceShell')" />
-                            $15K - $25K
+                            <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
+                                <span>$</span>
+                                <span>1</span>
+                                <span>5</span>
+                                <span>K</span>
+                                <span>&nbsp;</span>
+                                <span>-</span>
+                                <span>&nbsp;</span>
+                                <span>$</span>
+                                <span>2</span>
+                                <span>5</span>
+                                <span>K</span>
+                            </div>
                         </label>
                     </div>
                 </div>
                 <div class="grid gap-y-12 max-w-[736px]">
-                    <label>
-                        <h3 class="text-[#525252] text-2xl leading-[160%]">Describe your project</h3>
-                        <textarea class="grid w-full h-[26px] text-neutral-400 bg-transparent text-lg outline-none border-b border-solid border-[#737373] resize-none"></textarea>
-                    </label>
+                    <div class="relative group">
+                        <textarea id="description" required onchange="checkInputValue('description', 'description-label')" class="grid w-full h-[26px] py-1 text-neutral-400 bg-transparent text-lg outline-none border-b border-solid border-[#737373] resize-none"></textarea>
+                        <label id="description-label" for="description" class="transform transition-all absolute top-0 left-0 flex items-center text-2xl text-[#525252] group-focus-within:text-xs group-focus-within:-translate-y-full">Describe your project</label>
+                    </div>
                     <div class="flex justify-start">
-                        <button type="submit" class="grid place-content-center px-8 py-[14px] text-black bg-secondary rounded-[450px]">
-                            Submit
+                        <button type="submit" data-text="Submit" class="nav-btn relative grid place-content-center px-8 py-[14px] text-black hover:text-white bg-secondary hover:bg-transparent border border-solid border-secondary hover:border-white rounded-[450px] transition duration-300">
+                            <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
+                                <span>S</span>
+                                <span>u</span>
+                                <span>b</span>
+                                <span>m</span>
+                                <span>i</span>
+                                <span>t</span>
+                            </div>
                         </button>
                     </div>
                 </div>
             </form>
-        </div>
-        
+        </div> 
     </section>
 
     <footer class="container flex justify-between items-center py-20 px-[66px]">
         <div class="flex gap-x-10 text-lg text-neutral-600">
-            <a href="/">Earth</a>
-            <a href="/">Nozaracy© 2023 Ltd.</a>
-            <a href="/">Terms & Services</a>
+            <p>Earth</p>
+            <p>Nozaracy© 2023 Ltd.</p>
+            <a href="/" class="hover:text-secondary transition duration-300">Terms & Services</a>
         </div>
         <div class="grid place-content-center">
             <img src="files/img/Nozaracy_Brand_Colored_Icon.webp" width="168" height="34" alt="Brand Colored" class="w-[168px] h-[34px]" />
         </div>
         <div class="flex gap-x-10 text-lg text-neutral-600">
-            <a href="/">Telegram</a>
-            <a href="/">Instagram</a>
-            <a href="/">Dribbble</a>
-            <a href="/">Behance</a>
+            <a href="/" class="hover:text-secondary transition duration-300">Telegram</a>
+            <a href="/" class="hover:text-secondary transition duration-300">Instagram</a>
+            <a href="/" class="hover:text-secondary transition duration-300">Dribbble</a>
+            <a href="/" class="hover:text-secondary transition duration-300">Behance</a>
         </div>
     </footer>
 
@@ -507,12 +623,14 @@
         </div>
     </div>
 
-    <script src="files/javascript/OnHoverBox.js?version=3"></script>
-    <script src="files/javascript/TextareaResizer.js?version=3"></script>
-    <script src="files/javascript/Package.js?version=3"></script>
+    <script src="files/javascript/OnHoverBox.js?version=4"></script>
+    <script src="files/javascript/TextareaResizer.js?version=4"></script>
+    <script src="files/javascript/Package.js?version=4"></script>
     <script>
         checkBtn('ServiceRadio', 'RadioShell');
         checkBtn('ServicePrice', 'PriceShell');
+        checkInputValue('fullname', 'fullname-label')
+        checkInputValue('gmail', 'gmail-label')
     </script>
 </body>
 </html>

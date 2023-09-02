@@ -14,8 +14,8 @@
     <link rel="icon" type="image/x-icon" href="files/favicon.ico">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="files/css/style.css?version=4">
-    <link rel="stylesheet" href="files/css/tailwind.css?version=4">
+    <link rel="stylesheet" href="files/css/style.css?version=5">
+    <link rel="stylesheet" href="files/css/tailwind.css?version=5">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,11 +105,11 @@
                 <p class="max-w-[296px] text-lg leading-[160%] tracking-[-0.36px]">by connecting the dots between users’ needs and the client’s business model.</p>
             </div>
         </div>
-    </section>
-    
+    </section>  
+
     <section class="container p-0 mt-[14px] bg-primary z-10 rounded-3xl">
         <div class="grid w-full h-[564px] rounded-3xl overflow-clip bg-cyan-300/20">
-            <img src="files/img/Placeholder_Img.webp" width="1412" height="564px" alt="Section Background Image" class="w-full h-full object-cover object-top" />
+            <img src="files/img/Placeholder_Img.webp" width="1412" height="564px" alt="Section Background Image" class="w-full h-full object-cover object-top thumbnail" />
         </div>
         <div class="flex justify-between px-[66px] mt-[25px] text-lg">
             <p>// Anigaot</p>
@@ -169,7 +169,7 @@
         </div>
     </section>
 
-    <section class="container grid p-0 mt-[14px] text-tertiary-500 bg-neutral-100 rounded-3xl">
+    <section class="container grid justify-center p-0 mt-[14px] text-tertiary-500 bg-neutral-100 rounded-3xl">
         <div class="grid grid-cols-2 content-start">
             <div class="sticky top-0 w-full h-fit pl-[66px] pt-[70px]">
                 <h1 class="relative text-7xl max-w-[650px]">
@@ -294,7 +294,7 @@
             <div class="grid grid-cols-2">
                 <div class="grid place-content-center overflow-visible">
                     <div class="box group grid place-content-center w-[630px] h-[498] overflow-clip rounded-2xl cursor-none">
-                        <Img src="files/img/Placeholder_Section_Image.webp" width="682" height="512" alt="Placeholder Image" class="object-cover object-center" />
+                        <Img src="files/img/Placeholder_Section_Image.webp" width="682" height="512" alt="Placeholder Image" class="object-cover object-center thumbnail" />
                         
                         <div class="title w-[150px] h-[150px] bg-white mix-blend-difference rounded-full transition duration-200">
                             <p class="font-medium text-lg text-black">Discover</p>
@@ -322,7 +322,7 @@
             <div class="grid grid-cols-2">
                 <div class="grid place-content-center">
                     <div class="box group grid place-content-center w-[630px] h-[498] overflow-clip rounded-2xl cursor-none">
-                        <Img src="files/img/Placeholder_Section_Image.webp" width="682" height="512" alt="Placeholder Image" class="object-cover object-center" />
+                        <Img src="files/img/Placeholder_Section_Image.webp" width="682" height="512" alt="Placeholder Image" class="object-cover object-center thumbnail" />
                         
                         <div class="title w-[150px] h-[150px] bg-white mix-blend-difference rounded-full transition duration-200">
                             <p class="font-medium text-lg text-black">Discover</p>
@@ -623,14 +623,17 @@
         </div>
     </div>
 
-    <script src="files/javascript/OnHoverBox.js?version=4"></script>
-    <script src="files/javascript/TextareaResizer.js?version=4"></script>
-    <script src="files/javascript/Package.js?version=4"></script>
+    <script src="files/javascript/OnHoverBox.js?version=5"></script>
+    <script src="files/javascript/TextareaResizer.js?version=5"></script>
+    <script src="files/javascript/Package.js?version=5"></script>
+    <script src="files/javascript/simpleParallax.min.js?version=5"></script>
     <script>
         checkBtn('ServiceRadio', 'RadioShell');
         checkBtn('ServicePrice', 'PriceShell');
-        checkInputValue('fullname', 'fullname-label')
-        checkInputValue('gmail', 'gmail-label')
+        checkInputValue('fullname', 'fullname-label');
+        checkInputValue('gmail', 'gmail-label');
+        const image = document.getElementsByClassName('thumbnail');
+        new simpleParallax(image);
     </script>
 </body>
 </html>

@@ -33,17 +33,23 @@ function checkInputValue(id, label) {
     const inputLabel = document.getElementById(label);
 
     if (input && input.value) {
-        console.log(input.value);
+        // console.log(input.value);
         inputLabel.classList.remove('text-2xl');
 
         inputLabel.classList.add('text-xs');
         inputLabel.classList.add('-translate-y-full'); 
     }
     else {
-        console.log("no Value");
+        // console.log("no Value");
         inputLabel.classList.add('text-2xl');
 
         inputLabel.classList.remove('text-xs');
         inputLabel.classList.remove('-translate-y-full'); 
     }
 };
+
+function checkScreenSize() {
+    const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+    console.log(width, height);
+}

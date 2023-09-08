@@ -91,7 +91,7 @@
         </div>
     </header>
 
-    <main id="scroll">
+    <main data-scroll-container>
         <section class="relative container px-[66px] py-[14px] pb-[80px] bg-neutral-100 text-tertiary-500 rounded-3xl showAnim opacity-0 translate-y-16 duration-700">
             <div class="flex justify-between items-center">
                 <a href="/" class="p-[12px]">
@@ -675,7 +675,7 @@
         });
 
         const scroll = new LocomotiveScroll({
-            el: document.querySelector("#scroll"),
+            el: document.querySelector("[data-scroll-container]"),
         });
     </script>
 </body>

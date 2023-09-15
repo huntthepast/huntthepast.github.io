@@ -12,7 +12,7 @@
     <meta property="og:title" content="Nozarazy" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Personalized website to showcase our work and how to contact us" />
-    <meta property="og:image" content="files/img/Opengraph.png">
+    <!-- <meta property="og:image" content="/static/website-social-card-44070c4a901df708aa1563ac4bbe595a.jpg" /> -->
     <!-- <meta property="og:url" content="https://www.colbyfayock.com" /> -->
     
     <!-- Judul Website -->
@@ -20,9 +20,9 @@
     <link rel="icon" type="image/x-icon" href="files/favicon.ico">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="files/css/style.css?version=6">
-    <link rel="stylesheet" href="files/css/tailwind.css?version=6">
-    <link rel="stylesheet" href="files/css/locomotive-scroll.min.css?version=6">
+    <link rel="stylesheet" href="files/css/style.css?version=7.2">
+    <link rel="stylesheet" href="files/css/tailwind.css?version=7.2">
+    <link rel="stylesheet" href="files/css/locomotive-scroll.min.css?version=7.2">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,14 +33,12 @@
 
     <!-- Javascript -->
 </head>
-<body id="main" class="grid p-[14px] pb-0 font-satoshiVariable text-white bg-tertiary-500 overflow-x-hidden">
-    <div id="mouse" class="fixed w-2 h-2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full mix-blend-difference pointer-events-none z-50"></div>
-
+<body id="main" class="grid font-satoshiVariable text-white bg-tertiary-500">
     <header class="fixed top-[30px] right-[66px] w-full flex z-40">
         <div class="relative container flex justify-end">
             <nav class="absolute right-0 flex items-center p-[14px] mx-auto gap-x-2 text-white bg-tertiary-500 rounded-[344px]">
-                <a href="/" data-text="Service" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:text-tertiary-500 hover:bg-secondary rounded-[545px] transition duration-300">
-                    <div class="absolute flex justify-center items-center w-full h-full">
+                <a href="/" data-text="Service" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:bg-secondary rounded-[545px]">
+                    <div class="absolute flex justify-center items-center w-full h-full text-tertiary-500 transition duration-300">
                         <span>S</span>
                         <span>e</span>
                         <span>r</span>
@@ -91,14 +89,14 @@
         </div>
     </header>
 
-    <main data-scroll-container>
-        <section class="relative container px-[66px] py-[14px] pb-[80px] bg-neutral-100 text-tertiary-500 rounded-3xl showAnim opacity-0 translate-y-16 duration-700">
-            <div class="flex justify-between items-center">
+    <main data-scroll-container class="p-[14px] pb-0">
+        <section data-scroll-section class="relative container px-[66px] py-[14px] pb-[80px] bg-neutral-100 text-tertiary-500 rounded-3xl">
+            <div data-scroll data-scroll-speed="0.2" class="flex justify-between items-center">
                 <a href="/" class="p-[12px]">
                     <img src="files/img/Nozaracy_Brand_Icon.webp" width="133" height="30" alt="Brand Icon" />
                 </a>
             </div>
-            <div class="flex justify-between mt-[100px]">
+            <div data-scroll data-scroll-speed="0.2" class="flex justify-between mt-[100px]">
                 <div class="grid justify-center content-between py-6 showAnim opacity-0 translate-y-16 duration-700 delay-100">
                     <p class="text-lg">2023</p>
                     <div class="grid place-content-center">
@@ -115,13 +113,15 @@
                     <p class="max-w-[296px] text-lg leading-[160%] tracking-[-0.36px]">by connecting the dots between users’ needs and the client’s business model.</p>
                 </div>
             </div>
-        </section>  
-    
-        <section class="container p-0 pb-[14px] mt-[14px] bg-primary rounded-3xl">
+        </section>
+
+        <section data-scroll-section class="container p-0 pb-[14px] mt-[14px] bg-primary rounded-3xl">
             <div class="grid w-full h-[564px] rounded-3xl overflow-clip showAnim opacity-0 translate-y-16 duration-700">
-                <img src="files/img/Placeholder_Img.webp" width="1412" height="564px" alt="Section Background Image" class="w-full h-full object-cover object-top thumbnail" />
+                <div class="grid place-content-center w-full h-full" data-scroll data-scroll-speed="-1">
+                    <img src="files/img/Placeholder_Img.webp" width="1412" height="564px" alt="Section Background Image" class="w-full h-full object-cover object-top scale-150" />
+                </div>
             </div>
-            <div class="flex justify-between px-[66px] mt-[25px] text-lg">
+            <div data-scroll data-scroll-speed="0.2" class="flex justify-between px-[66px] mt-[25px] text-lg">
                 <p class="showAnim opacity-0 translate-y-16 duration-700">// Anigaot</p>
                 <p class="showAnim opacity-0 translate-y-16 duration-700 delay-100">2023</p>
                 <p class="showAnim opacity-0 translate-y-16 duration-700 delay-200">RECENT</p>
@@ -129,7 +129,7 @@
                 <p class="showAnim opacity-0 translate-y-16 duration-700 delay-[400ms]">2023</p>
             </div>
             <div class="relative grid justify-center px-[14px] pb-7 z-10 overflow-clip showAnim opacity-0 translate-y-16 duration-700">
-                <h1 class="relative top-14 font-pixPixelFC text-[220px] text-secondary">WORK</h1>
+                <h1 class="relative top-14 text-center font-pixPixelFC text-[220px] text-secondary">WORK</h1>
             </div>
             <div class="flex justify-between items-center m-[14px] mt-0 mb-0 py-20 bg-tertiary-500 rounded-[20px] z-20 showAnim opacity-0 translate-y-16 duration-700">
                 <div class="flex items-center gap-x-12">
@@ -178,10 +178,10 @@
                 </div>
             </div>
         </section>
-    
-        <section class="container grid justify-center p-0 mt-[14px] text-tertiary-500 bg-neutral-100 rounded-3xl">
-            <div class="grid grid-cols-2 content-start">
-                <div class="sticky top-0 w-full h-fit pl-[66px] pt-[70px] showAnim opacity-0 translate-y-16 duration-700">
+
+        <section data-scroll-section class="container grid justify-center p-0 mt-[14px] text-tertiary-500 bg-neutral-100 rounded-3xl overflow-hidden">
+            <div id="fixed" class="grid grid-cols-2 content-start">
+                <div data-scroll data-scroll-sticky data-scroll-target="#fixed" class="w-full h-fit pl-[66px] pt-[70px] showAnim transition-opacity opacity-0 translate-y-16 duration-700">
                     <h1 class="relative text-7xl max-w-[650px]">
                         Our expertises we’re proud of Some of our 
                         <span class="absolute bottom-[12px] right-[58px] flex items-center gap-x-6 font-pixPixelFC text-[32px]">
@@ -211,10 +211,6 @@
                             <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
                                 <h2 class="font-pixPixelFC text-lg w-[128px]">01</h2>
                                 <p class="text-center font-medium text-[32px]">Website Design</p>
-            
-                                <div class="fixed title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
-                                    <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
-                                </div>
                             </div>
                         </div>
                         <div class="grid showAnim opacity-0 translate-y-16 duration-700 delay-300">
@@ -222,10 +218,6 @@
                             <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
                                 <h2 class="font-pixPixelFC text-lg w-[128px]">02</h2>
                                 <p class="text-center font-medium text-[32px]">Mobile App</p>
-            
-                                <div class="fixed title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
-                                    <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
-                                </div>
                             </div>
                             
                         </div>
@@ -234,10 +226,6 @@
                             <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
                                 <h2 class="font-pixPixelFC text-lg w-[128px]">03</h2>
                                 <p class="text-center font-medium text-[32px]">Pitch Deck</p>
-            
-                                <div class="fixed title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
-                                    <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
-                                </div>
                             </div>
                         </div>
                         <div class="grid showAnim opacity-0 translate-y-16 duration-700 delay-500">
@@ -245,10 +233,6 @@
                             <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
                                 <h2 class="font-pixPixelFC text-lg w-[128px]">04</h2>
                                 <p class="text-center font-medium text-[32px]">Social Media Design</p>
-            
-                                <div class="fixed title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
-                                    <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
-                                </div>
                             </div>
                         </div>
                         <div class="grid showAnim opacity-0 translate-y-16 duration-700 delay-[600ms]">
@@ -256,10 +240,6 @@
                             <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
                                 <h2 class="font-pixPixelFC text-lg w-[128px]">05</h2>
                                 <p class="text-center font-medium text-[32px]">Branding</p>
-            
-                                <div class="fixed title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
-                                    <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
-                                </div>
                             </div>
                         </div>
                         <div class="grid showAnim opacity-0 translate-y-16 duration-700 delay-700">
@@ -267,10 +247,6 @@
                             <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
                                 <h2 class="font-pixPixelFC text-lg w-[128px]">06</h2>
                                 <p class="text-center font-medium text-[32px]">3D Animation</p>
-            
-                                <div class="fixed title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
-                                    <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
-                                </div>
                             </div>
                         </div>
                         <div class="grid showAnim opacity-0 translate-y-16 duration-700 delay-[800ms]">
@@ -278,10 +254,6 @@
                             <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
                                 <h2 class="font-pixPixelFC text-lg w-[128px]">07</h2>
                                 <p class="text-center font-medium text-[32px]">Illustration</p>
-            
-                                <div class="fixed title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
-                                    <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
-                                </div>
                             </div>
                         </div>
                         <div class="grid showAnim opacity-0 translate-x-16 duration-700 delay-[900ms]">
@@ -289,26 +261,22 @@
                             <div class="box group flex items-center py-6 text-tertiary-500 hover:text-primary cursor-none transition duration-500">
                                 <h2 class="font-pixPixelFC text-lg w-[128px]">08</h2>
                                 <p class="text-center font-medium text-[32px]">Development</p>
-            
-                                <div class="fixed title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200">
-                                    <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="flex justify-between px-[66px] mt-[295px] font-medium text-2xl text-primary">
+            <div data-scroll data-scroll-speed="0.5" class="flex justify-between px-[66px] mt-[295px] font-medium text-2xl text-primary">
                 <p class="showAnim opacity-0 translate-y-16 duration-700">OUR</p>
                 <p class="showAnim opacity-0 translate-y-16 duration-700 delay-100">SERVICES</p>
             </div>
             <div class="grid justify-center overflow-clip showAnim opacity-0 translate-x-16 duration-700 delay-200">
-                <h1 class="relative top-5 font-pixPixelFC text-[144px] text-primary">SERVICES</h1>
+                <h1 data-scroll data-scroll-speed="0.4" class="relative top-5 font-pixPixelFC text-[144px] text-primary">SERVICES</h1>
             </div>
         </section>
-    
-        <section class="container grid p-0 mt-[14px] pb-[120px] rounded-3xl">
+
+        <section data-scroll-section class="container grid p-0 mt-[14px] pb-[120px] rounded-3xl">
             <div class="flex justify-between items-center px-[175px] py-[260px]">
                 <p class="font-medium text-lg showAnim opacity-0 -translate-x-16 duration-700">(PROJECT)</p>
                 <div class="grid justify-center gap-y-10 font-pixPixelFC text-[32px] showAnim opacity-0 translate-y-16 duration-700 delay-100">
@@ -321,10 +289,8 @@
                 <div class="grid grid-cols-2">
                     <div class="grid place-content-center overflow-visible showAnim opacity-0 translate-y-16 duration-700">
                         <div class="box group grid place-content-center w-[630px] h-[498] overflow-clip rounded-2xl cursor-none">
-                            <Img src="files/img/Placeholder_Section_Image.webp" width="682" height="512" alt="Placeholder Image" class="object-cover object-center thumbnail" />
-                            
-                            <div class="title w-[150px] h-[150px] bg-white mix-blend-difference rounded-full transition duration-200">
-                                <p class="font-medium text-lg text-black">Discover</p>
+                            <div data-scroll data-scroll-speed="-1" class="grid place-content-center w-full h-full">
+                                <Img src="files/img/Placeholder_Section_Image.webp" width="682" height="512" alt="Placeholder Image" class="object-cover object-center scale-110" />
                             </div>
                         </div>
                     </div>
@@ -349,10 +315,8 @@
                 <div class="grid grid-cols-2">
                     <div class="grid place-content-center showAnim opacity-0 translate-y-16 duration-700">
                         <div class="box group grid place-content-center w-[630px] h-[498] overflow-clip rounded-2xl cursor-none">
-                            <Img src="files/img/Placeholder_Section_Image.webp" width="682" height="512" alt="Placeholder Image" class="object-cover object-center thumbnail" />
-                            
-                            <div class="title w-[150px] h-[150px] bg-white mix-blend-difference rounded-full transition duration-200">
-                                <p class="font-medium text-lg text-black">Discover</p>
+                            <div data-scroll data-scroll-speed="-1" class="grid place-content-center w-full h-full">
+                                <Img src="files/img/Placeholder_Section_Image.webp" width="682" height="512" alt="Placeholder Image" class="object-cover object-center scale-110" />
                             </div>
                         </div>
                     </div>
@@ -376,15 +340,15 @@
                 </div>
             </div>
         </section>
-    
-        <section class="container px-[66px]">
+
+        <section data-scroll-section class="container px-[66px]">
             <div class="flex items-center">
                 <div class="grid items-center">
                     <div class="flex gap-x-10">
-                        <p class="relative top-3 font-medium text-[#A3A3A3] text-lg">CONTACT</p>
-                        <h1 class="text-[80px] leading-[110%] tracking-[-3.2px]">If you have a general or</h1>
+                        <p class="relative top-3 font-medium text-[#A3A3A3] text-lg showAnim opacity-0 translate-x-16 duration-700">CONTACT</p>
+                        <h1 class="text-[80px] leading-[110%] tracking-[-3.2px] showAnim opacity-0 translate-y-16 duration-700 delay-100">If you have a general or</h1>
                     </div>
-                    <h2 class="text-[80px] max-w-[1000px] leading-[110%] tracking-[-3.2px]">
+                    <h2 class="text-[80px] max-w-[1000px] leading-[110%] tracking-[-3.2px] showAnim opacity-0 translate-y-16 duration-700 delay-100">
                         project enquiry, please drop
                         me an email or fill the
                         <span class="relative left-6 tracking-[32px]"> form</span>
@@ -397,7 +361,7 @@
                 </div>
             </div>
             <div class="flex items-center gap-x-10 mt-20">
-                <svg width="395" height="24" viewBox="0 0 395 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="showAnim opacity-0 -translate-x-16 duration-700 delay-200" width="395" height="24" viewBox="0 0 395 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 10.2857L0 13.7143L388 13.7143V17.1429H391.5V13.7143L395 13.7143V10.2857L391.5 10.2857V6.85714L388 6.85714V10.2857L0 10.2857ZM384.5 3.42857L388 3.42857V6.85714H384.5V3.42857ZM384.5 3.42857L381 3.42857V0L384.5 0V3.42857ZM384.5 20.5714L388 20.5714V17.1429L384.5 17.1429V20.5714ZM384.5 20.5714H381V24H384.5V20.5714Z" fill="url(#paint0_linear_2134_1575)"/>
                     <defs>
                     <linearGradient id="paint0_linear_2134_1575" x1="382" y1="24" x2="0" y2="24" gradientUnits="userSpaceOnUse">
@@ -406,20 +370,20 @@
                     </linearGradient>
                     </defs>
                 </svg>
-                <p class="text-[56px]">Tell us about your details</p>
+                <p class="text-[56px] showAnim opacity-0 -translate-x-16 duration-700 delay-500">Tell us about your details</p>
             </div>
             <div class="flex mt-[140px] mb-[100px]">
                 <div class="flex w-[435px]">
                     <div class="grid content-start gap-y-14">
-                        <div class="grid gap-y-4">
+                        <div class="grid gap-y-4 showAnim opacity-0 -translate-x-16 duration-700">
                             <h3 class="text-neutral-600 text-lg leading-[160%]">Email us</h3>
                             <a href="/" class="underline text-[32px] leading-[160%]">hi@nozaracy.com</a>
                         </div>
-                        <div class="grid gap-y-4">
+                        <div class="grid gap-y-4 showAnim opacity-0 -translate-x-16 duration-700 delay-100">
                             <h3 class="text-neutral-600 text-lg leading-[160%]">Instagram</h3>
                             <a href="/" class="text-[32px] leading-[160%]">@nozaracy</a>
                         </div>
-                        <div class="grid gap-y-4">
+                        <div class="grid gap-y-4 showAnim opacity-0 -translate-x-16 duration-700 delay-200">
                             <h3 class="text-neutral-600 text-lg leading-[160%]">Dribbble</h3>
                             <a href="/" class="text-[32px] leading-[160%]">Nozaracy</a>
                         </div>
@@ -427,8 +391,8 @@
                 </div>
                 <form class="grid content-start gap-y-20">
                     <div class="grid gap-y-10">
-                        <h2 class="text-2xl leading-[160%]">Service Needed :</h2>
-                        <div class="flex flex-wrap gap-x-4 gap-y-6 max-w-[736px]">
+                        <h2 class="text-2xl leading-[160%] showAnim opacity-0 translate-y-16 duration-700">Service Needed :</h2>
+                        <div class="flex flex-wrap gap-x-4 gap-y-6 max-w-[736px] showAnim opacity-0 translate-y-16 duration-700 delay-100">
                             <label data-text="Web Design" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
                                 <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="web design" checked onclick="checkBtn('ServiceRadio', 'RadioShell')"/>
                                 <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
@@ -542,9 +506,9 @@
                             </label>
                         </div>
                     </div>
-                    <div class="grid">
-                        <h2 class="text-2xl leading-[160%]">Let us know about you</h2>
-                        <div class="grid grid-cols-2 gap-x-10 mt-12 max-w-[736px]">
+                    <div class="grid gap-y-8">
+                        <h2 class="text-2xl leading-[160%] showAnim opacity-0 translate-y-16 duration-700 delay-300">Let us know about you</h2>
+                        <div class="grid grid-cols-2 gap-x-10 max-w-[736px] showAnim opacity-0 translate-y-16 duration-700 delay-[400ms]">
                             <div class="relative group">
                                 <input type="text" id="fullname" required onchange="checkInputValue('fullname', 'fullname-label')" class="grid w-full py-1 text-neutral-400 bg-transparent text-lg outline-none border-b border-solid border-[#737373]">
                                 <label id="fullname-label" for="fullname" class="transform transition-all absolute top-0 left-0 flex items-center text-2xl text-[#525252] group-focus-within:text-xs group-focus-within:-translate-y-full">Fullname*</label>
@@ -556,8 +520,8 @@
                         </div>
                     </div>
                     <div class="grid gap-y-10">
-                        <h2 class="text-2xl leading-[160%]">Service Needed (USD):</h2>
-                        <div class="flex flex-wrap gap-x-4 gap-y-6 max-w-[736px]">
+                        <h2 class="text-2xl leading-[160%] showAnim opacity-0 translate-y-16 duration-700 delay-500">Service Needed (USD):</h2>
+                        <div class="flex flex-wrap gap-x-4 gap-y-6 max-w-[736px] showAnim opacity-0 translate-y-16 duration-700 delay-[600ms]">
                             <label data-text="Under $5K" class="PriceShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
                                 <input type="radio" name="ServicePrice" class="absolute opacity-0" value="below $5k" checked onclick="checkBtn('ServicePrice', 'PriceShell')"/>
                                 <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
@@ -606,11 +570,11 @@
                         </div>
                     </div>
                     <div class="grid gap-y-12 max-w-[736px]">
-                        <div class="relative group">
+                        <div class="relative group showAnim opacity-0 translate-y-16 duration-700 delay-700">
                             <textarea id="description" required onchange="checkInputValue('description', 'description-label')" class="grid w-full h-[26px] py-1 text-neutral-400 bg-transparent text-lg outline-none border-b border-solid border-[#737373] resize-none"></textarea>
                             <label id="description-label" for="description" class="transform transition-all absolute top-0 left-0 flex items-center text-2xl text-[#525252] group-focus-within:text-xs group-focus-within:-translate-y-full">Describe your project</label>
                         </div>
-                        <div class="flex justify-start">
+                        <div class="flex justify-start showAnim opacity-0 translate-y-16 duration-700 delay-[800ms]">
                             <button type="submit" data-text="Submit" class="nav-btn relative grid place-content-center px-8 py-[14px] text-black hover:text-white bg-secondary hover:bg-transparent border border-solid border-secondary hover:border-white rounded-[450px] transition duration-300">
                                 <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
                                     <span>S</span>
@@ -626,21 +590,21 @@
                 </form>
             </div> 
         </section>
-    
-        <footer class="container flex justify-between items-center py-20 px-[66px]">
-            <div class="flex gap-x-10 text-lg text-neutral-600">
+
+        <footer data-scroll-section class="container flex justify-between items-center py-20 px-[66px]">
+            <div class="flex gap-x-10 text-lg text-neutral-600 showAnim opacity-0 translate-y-16 duration-700">
                 <p>Earth</p>
                 <p>Nozaracy© 2023 Ltd.</p>
                 <a href="/" class="hover:text-secondary transition duration-300">Terms & Services</a>
             </div>
-            <div class="grid place-content-center">
+            <div class="grid place-content-center showAnim opacity-0 translate-y-16 duration-700 delay-100">
                 <picture>
                     <source srcset="files/img/Nozaracy_Brand_Colored_Icon.webp" class="w-[168px] h-[34px]" type="image/webp">
                     <source srcset="files/img/Nozaracy_Brand_Colored_Icon.png" class="w-[168px] h-[34px]" type="image/png"> 
                     <img src="files/img/Nozaracy_Brand_Colored_Icon.png" width="168" height="34" alt="Brand Colored" class="w-[168px] h-[34px]" />
                 </picture>
             </div>
-            <div class="flex gap-x-10 text-lg text-neutral-600">
+            <div class="flex gap-x-10 text-lg text-neutral-600 showAnim opacity-0 translate-y-16 duration-700 delay-200">
                 <a href="/" class="hover:text-secondary transition duration-300">Telegram</a>
                 <a href="/" class="hover:text-secondary transition duration-300">Instagram</a>
                 <a href="/" class="hover:text-secondary transition duration-300">Dribbble</a>
@@ -648,34 +612,65 @@
             </div>
         </footer>
     
-        <div class="container p-0">
-            <div class="grid justify-center overflow-clip">
+        <div data-scroll-section class="container p-0">
+            <div class="grid justify-center overflow-clip showAnim opacity-0 translate-y-16 duration-700 delay-300">
                 <h1 class="relative top-5 font-pixPixelFC text-[144px] text-white">CONTACT</h1>
             </div>
         </div>
     </main>
 
-    <script src="files/javascript/intersectionObserver.js?version=6"></script>
-    <script src="files/javascript/OnHoverBox.js?version=6"></script>
-    <script src="files/javascript/TextareaResizer.js?version=6"></script>
-    <script src="files/javascript/Package.js?version=6"></script>
-    <script src="files/javascript/simpleParallax.min.js?version=6"></script>
-    <script src="files/javascript/locomotive-scroll.min.js?version=6"></script>
+    <!-- Mouse Hover -->
+    <div id="mouse" class="fixed w-2 h-2 -translate-x-1/2 -translate-y-1/2 bg-transparent bg-white mix-blend-difference rounded-full pointer-events-none z-50"></div>
+    
+    <!-- ArtBox Hover -->
+    <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
+        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+    </div>
+    <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
+        <img src="files/img/Opengraph.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+    </div>
+    <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
+        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+    </div>
+    <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
+        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+    </div>
+    <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
+        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+    </div>
+    <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
+        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+    </div>
+    <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
+        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+    </div>
+    <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
+        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+    </div>
+
+    <!-- Content Image Hover -->
+    <div class="title w-[150px] h-[150px] bg-white mix-blend-difference rounded-full transition duration-200">
+        <p class="font-medium text-lg text-black">Discover</p>
+    </div>
+    <div class="title w-[150px] h-[150px] bg-white mix-blend-difference rounded-full transition duration-200">
+        <p class="font-medium text-lg text-black">Discover</p>
+    </div>
+
+    <script src="files/javascript/intersectionObserver.js?version=7.2"></script>
+    <script src="files/javascript/OnHoverBox.js?version=7.2"></script>
+    <script src="files/javascript/TextareaResizer.js?version=7.2"></script>
+    <script src="files/javascript/Package.js?version=7.2"></script>
+    <script src="files/javascript/locomotive-scroll.min.js?version=7.2"></script>
     <script>
         checkBtn('ServiceRadio', 'RadioShell');
         checkBtn('ServicePrice', 'PriceShell');
         checkInputValue('fullname', 'fullname-label');
         checkInputValue('gmail', 'gmail-label');
-        
-        var image = document.getElementsByClassName('thumbnail');
-        new simpleParallax(image, {
-            orientation: 'down',
-            delay: .6,
-	        transition: 'cubic-bezier(0,0,0,1)'
-        });
 
         const scroll = new LocomotiveScroll({
             el: document.querySelector("[data-scroll-container]"),
+            smooth: true,
+            scrollFromAnywhere: true,
         });
     </script>
 </body>

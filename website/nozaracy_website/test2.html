@@ -20,9 +20,9 @@
     <link rel="icon" type="image/x-icon" href="files/favicon.ico">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="files/css/style.css?version=7.2">
-    <link rel="stylesheet" href="files/css/tailwind.css?version=7.2">
-    <link rel="stylesheet" href="files/css/locomotive-scroll.min.css?version=7.2">
+    <link rel="stylesheet" href="files/css/style.css?version=7.3">
+    <link rel="stylesheet" href="files/css/tailwind.css?version=7.3">
+    <link rel="stylesheet" href="files/css/locomotive-scroll.min.css?version=7.3">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,8 +37,8 @@
     <header class="fixed top-[30px] right-[66px] w-full flex z-40">
         <div class="relative container flex justify-end">
             <nav class="absolute right-0 flex items-center p-[14px] mx-auto gap-x-2 text-white bg-tertiary-500 rounded-[344px]">
-                <a href="/" data-text="Service" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:bg-secondary rounded-[545px]">
-                    <div class="absolute flex justify-center items-center w-full h-full text-tertiary-500 transition duration-300">
+                <a href="/" data-text="Service" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:text-tertiary-500 hover:bg-secondary rounded-[545px]">
+                    <div class="absolute flex justify-center items-center w-full h-full">
                         <span>S</span>
                         <span>e</span>
                         <span>r</span>
@@ -48,7 +48,7 @@
                         <span>e</span>
                     </div>
                 </a>
-                <a href="/" data-text="Works" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:text-tertiary-500 hover:bg-secondary rounded-[545px] transition duration-300">
+                <a href="/" data-text="Works" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:text-tertiary-500 hover:bg-secondary rounded-[545px]">
                     <div class="absolute flex justify-center items-center w-full h-full">
                         <span>W</span>
                         <span>o</span>
@@ -57,7 +57,7 @@
                         <span>s</span>
                     </div>
                 </a>
-                <a href="/" data-text="Contact Us" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:text-tertiary-500 hover:bg-secondary rounded-[545px] transition duration-300">
+                <a href="/" data-text="Contact Us" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:text-tertiary-500 hover:bg-secondary rounded-[545px]">
                     <div class="absolute flex justify-center items-center w-full h-full">
                         <span>C</span>
                         <span>o</span>
@@ -71,7 +71,7 @@
                         <span>s</span>
                     </div>
                 </a>
-                <a href="/" data-text="Contact Us" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:text-tertiary-500 hover:bg-secondary rounded-[545px] transition duration-300">
+                <a href="/" data-text="Contact Us" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:text-tertiary-500 hover:bg-secondary rounded-[545px]">
                     <div class="absolute flex justify-center items-center w-full h-full">
                         <span>C</span>
                         <span>o</span>
@@ -93,7 +93,11 @@
         <section data-scroll-section class="relative container px-[66px] py-[14px] pb-[80px] bg-neutral-100 text-tertiary-500 rounded-3xl">
             <div data-scroll data-scroll-speed="0.2" class="flex justify-between items-center">
                 <a href="/" class="p-[12px]">
-                    <img src="files/img/Nozaracy_Brand_Icon.webp" width="133" height="30" alt="Brand Icon" />
+                    <picture>
+                        <source srcset="files/img/Nozaracy_Brand_Icon.webp" type="image/webp">
+                        <source srcset="files/img/Nozaracy_Brand_Icon.png" type="image/png"> 
+                        <img src="files/img/Nozaracy_Brand_Icon.png" width="133" height="30" alt="Brand Icon" />
+                    </picture>
                 </a>
             </div>
             <div data-scroll data-scroll-speed="0.2" class="flex justify-between mt-[100px]">
@@ -118,7 +122,11 @@
         <section data-scroll-section class="container p-0 pb-[14px] mt-[14px] bg-primary rounded-3xl">
             <div class="grid w-full h-[564px] rounded-3xl overflow-clip showAnim opacity-0 translate-y-16 duration-700">
                 <div class="grid place-content-center w-full h-full" data-scroll data-scroll-speed="-1">
-                    <img src="files/img/Placeholder_Img.webp" width="1412" height="564px" alt="Section Background Image" class="w-full h-full object-cover object-top scale-150" />
+                    <picture>
+                        <source srcset="files/img/Placeholder_Img.webp" class="w-full h-full object-cover object-top scale-150" type="image/webp">
+                        <source srcset="files/img/Placeholder_Img.png" class="w-full h-full object-cover object-top scale-150" type="image/png"> 
+                        <img src="files/img/Placeholder_Img.png" width="1412" height="564px" alt="Section Background Image" class="w-full h-full object-cover object-top scale-150" />
+                    </picture>
                 </div>
             </div>
             <div data-scroll data-scroll-speed="0.2" class="flex justify-between px-[66px] mt-[25px] text-lg">
@@ -290,7 +298,11 @@
                     <div class="grid place-content-center overflow-visible showAnim opacity-0 translate-y-16 duration-700">
                         <div class="box group grid place-content-center w-[630px] h-[498] overflow-clip rounded-2xl cursor-none">
                             <div data-scroll data-scroll-speed="-1" class="grid place-content-center w-full h-full">
-                                <Img src="files/img/Placeholder_Section_Image.webp" width="682" height="512" alt="Placeholder Image" class="object-cover object-center scale-110" />
+                                <picture>
+                                    <source srcset="files/img/Placeholder_Section_Image.webp" class="object-cover object-center scale-110" type="image/webp">
+                                    <source srcset="files/img/Placeholder_Section_Image.png" class="object-cover object-center scale-110" type="image/png"> 
+                                    <img src="files/img/Placeholder_Section_Image.png" width="682" height="512" alt="Placeholder Image" class="object-cover object-center scale-110" />
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -305,7 +317,7 @@
                         <div class="flex gap-x-2 mt-20">
                             <div class="grid place-content-center py-[14px] px-8 text-lg border border-solid border-white rounded-[450px] showAnim opacity-0 translate-x-16 duration-700 delay-[400ms]">
                                 Agency Website Design
-                            </div>
+                            </div>picture
                             <div class="grid place-content-center py-[14px] px-8 text-lg border border-solid border-white rounded-[450px] showAnim opacity-0 translate-x-16 duration-700 delay-500">
                                 Development
                             </div>
@@ -316,7 +328,11 @@
                     <div class="grid place-content-center showAnim opacity-0 translate-y-16 duration-700">
                         <div class="box group grid place-content-center w-[630px] h-[498] overflow-clip rounded-2xl cursor-none">
                             <div data-scroll data-scroll-speed="-1" class="grid place-content-center w-full h-full">
-                                <Img src="files/img/Placeholder_Section_Image.webp" width="682" height="512" alt="Placeholder Image" class="object-cover object-center scale-110" />
+                                <picture>
+                                    <source srcset="files/img/Placeholder_Section_Image.webp" class="object-cover object-center scale-110" type="image/webp">
+                                    <source srcset="files/img/Placeholder_Section_Image.png" class="object-cover object-center scale-110" type="image/png"> 
+                                    <img src="files/img/Placeholder_Section_Image.png" width="682" height="512" alt="Placeholder Image" class="object-cover object-center scale-110" />
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -393,7 +409,7 @@
                     <div class="grid gap-y-10">
                         <h2 class="text-2xl leading-[160%] showAnim opacity-0 translate-y-16 duration-700">Service Needed :</h2>
                         <div class="flex flex-wrap gap-x-4 gap-y-6 max-w-[736px] showAnim opacity-0 translate-y-16 duration-700 delay-100">
-                            <label data-text="Web Design" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                            <label data-text="Web Design" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer">
                                 <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="web design" checked onclick="checkBtn('ServiceRadio', 'RadioShell')"/>
                                 <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
                                     <span>W</span>
@@ -409,7 +425,7 @@
                                 </div>
                             </label>
                             
-                            <label data-text="App Design" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                            <label data-text="App Design" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer">
                                 <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="app design" onclick="checkBtn('ServiceRadio', 'RadioShell')" />
                                 <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
                                     <span>A</span>
@@ -425,7 +441,7 @@
                                 </div>
                             </label>
     
-                            <label data-text="Branding" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                            <label data-text="Branding" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer">
                                 <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="branding" onclick="checkBtn('ServiceRadio', 'RadioShell')" />
                                 <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
                                     <span>B</span>
@@ -439,7 +455,7 @@
                                 </div>
                             </label>
     
-                            <label data-text="Developer" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                            <label data-text="Developer" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer">
                                 <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="developer" onclick="checkBtn('ServiceRadio', 'RadioShell')" />
                                 <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
                                     <span>D</span>
@@ -454,7 +470,7 @@
                                 </div>
                             </label>
     
-                            <label data-text="Pitch Deck" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                            <label data-text="Pitch Deck" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer">
                                 <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="pitch deck" onclick="checkBtn('ServiceRadio', 'RadioShell')" />
                                 <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
                                     <span>P</span>
@@ -470,7 +486,7 @@
                                 </div>
                             </label>
     
-                            <label data-text="SAAS" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                            <label data-text="SAAS" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer">
                                 <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="saas" onclick="checkBtn('ServiceRadio', 'RadioShell')" />
                                 <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
                                     <span>S</span>
@@ -480,7 +496,7 @@
                                 </div>
                             </label>
     
-                            <label data-text="Social Media Design" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                            <label data-text="Social Media Design" class="RadioShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer">
                                 <input type="radio" name="ServiceRadio" class="absolute opacity-0" value="social media design" onclick="checkBtn('ServiceRadio', 'RadioShell')" />
                                 <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
                                     <span>S</span>
@@ -522,7 +538,7 @@
                     <div class="grid gap-y-10">
                         <h2 class="text-2xl leading-[160%] showAnim opacity-0 translate-y-16 duration-700 delay-500">Service Needed (USD):</h2>
                         <div class="flex flex-wrap gap-x-4 gap-y-6 max-w-[736px] showAnim opacity-0 translate-y-16 duration-700 delay-[600ms]">
-                            <label data-text="Under $5K" class="PriceShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                            <label data-text="Under $5K" class="PriceShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer">
                                 <input type="radio" name="ServicePrice" class="absolute opacity-0" value="below $5k" checked onclick="checkBtn('ServicePrice', 'PriceShell')"/>
                                 <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
                                     <span>U</span>
@@ -536,7 +552,7 @@
                                     <span>K</span>
                                 </div>
                             </label>
-                            <label data-text="$5K - $15K" class="PriceShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                            <label data-text="$5K - $15K" class="PriceShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer">
                                 <input type="radio" name="ServicePrice" class="absolute opacity-0" value="$5k - $15k" onclick="checkBtn('ServicePrice', 'PriceShell')" />
                                 <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
                                     <span>$</span>
@@ -551,7 +567,7 @@
                                     <span>K</span>
                                 </div>
                             </label>
-                            <label data-text="$15K - $25K" class="PriceShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer transition duration-300">
+                            <label data-text="$15K - $25K" class="PriceShell nav-btn relative grid place-content-center py-[14px] px-8 text-neutral-600 hover:text-black bg-transparent hover:bg-white border border-solid border-neutral-600 hover:border-white rounded-[450px] cursor-pointer">
                                 <input type="radio" name="ServicePrice" class="absolute opacity-0" value="$15k - $25k" onclick="checkBtn('ServicePrice', 'PriceShell')" />
                                 <div class="absolute left-0 top-0 flex justify-center items-center w-full h-full">
                                     <span>$</span>
@@ -620,32 +636,64 @@
     </main>
 
     <!-- Mouse Hover -->
-    <div id="mouse" class="fixed w-2 h-2 -translate-x-1/2 -translate-y-1/2 bg-transparent bg-white mix-blend-difference rounded-full pointer-events-none z-50"></div>
+    <div id="mouse" class="fixed w-4 h-4 -translate-x-1/2 -translate-y-1/2 bg-transparent bg-white mix-blend-difference rounded-full pointer-events-none z-50"></div>
     
     <!-- ArtBox Hover -->
     <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
-        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        <picture>
+            <source srcset="files/img/HoverPlaceholder.webp" class="w-[300px] h-[300px] object-cover object-center" type="image/webp">
+            <source srcset="files/img/HoverPlaceholder.png" class="w-[300px] h-[300px] object-cover object-center" type="image/png"> 
+            <img src="files/img/HoverPlaceholder.png" width="400" height="300" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        </picture>
     </div>
     <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
-        <img src="files/img/Opengraph.png" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        <picture>
+            <source srcset="files/img/HoverPlaceholder.webp" class="w-[300px] h-[300px] object-cover object-center" type="image/webp">
+            <source srcset="files/img/HoverPlaceholder.png" class="w-[300px] h-[300px] object-cover object-center" type="image/png"> 
+            <img src="files/img/HoverPlaceholder.png" width="400" height="300" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        </picture>
     </div>
     <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
-        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        <picture>
+            <source srcset="files/img/HoverPlaceholder.webp" class="w-[300px] h-[300px] object-cover object-center" type="image/webp">
+            <source srcset="files/img/HoverPlaceholder.png" class="w-[300px] h-[300px] object-cover object-center" type="image/png"> 
+            <img src="files/img/HoverPlaceholder.png" width="400" height="300" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        </picture>
     </div>
     <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
-        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        <picture>
+            <source srcset="files/img/HoverPlaceholder.webp" class="w-[300px] h-[300px] object-cover object-center" type="image/webp">
+            <source srcset="files/img/HoverPlaceholder.png" class="w-[300px] h-[300px] object-cover object-center" type="image/png"> 
+            <img src="files/img/HoverPlaceholder.png" width="400" height="300" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        </picture>
     </div>
     <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
-        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        <picture>
+            <source srcset="files/img/HoverPlaceholder.webp" class="w-[300px] h-[300px] object-cover object-center" type="image/webp">
+            <source srcset="files/img/HoverPlaceholder.png" class="w-[300px] h-[300px] object-cover object-center" type="image/png"> 
+            <img src="files/img/HoverPlaceholder.png" width="400" height="300" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        </picture>
     </div>
     <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
-        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        <picture>
+            <source srcset="files/img/HoverPlaceholder.webp" class="w-[300px] h-[300px] object-cover object-center" type="image/webp">
+            <source srcset="files/img/HoverPlaceholder.png" class="w-[300px] h-[300px] object-cover object-center" type="image/png"> 
+            <img src="files/img/HoverPlaceholder.png" width="400" height="300" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        </picture>
     </div>
     <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
-        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        <picture>
+            <source srcset="files/img/HoverPlaceholder.webp" class="w-[300px] h-[300px] object-cover object-center" type="image/webp">
+            <source srcset="files/img/HoverPlaceholder.png" class="w-[300px] h-[300px] object-cover object-center" type="image/png"> 
+            <img src="files/img/HoverPlaceholder.png" width="400" height="300" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        </picture>
     </div>
     <div class="title w-[300px] h-[300px] rounded-lg bg-purple-500 transition duration-200 z-50">
-        <img src="files/img/HoverPlaceholder.webp" width="400px" height="300px" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        <picture>
+            <source srcset="files/img/HoverPlaceholder.webp" class="w-[300px] h-[300px] object-cover object-center" type="image/webp">
+            <source srcset="files/img/HoverPlaceholder.png" class="w-[300px] h-[300px] object-cover object-center" type="image/png"> 
+            <img src="files/img/HoverPlaceholder.png" width="400" height="300" alt="Placeholder Image" class="w-[300px] h-[300px] object-cover object-center" />
+        </picture>
     </div>
 
     <!-- Content Image Hover -->
@@ -656,11 +704,8 @@
         <p class="font-medium text-lg text-black">Discover</p>
     </div>
 
-    <script src="files/javascript/intersectionObserver.js?version=7.2"></script>
-    <script src="files/javascript/OnHoverBox.js?version=7.2"></script>
-    <script src="files/javascript/TextareaResizer.js?version=7.2"></script>
-    <script src="files/javascript/Package.js?version=7.2"></script>
-    <script src="files/javascript/locomotive-scroll.min.js?version=7.2"></script>
+    <script src="files/javascript/Package.js?version=7.3"></script>
+    <script src="files/javascript/locomotive-scroll.min.js?version=7.3"></script>
     <script>
         checkBtn('ServiceRadio', 'RadioShell');
         checkBtn('ServicePrice', 'PriceShell');

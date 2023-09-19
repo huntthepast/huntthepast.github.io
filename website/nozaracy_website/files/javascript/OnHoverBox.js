@@ -26,9 +26,9 @@ const onMouseLeave = (e, i) => {
     title[i].style.transform = 'translate(-50%,-50%) scale(0)';
 }
 
-htmlDoc.addEventListener("mousemove", (e) => onMouseMove(e));
-htmlDoc.addEventListener("mousemove", (e) => onGlobalMove(e));
-htmlDoc.addEventListener("scroll", (e) => onGlobalMove(e));
+window.addEventListener("mousemove", (e) => onMouseMove(e));
+window.addEventListener("mousemove", (e) => onGlobalMove(e));
+window.addEventListener("scroll", (e) => onGlobalMove(e));
 
 thumbs.forEach((thumb, i) => {
     thumb.addEventListener("mouseenter", (e) => onMouseEnter(e, i));

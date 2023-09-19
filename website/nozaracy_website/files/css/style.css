@@ -102,9 +102,13 @@
   animation-delay: 600ms;
 }
 
+.nav-btn {
+    transition: background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+}
+
 .nav-btn:before {
     content: attr(data-text);
-	transition: 0.25s ease-in-out;
+	transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
     opacity: 1;
     transform: translate(0, -2px);
 }
@@ -114,7 +118,7 @@
 }
 
 .nav-btn span {
-    transition: 0.25s cubic-bezier(0.5, -1, 0.5, 2);
+    transition: transform 0.25s cubic-bezier(0.5, -1, 0.5, 2), opacity 0.25s cubic-bezier(0.5, -1, 0.5, 2);
     opacity: 0;
     transform: translate(0, -20px);
 }
@@ -181,4 +185,8 @@
 }
 .nav-btn:hover span:nth-child(20) {
     transition-delay: 0.425s; 
+}
+
+#mouse {
+    transition: top 0.1s ease-out, left 0.1s ease-out;
 }

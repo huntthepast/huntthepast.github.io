@@ -190,3 +190,62 @@
 #mouse {
     transition: top 0.4s ease-out, left 0.4s ease-out;
 }
+
+/* Animate Onboarding */
+#onboarding {
+    animation-duration: 6s;
+    animation-name: scaleImage;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.onboarding-icon {
+    animation-duration: 5s;
+    animation-name: changeFill;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+#onboard {
+    animation-duration: 3s, 3s;
+    animation-name: changeBgn, changeTransparancy;
+    animation-delay: 3s, 6s;
+    animation-fill-mode: forwards;
+    background-color: #070707;
+}
+
+@keyframes scaleImage {
+    from{
+        transform: scale(1, 1);
+    }
+    to{
+        transform: scale(5, 5);
+    }
+}
+
+@keyframes changeFill {
+    from{
+        fill: #EDFF21;
+    }
+    to{
+        fill: white;
+    }
+}
+
+@keyframes changeBgn {
+    from{
+        background-color: #070707;
+    }
+    to{
+        background-color: white;
+    }
+}
+
+@keyframes changeTransparancy {
+    from{
+        opacity: 100;
+    }
+    to{
+        opacity: 0;
+    }
+}

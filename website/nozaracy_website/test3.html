@@ -90,7 +90,7 @@
     </header>
 
     <!-- OnBoard Animation -->
-    <!-- <section id="onboard" class="fixed top-0 left-0 grid place-content-center w-screen h-screen pointer-events-none z-50">
+    <section id="onboard" class="fixed top-0 left-0 grid place-content-center w-screen h-screen pointer-events-none z-50">
         <div class="grid place-content-center">
             <svg id="onboarding" width="150" height="120" viewBox="0 0 150 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="25" y="76" width="40" height="44" fill="url(#gradient)" class="onboarding-icon -skew-x-12" />
@@ -130,7 +130,7 @@
                 </defs>
             </svg>
         </div>
-    </section> -->
+    </section>
 
     <!-- OnBoard Border Background -->
     <section id="onboardborder" class="bg-neutral-100 transition duration-700 ease-in-out"></section>
@@ -151,7 +151,7 @@
                     <p class="max-w-[200px]">Lorem ipsum dolor sit amet consetetur.</p>
                 </div>
                 <div data-scroll data-scroll-speed="0.1" class="flex justify-between">
-                    <button type="button" class="grid justify-center content-between py-6 showAnim opacity-0 translate-y-16 duration-700 delay-100">
+                    <button type="button" onclick="GotoBtn('#section2')" class="grid justify-center content-between py-6 showAnim opacity-0 translate-y-16 duration-700 delay-100">
                         <p class="text-lg">2023</p>
                         <div class="grid place-content-center w-[52px] h-[52px] border border-tertiary-300 rounded-full">
                             <svg width="16" height="14" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -208,7 +208,7 @@
                     <p class="max-w-[628px] text-2xl">Our designs will create an impression for our customers, With an expert experience <span class="text-[#737373]">in the digital design industry, we have the expertise to deliver outstanding results and build trust with human experience.</span></p>
                 </div>
                 <div class="flex justify-between items-center pl-[160px]">
-                    <button type="button" class="grid justify-center content-between py-6 showAnim opacity-0 translate-y-16 duration-700 delay-100">
+                    <button type="button" onclick="GotoBtn('#section3')" class="grid justify-center content-between py-6 showAnim opacity-0 translate-y-16 duration-700 delay-100">
                         <div class="grid place-content-center w-[52px] h-[52px] border border-tertiary-300 rounded-full">
                             <svg width="21" height="18" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.6665 -3.49691e-07L7.99984 -4.66255e-07L7.99984 16L5.33317 16L5.33317 18.6667L7.99984 18.6667L7.99984 21.3333L10.6665 21.3333L10.6665 18.6667L13.3332 18.6667L13.3332 16L10.6665 16L10.6665 -3.49691e-07ZM15.9998 13.3333L15.9998 16L13.3332 16L13.3332 13.3333L15.9998 13.3333ZM15.9998 13.3333L15.9998 10.6667L18.6665 10.6667L18.6665 13.3333L15.9998 13.3333ZM2.6665 13.3333L2.6665 16L5.33317 16L5.33317 13.3333L2.6665 13.3333ZM2.6665 13.3333L2.6665 10.6667L-0.000162591 10.6667L-0.000162707 13.3333L2.6665 13.3333Z" fill="white"/>
@@ -252,7 +252,7 @@
         </section>
 
         <!-- Section 3 -->
-        <section data-scroll-section class="container grid justify-center py-0 px-[66px] mt-[14px] text-tertiary-500 bg-neutral-100 rounded-3xl overflow-hidden">
+        <section data-scroll-section id="section3" class="container grid justify-center py-0 px-[66px] mt-[14px] text-tertiary-500 bg-neutral-100 rounded-3xl overflow-hidden">
             <div id="fixed" class="grid grid-cols-5 content-start gap-x-[50px] bg-green-500/20">
                 <div data-scroll data-scroll-sticky data-scroll-target="#fixed" class="col-span-2 grid content-between w-full h-screen max-h-[720px] pt-[70px] showAnim transition-opacity opacity-0 translate-y-16 duration-700 bg-green-500/20">
                     <div class="grid gap-y-5">
@@ -357,7 +357,7 @@
             </div>
         </section>
 
-        <section data-scroll-section class="container grid p-0 mt-[14px] pb-[120px] rounded-3xl">
+        <section data-scroll-section id="section4" class="container grid p-0 mt-[14px] pb-[120px] rounded-3xl">
             <div class="flex justify-between items-center px-[175px] py-[260px]">
                 <p class="font-medium text-lg showAnim opacity-0 -translate-x-16 duration-700">(PROJECT)</p>
                 <div class="grid justify-center gap-y-10 font-pixPixelFC text-[32px] showAnim opacity-0 translate-y-16 duration-700 delay-100">
@@ -430,7 +430,7 @@
             </div>
         </section>
 
-        <section data-scroll-section class="container px-[66px]">
+        <section data-scroll-section id="section5" class="container px-[66px]">
             <div class="flex items-center">
                 <div class="grid items-center">
                     <div class="flex gap-x-10">
@@ -804,6 +804,15 @@
             //     onBoardBorder.style.transform = 'translate(0px, 0px) scale(1)';
             // }
         })
+        
+        function GotoBtn(location) {
+            scroll.scrollTo(location,
+                {
+                    'duration': 600,
+                    'easing': [0.25, 0.00, 0.35, 1.00],
+                }
+            )
+        }
         
     </script>
 </body>

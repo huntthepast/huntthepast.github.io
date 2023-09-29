@@ -100,7 +100,7 @@ function OnInput() {
 const htmlDoc = document.querySelector('#main');
 const mouseSprite = document.querySelector('#mouse');
 const thumbs = document.querySelectorAll(".box");
-const title = document.querySelectorAll(".title")
+const title = document.querySelectorAll(".title");
 
 const onGlobalMove = (e) => {
     const scrollLeft = (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
@@ -127,7 +127,7 @@ const onMouseLeave = (e, i) => {
 
 window.addEventListener("mousemove", (e) => onMouseMove(e));
 window.addEventListener("mousemove", (e) => onGlobalMove(e));
-window.addEventListener("scroll", (e) => onGlobalMove(e));
+window.addEventListener("wheel", (e) => onGlobalMove(e));
 
 thumbs.forEach((thumb, i) => {
     thumb.addEventListener("mouseenter", (e) => onMouseEnter(e, i));

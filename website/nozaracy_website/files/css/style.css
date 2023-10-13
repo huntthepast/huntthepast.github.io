@@ -1,3 +1,6 @@
+/* Global */
+
+
 /* Font Family */
 @font-face {
     font-family: 'Satoshi-Variable';
@@ -136,6 +139,14 @@
 	-o-animation: rotating 2s linear infinite;
 	animation: rotating 2s linear infinite;
   animation-delay: 600ms;
+}
+
+.rotating4 {
+	-webkit-animation: rotating 1.5s linear infinite;
+	-moz-animation: rotating 1.5s linear infinite;
+	-ms-animation: rotating 1.5s linear infinite;
+	-o-animation: rotating 1.5s linear infinite;
+	animation: rotating 1.5s linear infinite;
 }
 
 .nav-btn {

@@ -3,7 +3,7 @@
 function checkScreenSize() {
     const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
-    console.log(width, height);
+    // console.log(width, height);
 }
 
 /////////////////////////////////////// Intersection Observer /////////////////////////////////////
@@ -45,6 +45,7 @@ function checkBtn(id, shell) {
             // Change Radio Style On
             radioShell[i].classList.add('text-black');
             radioShell[i].classList.remove('text-neutral-600');
+            radioShell[i].classList.remove('bg-black');
             radioShell[i].classList.add('bg-white');
             radioShell[i].classList.remove('bg-transparent');
             radioShell[i].classList.add('border-white');
@@ -55,6 +56,7 @@ function checkBtn(id, shell) {
             // Change Radio Style Off
             radioShell[i].classList.remove('text-black');
             radioShell[i].classList.add('text-neutral-600');
+            radioShell[i].classList.add('bg-black');
             radioShell[i].classList.remove('bg-white');
             radioShell[i].classList.add('bg-transparent');
             radioShell[i].classList.remove('border-white');
@@ -71,18 +73,30 @@ function checkInputValue(id, label) {
     if (input && input.value) {
         // console.log(input.value);
         inputLabel.classList.remove('text-2xl');
-
+        inputLabel.classList.remove('-top-[14px]');
+        
+        inputLabel.classList.add('top-0');
         inputLabel.classList.add('text-xs');
         inputLabel.classList.add('-translate-y-full'); 
     }
     else {
         // console.log("no Value");
         inputLabel.classList.add('text-2xl');
-
+        inputLabel.classList.add('-top-[14px]');
+        
+        inputLabel.classList.remove('top-0');
         inputLabel.classList.remove('text-xs');
         inputLabel.classList.remove('-translate-y-full'); 
     }
 };
+
+function homepageBtnInit() {
+    checkBtn('ServiceRadio', 'RadioShell');
+    checkBtn('ServicePrice', 'PriceShell');
+    checkInputValue('fullname', 'fullname-label');
+    checkInputValue('gmail', 'gmail-label');
+    checkInputValue('description', 'description-label');
+}
 
 // Set Textarea Size
 const tx = document.getElementsByTagName("textarea");

@@ -20,9 +20,9 @@
     <link rel="icon" type="image/x-icon" href="files/favicon.ico">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="files/css/style.css?version=9.3">
-    <link rel="stylesheet" href="files/css/tailwind.css?version=9.3">
-    <link rel="stylesheet" href="files/css/locomotive-scroll.min.css?version=9.3">
+    <link rel="stylesheet" href="files/css/style.css?version=10.3">
+    <link rel="stylesheet" href="files/css/tailwind.css?version=10.3">
+    <link rel="stylesheet" href="files/css/locomotive-scroll.min.css?version=10.3">
 
     <!-- CDN -->
         <!-- Google Font -->
@@ -40,9 +40,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js" integrity="sha384-KwBSlAC5k+1tvNZWTOn4ZtdKZWx17q+Gs3Sls/mYDHx/F2TMg5dNmYYxmmtRLjt5" crossorigin="anonymous"></script>
 </head>
 <body id="main" class="grid font-satoshiVariable text-white bg-tertiary-500">
-    <header class="fixed top-[30px] right-[66px] w-full flex z-40">
+    <header class="fixed top-[30px] right-[66px] w-full flex bg-red-500 z-40">
         <div class="relative container flex justify-end">
-            <nav class="absolute right-0 flex items-center p-[14px] mx-auto gap-x-2 text-white bg-tertiary-500 rounded-[344px]">
+            <nav id="MainHeader" class="absolute right-0 flex items-center p-[14px] mx-auto gap-x-2 text-white bg-tertiary-500 border border-[#404040] rounded-[344px] transition duration-700">
                 <a href="/" data-text="Service" class="nav-btn relative grid place-content-center px-[18px] py-[6px] hover:text-tertiary-500 hover:bg-secondary rounded-[545px]">
                     <div class="absolute flex justify-center items-center w-full h-full">
                         <span>S</span>
@@ -244,7 +244,7 @@
                                 </div>
                             </div>
                             <div class="relative group grid place-content-center gap-y-2 w-[300px] h-[300px] rounded-full z-10 showAnim opacity-0 translate-y-16 duration-700 delay-300">
-                                <div class="conicBg rotating3 rotate-[70deg] w-[300px] h-[300px] rounded-full"></div>
+                                <div class="bg-[conic-gradient(#FFFFFF00,#FFFFFF00,#FFFFFFEB,#FFFFFF,#FFFFFF00)] group-hover:bg-[conic-gradient(#FFFFFF00,#FFFFFF00,red,red,#FFFFFF00)] rotating3 rotate-[70deg] w-[300px] h-[300px] rounded-full"></div>
                                 <div class="absolute top-[1px] left-[1px] grid place-content-center w-[298px] h-[298px] bg-tertiary-500 rounded-full">
                                     <div class="relative flex justify-center">
                                         <h2 class="font-medium text-[80px] leading-none group-hover:text-secondary transition duration-500">8</h2>
@@ -372,19 +372,73 @@
             <div id="section4" class="grid w-screen h-[300vw]">
                 <div data-scroll data-scroll-sticky data-scroll-target="#section4" class="horizontal-scroll-container grid h-screen">
                     <div class="horizontal-scroll flex flex-nowrap items-center w-fit h-screen">
-                        <div class="grid p-[14px] w-screen h-full">
+                        <div class="relative grid p-[14px] w-screen h-full">
                             <div class="relative grid place-content-center w-full h-full overflow-hidden rounded-[20px]">
                                 <img src="files/img/Horizontal_Content1.png" width="1412" height="900" alt="NOZARACY Text" class="absolute object-cover w-full h-full">
                             </div>
+                            <div class="absolute grid p-[14px] w-full h-full z-30 text-tertiary-500">
+                                <div class="relative grid w-full h-full overflow-hidden rounded-[20px]">
+                                    <div class="absolute left-10 top-10 flex items-center gap-x-3">
+                                        <p class="uppercase text-lg">Year</p>
+                                        <div class="w-[6px] h-[6px] bg-tertiary-500 rounded-full"></div>
+                                        <p class="text-lg">2023</p>
+                                    </div>
+                                    <div class="absolute left-10 bottom-10">
+                                        <h1 class="font-medium text-5xl">Iphone </br> Mobile Apps</h1>
+                                    </div>
+                                    <div class="absolute right-10 top-10">
+                                        <img src="files/img/Horizontal_Pop_Text_Dark.png" alt="Pop Text 1" width="332" height="194" class="w-full h-full">
+                                    </div>
+                                    <div class="absolute right-10 bottom-10 max-w-[460px]">
+                                        <h2 class="text-2xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our designs will create an impression for our customers, With an expert experience in the digital design industry.</h2>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="grid p-[14px] w-screen h-full">
+                        <div class="relative grid p-[14px] w-screen h-full">
                             <div class="relative grid place-content-center w-full h-full overflow-hidden rounded-[20px]">
                                 <img src="files/img/Horizontal_Content2.png" width="1412" height="900" alt="NOZARACY Text" class="absolute object-cover w-full h-full">
                             </div>
+                            <div class="absolute grid p-[14px] w-full h-full z-30 text-white">
+                                <div class="relative grid w-full h-full overflow-hidden rounded-[20px]">
+                                    <div class="absolute left-10 top-10 flex items-center gap-x-3">
+                                        <p class="uppercase text-lg">Year</p>
+                                        <div class="w-[6px] h-[6px] bg-tertiary-500 rounded-full"></div>
+                                        <p class="text-lg">2023</p>
+                                    </div>
+                                    <div class="absolute left-10 bottom-10">
+                                        <h1 class="font-medium text-5xl">Iphone </br> Mobile Apps</h1>
+                                    </div>
+                                    <div class="absolute right-10 top-10">
+                                        <img src="files/img/Horizontal_Pop_Text_Light.png" alt="Pop Text 1" width="332" height="194" class="w-full h-full">
+                                    </div>
+                                    <div class="absolute right-10 bottom-10 max-w-[460px]">
+                                        <h2 class="text-2xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our designs will create an impression for our customers, With an expert experience in the digital design industry.</h2>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="grid p-[14px] w-screen h-full">
+                        <div class="relative grid p-[14px] w-screen h-full">
                             <div class="relative grid place-content-center w-full h-full overflow-hidden rounded-[20px]">
                                 <img src="files/img/Horizontal_Content3.png" width="1412" height="900" alt="NOZARACY Text" class="absolute object-cover w-full h-full">
+                            </div>
+                            <div class="absolute grid p-[14px] w-full h-full z-30 text-white">
+                                <div class="relative grid w-full h-full overflow-hidden rounded-[20px]">
+                                    <div class="absolute left-10 top-10 flex items-center gap-x-3">
+                                        <p class="uppercase text-lg">Year</p>
+                                        <div class="w-[6px] h-[6px] bg-tertiary-500 rounded-full"></div>
+                                        <p class="text-lg">2023</p>
+                                    </div>
+                                    <div class="absolute left-10 bottom-10">
+                                        <h1 class="font-medium text-5xl">Iphone </br> Mobile Apps</h1>
+                                    </div>
+                                    <div class="absolute right-10 top-10">
+                                        <img src="files/img/Horizontal_Pop_Text_Light.png" alt="Pop Text 1" width="332" height="194" class="w-full h-full">
+                                    </div>
+                                    <div class="absolute right-10 bottom-10 max-w-[460px]">
+                                        <h2 class="text-2xl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our designs will create an impression for our customers, With an expert experience in the digital design industry.</h2>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -731,8 +785,8 @@
         </picture>
     </div>
 
-    <script src="files/javascript/Package.js?version=9.3"></script>
-    <script src="files/javascript/locomotive-scroll.min.js?version=9.3"></script>
+    <script src="files/javascript/Package.js?version=10.3"></script>
+    <script src="files/javascript/locomotive-scroll.min.js?version=10.3"></script>
     <script>
         //Set the Button state on load
         homepageBtnInit()
@@ -869,11 +923,18 @@
             });
 
             const onBoardBorder = document.querySelector('#onboardborder');
+            const onMainHeader = document.querySelector('#MainHeader');
             locoScroll.on('scroll', ({ limit, scroll }) => {
                 const progress = scroll.y / limit.y * 100;
                 if(scroll.y > 60){
                     onBoardBorder.style.borderRadius = '24px';
                     onBoardBorder.style.transform = 'translate(0px, -0%) scale(0)';
+                }
+
+                if(scroll.y > 100){
+                    onMainHeader.style.transform = 'translate(-105%, -30%)';
+                }else{
+                    onMainHeader.style.transform = 'translate(0px, 0px)';
                 }
                 //else{
                 //     onBoardBorder.style.borderRadius = '0px';
@@ -917,9 +978,10 @@
                 start: "top 400px",
                 scrub: true,
             },
-            x: -860,
+            x: -200,
             duration: 1,
         });
+        // x: -860
 
         gsap.to(".text-vision", {
             scrollTrigger: {
@@ -954,6 +1016,7 @@
         gsap.to(".horizontal-scroll", {
             scrollTrigger: {
                 trigger:".horizontal-scroll-container",
+                ToggleEvent: "play reverse none none",
                 start:"top -56px",
                 end: () => `+=${(getScrollAmount() - 400 ) * -1}`,
                 scrub: true,

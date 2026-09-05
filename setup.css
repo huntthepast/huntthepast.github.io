@@ -1,3 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss" source(none);
+
+/* Explicit template sources — keeps the scanner off the font/image binaries
+   and off the generated stylesheet. */
+@source "./index.html";
+@source "./js/**/*.js";
+
+/* Tailwind v4's preflight gives buttons `cursor: default`. This site navigates
+   almost entirely through <button>, so restore the pointer. */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}

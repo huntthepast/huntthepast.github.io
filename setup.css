@@ -5,11 +5,323 @@
 @source "./index.html";
 @source "./js/**/*.js";
 
-/* Tailwind v4's preflight gives buttons `cursor: default`. This site navigates
-   almost entirely through <button>, so restore the pointer. */
+/* ==========================================================================
+   Theme
+
+   Built around the original brand pair (#143C82 navy / #FCF9F9 cream). The
+   navy is kept as `ink-700` and extended into a deeper, slightly more
+   saturated ramp so cards and text have room to separate. The four accents
+   carry the arcade feel and are used one-per-section rather than all at once.
+   ========================================================================== */
+@theme {
+  --color-ink-950: #050d20;
+  --color-ink-900: #081633;
+  --color-ink-850: #0b1f47;
+  --color-ink-800: #0e2a5e;
+  --color-ink-700: #143c82; /* original brand navy */
+  --color-ink-600: #1b4fa8;
+  --color-ink-500: #2a68d0;
+
+  --color-cream: #fcf9f9;   /* original brand off-white */
+  --color-mist: #a9b8dc;    /* muted body copy on navy */
+
+  --color-gold: #ffc93c;
+  --color-magenta: #ff4d9d;
+  --color-cyan: #3ddcff;
+  --color-lime: #9ff03c;
+
+  --font-display: "Gotham", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --ease-pop: cubic-bezier(0.34, 1.36, 0.64, 1);
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    /* clears the sticky header when jumping to a section */
+    scroll-padding-top: 6.5rem;
+  }
+
+  body {
+    background-color: var(--color-ink-950);
+    color: var(--color-cream);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  /* Tailwind v4 preflight gives buttons `cursor: default`. This site navigates
+     almost entirely through <button>, so restore the pointer. */
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 0.25rem;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-ink-950);
+  }
+
+  * {
+    scrollbar-color: var(--color-ink-600) var(--color-ink-950);
+    scrollbar-width: thin;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Same treatment, driven by the in-page toggle instead of the OS setting.
+     The class lands on <html> before first paint (inline script in <head>). */
+  html.reduce-motion { scroll-behavior: auto; }
+
+  html.reduce-motion *,
+  html.reduce-motion *::before,
+  html.reduce-motion *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   Components
+
+   Each section sets its own `--accent` inline; eyebrows, card glows and rules
+   all read from it, so recolouring a section is a one-attribute change.
+   ========================================================================== */
+@layer components {
+  /* --- Layout ------------------------------------------------------------ */
+  .shell {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .section-pad {
+    @apply py-20 sm:py-28 lg:py-32;
+  }
+
+  /* --- Section headings -------------------------------------------------- */
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 text-xs font-semibold uppercase;
+    letter-spacing: 0.22em;
+    color: var(--accent, var(--color-gold));
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply h-2 w-2 rotate-45;
+    border-radius: 2px;
+    background-color: currentColor;
+    box-shadow: 0 0 12px currentColor;
+  }
+
+  .section-title {
+    @apply mt-4 text-4xl sm:text-5xl lg:text-6xl;
+  }
+
+  .section-lead {
+    @apply mt-5 max-w-2xl text-base leading-relaxed text-mist sm:text-lg;
+  }
+
+  /* --- Buttons (pair with .btn in markup: `class="btn btn-primary"`) ------ */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-xl px-6 py-3.5
+           text-sm font-semibold transition-all duration-200;
+    letter-spacing: 0.02em;
+  }
+
+  .btn-primary {
+    @apply bg-gold text-ink-950;
+    box-shadow: 0 6px 0 0 #c9922a;
+  }
+  .btn-primary:hover {
+    @apply -translate-y-0.5 brightness-110;
+    box-shadow: 0 8px 0 0 #c9922a;
+  }
+  .btn-primary:active {
+    @apply translate-y-1;
+    box-shadow: 0 2px 0 0 #c9922a;
+  }
+
+  .btn-ghost {
+    @apply border-2 border-cream/25 text-cream;
+  }
+  .btn-ghost:hover {
+    @apply -translate-y-0.5 border-cream/60 bg-cream/10;
+  }
+
+  /* --- Surfaces ---------------------------------------------------------- */
+  .card {
+    @apply relative overflow-hidden rounded-2xl border border-cream/10 bg-ink-900/70
+           transition-all duration-300;
+  }
+
+  /* Accent hairline that lights up on hover — the main "game" flourish. */
+  .card::after {
+    content: "";
+    @apply pointer-events-none absolute inset-x-0 top-0 h-px opacity-0 transition-opacity duration-300;
+    background: linear-gradient(90deg, transparent, var(--accent, var(--color-gold)), transparent);
+  }
+
+  .card:hover {
+    @apply -translate-y-1.5 border-cream/25;
+    box-shadow: 0 18px 40px -18px rgb(0 0 0 / 0.85),
+                0 0 0 1px color-mix(in oklab, var(--accent, #ffc93c) 30%, transparent);
+  }
+
+  .card:hover::after {
+    @apply opacity-100;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-md border border-cream/15 bg-cream/5
+           px-2.5 py-1 text-xs font-medium text-mist;
+  }
+
+  /* --- Navigation -------------------------------------------------------- */
+  .nav-link {
+    @apply relative py-2 text-sm font-semibold text-cream/75 transition-colors duration-200;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute left-0 h-0.5 w-0 rounded-full bg-gold transition-all duration-300;
+    bottom: -0.125rem;
+  }
+
+  .nav-link:hover,
+  .nav-link[aria-current="true"] {
+    @apply text-cream;
+  }
+
+  .nav-link:hover::after,
+  .nav-link[aria-current="true"]::after {
+    @apply w-full;
+  }
+
+  .side-link {
+    @apply flex items-center gap-4 rounded-xl px-4 py-3.5 font-display text-2xl font-bold
+           text-cream/80 transition-all duration-200;
+  }
+
+  .side-link:hover,
+  .side-link[aria-current="true"] {
+    @apply translate-x-1 bg-cream/10 text-cream;
+  }
+
+  .side-link .idx {
+    @apply font-sans text-xs font-semibold text-gold;
+    letter-spacing: 0.2em;
+  }
+
+  /* --- Settings controls (language + motion) ----------------------------- */
+  .ctrl-btn {
+    @apply grid h-11 w-11 place-content-center rounded-xl border border-cream/15
+           bg-cream/5 text-cream/70 transition-colors duration-200;
+  }
+
+  .ctrl-btn:hover {
+    @apply bg-cream/15 text-cream;
+  }
+
+  .ctrl-btn[aria-pressed="true"] {
+    @apply border-gold bg-gold text-ink-950;
+  }
+
+  .lang-switch {
+    @apply flex items-center rounded-xl border border-cream/15 bg-cream/5 p-1;
+  }
+
+  .lang-opt {
+    @apply rounded-lg px-2.5 py-1.5 text-xs font-semibold text-cream/60 transition-colors duration-200;
+  }
+
+  .lang-opt:hover {
+    @apply text-cream;
+  }
+
+  .lang-opt[aria-pressed="true"] {
+    @apply bg-gold text-ink-950;
+  }
+
+  /* --- Social icon buttons ----------------------------------------------- */
+  .social {
+    @apply grid h-11 w-11 place-content-center rounded-xl border border-cream/15
+           bg-cream/5 text-cream/70 transition-all duration-200;
+  }
+
+  .social:hover {
+    @apply -translate-y-0.5 text-ink-950;
+    background-color: var(--brand, var(--color-gold));
+    border-color: var(--brand, var(--color-gold));
+  }
+
+  .social svg {
+    @apply w-auto;
+    height: 1.15rem;
+    fill: currentColor;
+  }
+}
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+@layer utilities {
+  /* Faint blueprint grid — reads as "game UI" with no image weight. */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
+    mask-image: linear-gradient(to bottom, #000 55%, transparent);
+  }
+
+  .text-gradient {
+    background: linear-gradient(100deg, var(--color-cream) 10%, var(--color-cyan) 55%, var(--color-gold) 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Scroll-reveal: JS adds .is-visible when the element enters the viewport. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s var(--ease-pop);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; }
   }
 }

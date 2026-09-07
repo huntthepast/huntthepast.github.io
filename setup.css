@@ -283,6 +283,18 @@
     height: 1.15rem;
     fill: currentColor;
   }
+
+  /* --- Inline SVG icons -------------------------------------------------- */
+  /* Replaced the Font Awesome kit (an external, render-blocking script) with
+     inline <svg> so there is no extra request or webfont. Sized to the current
+     font-size like an icon font and coloured by `currentColor`. */
+  .icon {
+    width: 1em;
+    height: 1em;
+    flex: none;
+    fill: currentColor;
+    vertical-align: -0.125em;
+  }
 }
 
 /* ==========================================================================

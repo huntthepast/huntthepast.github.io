@@ -541,31 +541,101 @@
                     </div>
                 </div>
 
+                <!-- Static cover cards (screenshots in img/games/) instead of live
+                     itch.io <iframe> embeds. The embeds fired six requests to itch.io
+                     on every page load and itch (openresty) rate-limits them, so a
+                     visitor could hit "429 Too Many Requests". These local covers have
+                     no external dependency. -->
                 <div class="reveal mt-14 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-                    <div class="card p-3">
-                        <iframe class="w-full rounded-lg" height="167" loading="lazy" title="Dream Eater di itch.io"
-                                src="https://itch.io/embed/1135785?bg_color=0b1f47&amp;fg_color=fcf9f9&amp;link_color=ffc93c&amp;border_color=143c82"></iframe>
-                    </div>
-                    <div class="card p-3">
-                        <iframe class="w-full rounded-lg" height="167" loading="lazy" title="Oxygen Is Limited di itch.io"
-                                src="https://itch.io/embed/784638?bg_color=0b1f47&amp;fg_color=fcf9f9&amp;link_color=ffc93c&amp;border_color=143c82"></iframe>
-                    </div>
-                    <div class="card p-3">
-                        <iframe class="w-full rounded-lg" height="167" loading="lazy" title="Janitor Joe di itch.io"
-                                src="https://itch.io/embed/751555?bg_color=0b1f47&amp;fg_color=fcf9f9&amp;link_color=ffc93c&amp;border_color=143c82"></iframe>
-                    </div>
-                    <div class="card p-3">
-                        <iframe class="w-full rounded-lg" height="167" loading="lazy" title="Disscaveira 2 di itch.io"
-                                src="https://itch.io/embed/731692?bg_color=0b1f47&amp;fg_color=fcf9f9&amp;link_color=ffc93c&amp;border_color=143c82"></iframe>
-                    </div>
-                    <div class="card p-3">
-                        <iframe class="w-full rounded-lg" height="167" loading="lazy" title="Rocket Bunny di itch.io"
-                                src="https://itch.io/embed/553183?bg_color=0b1f47&amp;fg_color=fcf9f9&amp;link_color=ffc93c&amp;border_color=143c82"></iframe>
-                    </div>
-                    <div class="card p-3">
-                        <iframe class="w-full rounded-lg" height="167" loading="lazy" title="Mighty no.(9) di itch.io"
-                                src="https://itch.io/embed/481176?bg_color=0b1f47&amp;fg_color=fcf9f9&amp;link_color=ffc93c&amp;border_color=143c82"></iframe>
-                    </div>
+                    <a href="https://hunt-the-past.itch.io/dream-eater" target="_blank" rel="noopener" class="card group flex flex-col">
+                        <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
+                            <img src="img/games/dream-eater.gif" alt="Dream Eater" loading="lazy"
+                                 class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="flex flex-1 flex-col p-6">
+                            <h3 class="text-xl">Dream Eater</h3>
+                            <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="game.dreamEater">Shoot em up pendek dengan mekanik hisap ala Kirby.</p>
+                            <span class="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold">
+                                <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+                                <span data-i18n="games.play">Main di itch.io</span>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="https://hunt-the-past.itch.io/oxygen-is-limited" target="_blank" rel="noopener" class="card group flex flex-col">
+                        <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
+                            <img src="img/games/oxygen-is-limited.gif" alt="Oxygen Is Limited" loading="lazy"
+                                 class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="flex flex-1 flex-col p-6">
+                            <h3 class="text-xl">Oxygen Is Limited</h3>
+                            <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="game.oxygen">Oksigen di luar angkasa terbatas — pakai dengan bijak.</p>
+                            <span class="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold">
+                                <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+                                <span data-i18n="games.play">Main di itch.io</span>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="https://hunt-the-past.itch.io/janitor-joe" target="_blank" rel="noopener" class="card group flex flex-col">
+                        <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
+                            <img src="img/games/janitor-joe.gif" alt="Janitor Joe" loading="lazy"
+                                 class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="flex flex-1 flex-col p-6">
+                            <h3 class="text-xl">Janitor Joe</h3>
+                            <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="game.janitor">Platformer pendek bergaya Game Boy.</p>
+                            <span class="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold">
+                                <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+                                <span data-i18n="games.play">Main di itch.io</span>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="https://hunt-the-past.itch.io/disscaveira-2" target="_blank" rel="noopener" class="card group flex flex-col">
+                        <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
+                            <img src="img/games/disscaveira-2.png" alt="Disscaveira 2" loading="lazy"
+                                 class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="flex flex-1 flex-col p-6">
+                            <h3 class="text-xl">Disscaveira 2</h3>
+                            <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="game.disscaveira">Metroidvania low-res: cari kristal yang dicuri.</p>
+                            <span class="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold">
+                                <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+                                <span data-i18n="games.play">Main di itch.io</span>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="https://hunt-the-past.itch.io/rocket-bunny" target="_blank" rel="noopener" class="card group flex flex-col">
+                        <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
+                            <img src="img/games/rocket-bunny.png" alt="Rocket Bunny" loading="lazy"
+                                 class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="flex flex-1 flex-col p-6">
+                            <h3 class="text-xl">Rocket Bunny</h3>
+                            <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="game.rocketBunny">Raih wortel di puncak.</p>
+                            <span class="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold">
+                                <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+                                <span data-i18n="games.play">Main di itch.io</span>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a href="https://hunt-the-past.itch.io/mighty-no9" target="_blank" rel="noopener" class="card group flex flex-col">
+                        <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
+                            <img src="img/games/mighty-no9.png" alt="Mighty no.(9)" loading="lazy"
+                                 class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                        <div class="flex flex-1 flex-col p-6">
+                            <h3 class="text-xl">Mighty no.(9)</h3>
+                            <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="game.mightyno9">Game bergaya Mega Man dengan sentuhan Touhou.</p>
+                            <span class="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-gold">
+                                <i class="fa-brands fa-itch-io" aria-hidden="true"></i>
+                                <span data-i18n="games.play">Main di itch.io</span>
+                            </span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>

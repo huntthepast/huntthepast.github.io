@@ -30,6 +30,7 @@ const I18N = {
     'nav.games': 'Games',
     'nav.links': 'Links',
     'nav.linksLong': 'Situs Lain',
+    'nav.contact': 'Kontak',
 
     'header.cta': 'Main Game Saya',
 
@@ -98,6 +99,21 @@ const I18N = {
     'links.gamejolt.desc': 'Profil Game Jolt saya, tempat beberapa game saya juga dirilis.',
     'links.yt.cta': 'Buka channel',
 
+    'contact.eyebrow': 'Kontak',
+    'contact.title': 'Kirim Saya Pesan',
+    'contact.lead': 'Punya pertanyaan, tawaran proyek, atau sekadar ingin menyapa? Tinggalkan pesan dan saya akan membalasnya lewat email.',
+    'contact.name': 'Nama',
+    'contact.namePh': 'Nama kamu',
+    'contact.email': 'Email',
+    'contact.emailPh': 'nama@email.com',
+    'contact.message': 'Pesan',
+    'contact.messagePh': 'Tulis pesan kamu di sini…',
+    'contact.send': 'Kirim Pesan',
+    'contact.sending': 'Mengirim…',
+    'contact.success': 'Terima kasih! Pesan kamu sudah terkirim.',
+    'contact.error': 'Maaf, pesan gagal terkirim. Coba lagi atau email langsung.',
+    'contact.alt': 'Lebih suka email langsung?',
+
     'footer.blurb': 'Halo, saya <span class="font-semibold text-cream">Amarta Sanca Lazuardi</span>. Saya membuat game sejak SD sampai sekarang, dan bekerja sebagai full stack developer sambil terus belajar web design.',
     'footer.pages': 'Halaman',
     'footer.contact': 'Kontak',
@@ -123,6 +139,7 @@ const I18N = {
     'nav.games': 'Games',
     'nav.links': 'Links',
     'nav.linksLong': 'Other Sites',
+    'nav.contact': 'Contact',
 
     'header.cta': 'Play My Games',
 
@@ -190,6 +207,21 @@ const I18N = {
     'links.yt.desc': 'Gameplay, playthroughs, and the occasional devlog.',
     'links.gamejolt.desc': 'My Game Jolt profile, where some of my games are released too.',
     'links.yt.cta': 'Open channel',
+
+    'contact.eyebrow': 'Contact',
+    'contact.title': 'Send Me a Message',
+    'contact.lead': 'Got a question, a project in mind, or just want to say hi? Leave a message and I will get back to you by email.',
+    'contact.name': 'Name',
+    'contact.namePh': 'Your name',
+    'contact.email': 'Email',
+    'contact.emailPh': 'you@email.com',
+    'contact.message': 'Message',
+    'contact.messagePh': 'Write your message here…',
+    'contact.send': 'Send Message',
+    'contact.sending': 'Sending…',
+    'contact.success': 'Thanks! Your message has been sent.',
+    'contact.error': 'Sorry, the message could not be sent. Please try again or email directly.',
+    'contact.alt': 'Prefer to email directly?',
 
     'footer.blurb': 'Hi, I am <span class="font-semibold text-cream">Amarta Sanca Lazuardi</span>. I have been making games since primary school, and I work as a full stack developer while I keep learning web design.',
     'footer.pages': 'Pages',

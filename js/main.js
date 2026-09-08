@@ -81,6 +81,10 @@ function applyLang(lang) {
         el.setAttribute('aria-label', t(el.dataset.i18nAria));
     });
 
+    document.querySelectorAll('[data-i18n-ph]').forEach((el) => {
+        el.setAttribute('placeholder', t(el.dataset.i18nPh));
+    });
+
     document.querySelectorAll('[data-lang]').forEach((btn) => {
         btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang));
     });
@@ -347,6 +351,61 @@ function initYear() {
     if (year) year.textContent = String(new Date().getFullYear());
 }
 
+/* -------------------------------------------------------------------------
+   Contact form
+
+   GitHub Pages has no backend, so the form is submitted with fetch() to
+   Web3Forms, which relays the message to the email tied to the access key.
+   Everything degrades gracefully: without JS the form still posts normally,
+   and the visible mailto link is always there as a fallback.
+   ------------------------------------------------------------------------- */
+function initContact() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+
+    const status = document.getElementById('contact-status');
+    const button = form.querySelector('[data-cf-submit]');
+
+    function setStatus(key, tone) {
+        status.textContent = t(key);
+        status.classList.remove('text-mist', 'text-lime', 'text-magenta');
+        status.classList.add(tone === 'ok' ? 'text-lime' : tone === 'err' ? 'text-magenta' : 'text-mist');
+    }
+
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        // The form carries `novalidate`, so trigger the native checks ourselves.
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        button.disabled = true;
+        setStatus('contact.sending', '');
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { Accept: 'application/json' },
+                body: new FormData(form),
+            });
+            const data = await response.json().catch(() => ({}));
+
+            if (response.ok && data.success) {
+                setStatus('contact.success', 'ok');
+                form.reset();
+            } else {
+                setStatus('contact.error', 'err');
+            }
+        } catch (e) {
+            setStatus('contact.error', 'err');
+        } finally {
+            button.disabled = false;
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initMotion();
     initHeader();
@@ -355,4 +414,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initReveal();
     initLang(); // also renders the video cards
     initYear();
+    initContact();
 });

@@ -207,6 +207,27 @@
            px-2.5 py-1 text-xs font-medium text-mist;
   }
 
+  /* --- Form controls (contact) ------------------------------------------- */
+  .field-label {
+    @apply block text-xs font-semibold uppercase tracking-[0.15em] text-mist;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-cream/15 bg-ink-950/60 px-4 py-3 text-sm text-cream
+           transition-colors duration-200;
+  }
+
+  .field::placeholder {
+    color: color-mix(in oklab, var(--color-mist) 65%, transparent);
+  }
+
+  /* The ring is the focus indicator for inputs (replaces the global outline). */
+  .field:focus {
+    outline: none;
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-gold) 22%, transparent);
+  }
+
   /* --- Navigation -------------------------------------------------------- */
   .nav-link {
     @apply relative py-2 text-sm font-semibold text-cream/75 transition-colors duration-200;

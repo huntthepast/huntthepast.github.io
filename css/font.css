@@ -1,3 +1,35 @@
+/* Poppins — body / UI typeface. Self-hosted (latin subset, weights 400/500/600/
+   700) so there is no render-blocking request to Google Fonts and no third-party
+   origin. Weights that are declared but never rendered are simply not downloaded. */
+@font-face {
+    font-family: 'Poppins';
+    src: url('poppins/poppins-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('poppins/poppins-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('poppins/poppins-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('poppins/poppins-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Gotham — display typeface for Hunt The Past.
    woff2 first so modern browsers take the smallest file (the previous order
    listed .otf first, which meant everyone downloaded ~30KB instead of ~14KB).

@@ -61,6 +61,13 @@
     line-height: 1.05;
   }
 
+  /* <picture> only wraps <source>/<img>. Left as its default inline box it
+     breaks percentage sizing on the image (h-full/w-full would resolve against
+     the picture, not the real container), so let it generate no box. */
+  picture {
+    display: contents;
+  }
+
   /* Tailwind v4 preflight gives buttons `cursor: default`. This site navigates
      almost entirely through <button>, so restore the pointer. */
   button:not(:disabled),

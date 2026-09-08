@@ -28,9 +28,11 @@
     <meta name="twitter:description" content="Portofolio pribadi: game, website, dan video seputar game development.">
     <meta name="twitter:image" content="https://huntthepast.github.io/img/Banner%20http%20wide.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <!-- Self-hosted Poppins (declared in css/font.css) — no render-blocking
+         Google Fonts request and no third-party origin. Preload the two weights
+         used above the fold (400 body, 600 UI). -->
+    <link rel="preload" as="font" type="font/woff2" href="css/poppins/poppins-400.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="css/poppins/poppins-600.woff2" crossorigin>
 
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/tailwind.css">
@@ -327,8 +329,10 @@
                 <div class="reveal mt-6 grid gap-7 sm:grid-cols-2 lg:grid-cols-6">
                     <a href="https://xavierluv.com" target="_blank" rel="noopener" class="card group flex flex-col lg:col-span-2">
                         <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
-                            <img src="img/work/xavierluv.png" alt="XAVIERLUV" loading="lazy"
-                                 class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            <picture>
+                                <source srcset="img/work/xavierluv.webp" type="image/webp">
+                                <img src="img/work/xavierluv.png" alt="XAVIERLUV" loading="lazy" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </picture>
                         </div>
                         <div class="flex flex-1 flex-col p-6">
                             <h3 class="text-xl">XAVIERLUV</h3>
@@ -342,8 +346,10 @@
 
                     <a href="https://nozaracy.com" target="_blank" rel="noopener" class="card group flex flex-col lg:col-span-2">
                         <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
-                            <img src="img/work/nozaracy.png" alt="Nozaracy" loading="lazy"
-                                 class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            <picture>
+                                <source srcset="img/work/nozaracy.webp" type="image/webp">
+                                <img src="img/work/nozaracy.png" alt="Nozaracy" loading="lazy" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </picture>
                         </div>
                         <div class="flex flex-1 flex-col p-6">
                             <h3 class="text-xl">Nozaracy</h3>
@@ -357,8 +363,10 @@
 
                     <a href="https://alatpotongayam.com" target="_blank" rel="noopener" class="card group flex flex-col lg:col-span-2">
                         <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
-                            <img src="img/work/alatpotongayam.png" alt="Mesin Potong Ayam" loading="lazy"
-                                 class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            <picture>
+                                <source srcset="img/work/alatpotongayam.webp" type="image/webp">
+                                <img src="img/work/alatpotongayam.png" alt="Mesin Potong Ayam" loading="lazy" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </picture>
                         </div>
                         <div class="flex flex-1 flex-col p-6">
                             <h3 class="text-xl">Mesin Potong Ayam</h3>
@@ -372,8 +380,10 @@
 
                     <a href="https://torrisilegal.com.au" target="_blank" rel="noopener" class="card group flex flex-col lg:col-span-2">
                         <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
-                            <img src="img/work/torrisilegal.png" alt="Torrisi Legal" loading="lazy"
-                                 class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            <picture>
+                                <source srcset="img/work/torrisilegal.webp" type="image/webp">
+                                <img src="img/work/torrisilegal.png" alt="Torrisi Legal" loading="lazy" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </picture>
                         </div>
                         <div class="flex flex-1 flex-col p-6">
                             <h3 class="text-xl">Torrisi Legal</h3>
@@ -387,8 +397,10 @@
 
                     <a href="https://aftertakepost.com" target="_blank" rel="noopener" class="card group flex flex-col lg:col-span-2">
                         <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
-                            <img src="img/work/aftertakepost.png" alt="Aftertakepost" loading="lazy"
-                                 class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            <picture>
+                                <source srcset="img/work/aftertakepost.webp" type="image/webp">
+                                <img src="img/work/aftertakepost.png" alt="Aftertakepost" loading="lazy" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </picture>
                         </div>
                         <div class="flex flex-1 flex-col p-6">
                             <h3 class="text-xl">Aftertakepost</h3>
@@ -402,8 +414,10 @@
 
                     <a href="https://chilldmeats.com.au" target="_blank" rel="noopener" class="card group flex flex-col lg:col-span-2">
                         <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
-                            <img src="img/work/chilldmeats.png" alt="Chill'd" loading="lazy"
-                                 class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            <picture>
+                                <source srcset="img/work/chilldmeats.webp" type="image/webp">
+                                <img src="img/work/chilldmeats.png" alt="Chill'd" loading="lazy" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </picture>
                         </div>
                         <div class="flex flex-1 flex-col p-6">
                             <h3 class="text-xl">Chill'd</h3>
@@ -417,8 +431,10 @@
 
                     <a href="https://serviskulkasjogja.com" target="_blank" rel="noopener" class="card group flex flex-col lg:col-span-2 lg:col-start-2">
                         <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
-                            <img src="img/work/serviskulkasjogja.png" alt="Servis Kulkas Jogja" loading="lazy"
-                                 class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            <picture>
+                                <source srcset="img/work/serviskulkasjogja.webp" type="image/webp">
+                                <img src="img/work/serviskulkasjogja.png" alt="Servis Kulkas Jogja" loading="lazy" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </picture>
                         </div>
                         <div class="flex flex-1 flex-col p-6">
                             <h3 class="text-xl">Servis Kulkas Jogja</h3>
@@ -432,8 +448,10 @@
 
                     <a href="https://aghalondon.com" target="_blank" rel="noopener" class="card group flex flex-col lg:col-span-2">
                         <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
-                            <img src="img/work/aghalondon.png" alt="AGHA London" loading="lazy"
-                                 class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            <picture>
+                                <source srcset="img/work/aghalondon.webp" type="image/webp">
+                                <img src="img/work/aghalondon.png" alt="AGHA London" loading="lazy" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </picture>
                         </div>
                         <div class="flex flex-1 flex-col p-6">
                             <h3 class="text-xl">AGHA London</h3>
@@ -624,8 +642,10 @@
 
                     <a href="https://hunt-the-past.itch.io/janitor-joe" target="_blank" rel="noopener" class="card group flex flex-col">
                         <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
-                            <img src="img/games/janitor-joe.gif" alt="Janitor Joe" loading="lazy"
-                                 class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                            <picture>
+                                <source srcset="img/games/janitor-joe.webp" type="image/webp">
+                                <img src="img/games/janitor-joe.gif" alt="Janitor Joe" loading="lazy" class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                            </picture>
                         </div>
                         <div class="flex flex-1 flex-col p-6">
                             <h3 class="text-xl">Janitor Joe</h3>
@@ -639,8 +659,10 @@
 
                     <a href="https://hunt-the-past.itch.io/disscaveira-2" target="_blank" rel="noopener" class="card group flex flex-col">
                         <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
-                            <img src="img/games/disscaveira-2.png" alt="Disscaveira 2" loading="lazy"
-                                 class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                            <picture>
+                                <source srcset="img/games/disscaveira-2.webp" type="image/webp">
+                                <img src="img/games/disscaveira-2.png" alt="Disscaveira 2" loading="lazy" class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                            </picture>
                         </div>
                         <div class="flex flex-1 flex-col p-6">
                             <h3 class="text-xl">Disscaveira 2</h3>
@@ -654,8 +676,10 @@
 
                     <a href="https://hunt-the-past.itch.io/rocket-bunny" target="_blank" rel="noopener" class="card group flex flex-col">
                         <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
-                            <img src="img/games/rocket-bunny.png" alt="Rocket Bunny" loading="lazy"
-                                 class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                            <picture>
+                                <source srcset="img/games/rocket-bunny.webp" type="image/webp">
+                                <img src="img/games/rocket-bunny.png" alt="Rocket Bunny" loading="lazy" class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                            </picture>
                         </div>
                         <div class="flex flex-1 flex-col p-6">
                             <h3 class="text-xl">Rocket Bunny</h3>
@@ -669,8 +693,10 @@
 
                     <a href="https://hunt-the-past.itch.io/mighty-no9" target="_blank" rel="noopener" class="card group flex flex-col">
                         <div class="aspect-16/10 overflow-hidden border-b border-cream/10 bg-ink-850">
-                            <img src="img/games/mighty-no9.png" alt="Mighty no.(9)" loading="lazy"
-                                 class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                            <picture>
+                                <source srcset="img/games/mighty-no9.webp" type="image/webp">
+                                <img src="img/games/mighty-no9.png" alt="Mighty no.(9)" loading="lazy" class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105">
+                            </picture>
                         </div>
                         <div class="flex flex-1 flex-col p-6">
                             <h3 class="text-xl">Mighty no.(9)</h3>

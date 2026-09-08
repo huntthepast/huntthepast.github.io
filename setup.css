@@ -308,6 +308,17 @@
    Utilities
    ========================================================================== */
 @layer utilities {
+  /* Below-the-fold sections skip style, layout, paint and image-decode until
+     they are scrolled near the viewport. This is the main lever against the
+     "Minimize main-thread work" / Style & Layout cost on load: the browser no
+     longer lays out the whole page (and re-lays it out on every web-font swap).
+     contain-intrinsic-size reserves an approximate height so the scrollbar stays
+     sane before first render; the `auto` keyword then remembers the real size. */
+  .defer-paint {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 900px;
+  }
+
   /* Faint blueprint grid — reads as "game UI" with no image weight. */
   .bg-grid {
     background-image:

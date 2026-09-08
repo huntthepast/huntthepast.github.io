@@ -33,6 +33,7 @@
          used above the fold (400 body, 600 UI). -->
     <link rel="preload" as="font" type="font/woff2" href="css/poppins/poppins-400.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="css/poppins/poppins-600.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="css/font/gotham-black-webfont.woff2" crossorigin>
 
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/tailwind.css">
@@ -277,7 +278,7 @@
         <!-- ===============================================================
              Section 1 — YouTube
              =============================================================== -->
-        <section id="video" class="section-pad relative" style="--accent: var(--color-cyan)">
+        <section id="video" class="section-pad defer-paint relative" style="--accent: var(--color-cyan)">
             <div class="shell">
                 <div class="reveal flex flex-wrap items-end justify-between gap-8">
                     <div>
@@ -310,7 +311,7 @@
         <!-- ===============================================================
              Section 2 — Websites
              =============================================================== -->
-        <section id="website" class="section-pad relative overflow-hidden" style="--accent: var(--color-magenta)">
+        <section id="website" class="section-pad defer-paint relative overflow-hidden" style="--accent: var(--color-magenta)">
             <div class="pointer-events-none absolute inset-0 -z-10 bg-linear-to-b from-transparent via-ink-900/60 to-transparent" aria-hidden="true"></div>
 
             <div class="shell">
@@ -581,7 +582,7 @@
         <!-- ===============================================================
              Section 3 — Games
              =============================================================== -->
-        <section id="games" class="section-pad relative" style="--accent: var(--color-gold)">
+        <section id="games" class="section-pad defer-paint relative" style="--accent: var(--color-gold)">
             <div class="shell">
                 <div class="reveal flex flex-wrap items-end justify-between gap-8">
                     <div>
@@ -714,7 +715,7 @@
         <!-- ===============================================================
              Section 4 — Other sites
              =============================================================== -->
-        <section id="links" class="section-pad relative overflow-hidden" style="--accent: var(--color-lime)">
+        <section id="links" class="section-pad defer-paint relative overflow-hidden" style="--accent: var(--color-lime)">
             <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
                 <div class="absolute inset-0 bg-linear-to-b from-transparent via-ink-900/60 to-transparent"></div>
                 <div class="absolute bottom-0 left-1/2 h-72 w-160 -translate-x-1/2 rounded-full bg-lime/10 blur-3xl"></div>

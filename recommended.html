@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050d20">
+
+    <title>Sites I Recommend — Hunt The Past</title>
+    <meta name="description" content="Situs yang saya rekomendasikan — untuk main game, cari panduan, bikin game, cari aset, dan belajar web development.">
+    <meta name="author" content="Amarta Sanca Lazuardi">
+    <link rel="canonical" href="https://huntthepast.github.io/recommended.html">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hunt The Past">
+    <meta property="og:title" content="Sites I Recommend — Hunt The Past">
+    <meta property="og:description" content="A curated directory of sites I recommend — for gaming, game guides, game dev, assets, and learning.">
+    <meta property="og:image" content="https://huntthepast.github.io/img/Banner%20http%20wide.png">
+    <meta property="og:url" content="https://huntthepast.github.io/recommended.html">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://huntthepast.github.io/img/Banner%20http%20wide.png">
+
+    <!-- Self-hosted Poppins + Gotham (see css/font.css) — no third-party fonts. -->
+    <link rel="preload" as="font" type="font/woff2" href="css/poppins/poppins-400.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="css/poppins/poppins-600.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="css/font/gotham-black-webfont.woff2" crossorigin>
+
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/tailwind.css">
+
+    <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <!-- Applied before first paint so a reduced-motion visitor never sees the
+         animations flash on. Shares the same preference as the main page. -->
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('htp-motion');
+                var reduce = saved === null
+                    ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                    : saved === 'reduce';
+                if (reduce) document.documentElement.classList.add('reduce-motion');
+            } catch (e) { /* private mode — fall back to full motion */ }
+        })();
+    </script>
+
+    <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+
+    <!-- Reuses the main site's scripts: i18n dictionary + behaviour (language
+         toggle, reduced-motion, scroll reveal). No page-specific JS needed —
+         every card description carries a data-i18n key, translated on load and
+         whenever the language is switched. -->
+    <script src="js/i18n.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Sites I Recommend",
+      "url": "https://huntthepast.github.io/recommended.html",
+      "isPartOf": { "@type": "WebSite", "name": "Hunt The Past", "url": "https://huntthepast.github.io/" }
+    }
+    </script>
+</head>
+<body class="bg-ink-950">
+
+    <a href="#main" data-i18n="a11y.skip" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-60 focus:rounded-lg focus:bg-gold focus:px-4 focus:py-2 focus:font-semibold focus:text-ink-950">Lompat ke konten</a>
+
+    <!-- ===================================================================
+         Header
+         =================================================================== -->
+    <header id="site-header" class="fixed inset-x-0 top-0 z-40 transition-all duration-300">
+        <div class="shell">
+            <div class="flex h-20 items-center justify-between gap-4">
+
+                <a href="index.html" class="flex shrink-0 items-center" aria-label="Hunt The Past">
+                    <picture>
+                        <source srcset="img/htp-logo-slim.webp" type="image/webp">
+                        <img src="img/htp-logo-slim.png" alt="Hunt The Past" class="h-10 w-auto object-contain sm:h-12" width="189" height="160">
+                    </picture>
+                </a>
+
+                <div class="flex items-center gap-2.5 sm:gap-3">
+                    <a href="index.html" class="btn btn-ghost hidden text-xs sm:inline-flex" data-i18n="nav.portfolio">Portofolio</a>
+
+                    <div class="lang-switch" role="group" data-i18n-aria="a11y.language" aria-label="Pilih bahasa">
+                        <button type="button" class="lang-opt" data-lang="id" aria-pressed="true">ID</button>
+                        <button type="button" class="lang-opt" data-lang="en" aria-pressed="false">EN</button>
+                    </div>
+                    <button type="button" class="ctrl-btn" data-motion-toggle aria-pressed="false"
+                            data-i18n-aria="a11y.motion" aria-label="Kurangi animasi">
+                        <svg class="icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288H175.5L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7H272.5L349.4 44.6z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- ===============================================================
+             Hero
+             =============================================================== -->
+        <section id="top" class="relative overflow-hidden pt-32 pb-10 sm:pt-40 lg:pt-44">
+            <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+                <div class="absolute inset-0 bg-linear-to-b from-ink-800 via-ink-900 to-ink-950"></div>
+                <div class="bg-grid mask-fade-b absolute inset-0"></div>
+                <div class="absolute -top-24 left-1/2 h-96 w-160 -translate-x-1/2 rounded-full bg-gold/10 blur-3xl"></div>
+            </div>
+
+            <div class="shell">
+                <div class="reveal mx-auto max-w-3xl text-center">
+                    <span class="eyebrow" style="--accent: var(--color-gold)" data-i18n="rec.eyebrow">Rekomendasi</span>
+                    <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl">
+                        <span class="text-gradient" data-i18n="rec.title">Situs yang Saya Rekomendasikan</span>
+                    </h1>
+                    <p class="mt-6 text-base leading-relaxed text-mist sm:text-lg" data-i18n="rec.lead">
+                        Situs yang sering saya pakai dan rekomendasikan — buat main game, cari panduan,
+                        bikin game, cari aset, sampai belajar web. Sudah saya kelompokkan biar gampang dicari.
+                    </p>
+                </div>
+
+                <div class="reveal mt-9 flex flex-wrap justify-center gap-2.5">
+                    <a href="#gaming" class="chip transition-colors duration-200 hover:border-gold/60 hover:text-cream" data-i18n="rec.cat.gaming">Gaming</a>
+                    <a href="#guides" class="chip transition-colors duration-200 hover:border-cyan/60 hover:text-cream" data-i18n="rec.cat.guides">Panduan</a>
+                    <a href="#tools" class="chip transition-colors duration-200 hover:border-magenta/60 hover:text-cream" data-i18n="rec.cat.tools">Alat</a>
+                    <a href="#assets" class="chip transition-colors duration-200 hover:border-lime/60 hover:text-cream" data-i18n="rec.cat.assets">Aset</a>
+                    <a href="#learn" class="chip transition-colors duration-200 hover:border-gold/60 hover:text-cream" data-i18n="rec.cat.learn">Belajar</a>
+                    <a href="#webdev" class="chip transition-colors duration-200 hover:border-cyan/60 hover:text-cream" data-i18n="rec.cat.web">Web</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===============================================================
+             Category: Gaming
+             To add a site: copy one <a class="card">…</a> block and add its
+             description to js/i18n.js under a new rec.* key (id + en).
+             =============================================================== -->
+        <section id="gaming" class="defer-paint py-14 sm:py-16" style="--accent: var(--color-gold)">
+            <div class="shell">
+                <div class="reveal flex items-center gap-3">
+                    <span class="h-3 w-3 shrink-0 rotate-45 rounded-[3px]" style="background: var(--accent); box-shadow: 0 0 12px var(--accent)" aria-hidden="true"></span>
+                    <h2 class="section-title text-2xl sm:text-3xl lg:text-4xl" data-i18n="rec.cat.gaming">Gaming &amp; Rilis Game</h2>
+                </div>
+                <div class="reveal mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                    <a href="https://itch.io" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">itch.io</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.itchio">Rumah game &amp; tool indie, bayar seikhlasnya.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">itch.io<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://store.steampowered.com" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Steam</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.steam">Toko game PC terbesar.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">store.steampowered.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://gamejolt.com" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Game Jolt</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.gamejolt">Komunitas &amp; rilis game indie.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">gamejolt.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://www.newgrounds.com" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Newgrounds</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.newgrounds">Game browser, animasi, dan audio.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">newgrounds.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://retroachievements.org" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">RetroAchievements</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.retroachievements">Achievement untuk game retro yang kamu mainkan.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">retroachievements.org<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===============================================================
+             Category: Game Guides & Wikis
+             =============================================================== -->
+        <section id="guides" class="defer-paint py-14 sm:py-16" style="--accent: var(--color-cyan)">
+            <div class="shell">
+                <div class="reveal flex items-center gap-3">
+                    <span class="h-3 w-3 shrink-0 rotate-45 rounded-[3px]" style="background: var(--accent); box-shadow: 0 0 12px var(--accent)" aria-hidden="true"></span>
+                    <h2 class="section-title text-2xl sm:text-3xl lg:text-4xl" data-i18n="rec.cat.guides">Panduan &amp; Wiki Game</h2>
+                </div>
+                <div class="reveal mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                    <a href="https://www.fandom.com" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Fandom</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.fandom">Wiki komunitas untuk hampir semua game.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">fandom.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://strategywiki.org" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">StrategyWiki</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.strategywiki">Panduan strategi gratis dan ringan.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">strategywiki.org<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://gamefaqs.gamespot.com" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">GameFAQs</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.gamefaqs">FAQ &amp; walkthrough klasik.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">gamefaqs.gamespot.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://www.speedrun.com" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Speedrun.com</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.speedrun">Papan skor &amp; panduan speedrun.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">speedrun.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://guides.gamercorner.net/" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Gamer Corner Guides</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.gamercorner">Panduan mendalam soal mekanik game RPG.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">guides.gamercorner.net<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://www.neoseeker.com/" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Neoseeker</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.neoseeker">Walkthrough, wiki, dan forum game.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">neoseeker.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===============================================================
+             Category: Game Dev Tools
+             =============================================================== -->
+        <section id="tools" class="defer-paint py-14 sm:py-16" style="--accent: var(--color-magenta)">
+            <div class="shell">
+                <div class="reveal flex items-center gap-3">
+                    <span class="h-3 w-3 shrink-0 rotate-45 rounded-[3px]" style="background: var(--accent); box-shadow: 0 0 12px var(--accent)" aria-hidden="true"></span>
+                    <h2 class="section-title text-2xl sm:text-3xl lg:text-4xl" data-i18n="rec.cat.tools">Alat Bikin Game</h2>
+                </div>
+                <div class="reveal mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                    <a href="https://godotengine.org" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Godot Engine</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.godot">Engine game open-source &amp; gratis.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">godotengine.org<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://unity.com" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Unity</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.unity">Engine lintas platform populer.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">unity.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://www.aseprite.org" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Aseprite</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.aseprite">Alat pixel art &amp; animasi.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">aseprite.org<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://www.mapeditor.org" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Tiled</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.tiled">Editor tilemap yang fleksibel.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">mapeditor.org<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://gamemaker.io/en" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">GameMaker</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.gamemaker">Engine cepat untuk bikin game 2D.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">gamemaker.io<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===============================================================
+             Category: Assets & Resources
+             =============================================================== -->
+        <section id="assets" class="defer-paint py-14 sm:py-16" style="--accent: var(--color-lime)">
+            <div class="shell">
+                <div class="reveal flex items-center gap-3">
+                    <span class="h-3 w-3 shrink-0 rotate-45 rounded-[3px]" style="background: var(--accent); box-shadow: 0 0 12px var(--accent)" aria-hidden="true"></span>
+                    <h2 class="section-title text-2xl sm:text-3xl lg:text-4xl" data-i18n="rec.cat.assets">Aset &amp; Sumber Daya</h2>
+                </div>
+                <div class="reveal mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                    <a href="https://kenney.nl" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Kenney</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.kenney">Ribuan aset game gratis.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">kenney.nl<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://opengameart.org" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">OpenGameArt</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.oga">Art, musik, &amp; SFX dari komunitas.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">opengameart.org<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://freesound.org" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Freesound</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.freesound">Efek suara gratis, ribuan pilihan.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">freesound.org<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://coolors.co" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Coolors</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.coolors">Bikin palet warna dalam hitungan detik.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">coolors.co<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://lospec.com" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Lospec</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.lospec">Palet warna & tool buat pixel art.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">lospec.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://www.beepbox.co" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">BeepBox</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.beepbox">Bikin musik chiptune langsung di browser.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">beepbox.co<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===============================================================
+             Category: Learning & Community
+             =============================================================== -->
+        <section id="learn" class="defer-paint py-14 sm:py-16" style="--accent: var(--color-gold)">
+            <div class="shell">
+                <div class="reveal flex items-center gap-3">
+                    <span class="h-3 w-3 shrink-0 rotate-45 rounded-[3px]" style="background: var(--accent); box-shadow: 0 0 12px var(--accent)" aria-hidden="true"></span>
+                    <h2 class="section-title text-2xl sm:text-3xl lg:text-4xl" data-i18n="rec.cat.learn">Belajar &amp; Komunitas</h2>
+                </div>
+                <div class="reveal mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                    <a href="https://www.gdquest.com" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">GDQuest</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.gdquest">Tutorial &amp; kursus Godot.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">gdquest.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://gamemakerstoolkit.com" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Game Maker's Toolkit</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.gmtk">Video desain game oleh Mark Brown.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">gamemakerstoolkit.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://www.reddit.com/r/gamedev" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">r/gamedev</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.rgamedev">Komunitas developer game di Reddit.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">reddit.com/r/gamedev<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://www.freecodecamp.org" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">freeCodeCamp</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.fcc">Belajar ngoding gratis.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">freecodecamp.org<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://www.mgcomics.com/" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">MG Comics</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.mgcomics">Kumpulan webcomic bertema game, termasuk Mega Man.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">mgcomics.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===============================================================
+             Category: Web Development
+             =============================================================== -->
+        <section id="webdev" class="defer-paint py-14 sm:py-16" style="--accent: var(--color-cyan)">
+            <div class="shell">
+                <div class="reveal flex items-center gap-3">
+                    <span class="h-3 w-3 shrink-0 rotate-45 rounded-[3px]" style="background: var(--accent); box-shadow: 0 0 12px var(--accent)" aria-hidden="true"></span>
+                    <h2 class="section-title text-2xl sm:text-3xl lg:text-4xl" data-i18n="rec.cat.web">Web Development</h2>
+                </div>
+                <div class="reveal mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                    <a href="https://developer.mozilla.org" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">MDN Web Docs</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.mdn">Referensi web paling lengkap.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">developer.mozilla.org<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://tailwindcss.com" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Tailwind CSS</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.tailwind">Framework CSS utility (dipakai situs ini!).</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">tailwindcss.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://caniuse.com" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Can I Use</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.caniuse">Cek dukungan fitur di browser.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">caniuse.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://vercel.com" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Vercel</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.vercel">Deploy proyek web gratis.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">vercel.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://getbootstrap.com/" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Bootstrap</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.bootstrap">Framework CSS komponen siap pakai.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">getbootstrap.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://lenis.dev/" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">Lenis</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.lenis">Library smooth scroll yang ringan.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">lenis.dev<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                    <a href="https://gsap.com/" target="_blank" rel="noopener" class="card group flex flex-col p-6">
+                        <h3 class="text-lg">GSAP</h3>
+                        <p class="mt-2.5 flex-1 text-sm leading-relaxed text-mist" data-i18n="rec.gsap">Library animasi web yang powerful.</p>
+                        <span class="mt-5 inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-widest break-all" style="color: var(--accent)">gsap.com<svg class="icon shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curator's note -->
+        <section class="defer-paint pb-16 sm:pb-20">
+            <div class="shell">
+                <p class="reveal mx-auto max-w-2xl text-center text-xs leading-relaxed text-mist/70" data-i18n="rec.note">
+                    Semua situs di atas milik pihak masing-masing — saya hanya merekomendasikan, tidak berafiliasi.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================================================================
+         Footer
+         =================================================================== -->
+    <footer class="border-t border-cream/10 bg-ink-900">
+        <div class="shell">
+            <div class="grid gap-12 py-14 lg:grid-cols-[1.6fr_1fr] lg:gap-16 lg:py-16">
+
+                <div>
+                    <a href="index.html" class="inline-flex" aria-label="Hunt The Past">
+                        <picture>
+                            <source srcset="img/htp-logo-dark.webp" type="image/webp">
+                            <img src="img/htp-logo-dark.png" alt="Hunt The Past" class="h-20 w-auto object-contain" width="301" height="240">
+                        </picture>
+                    </a>
+                    <p class="mt-5 max-w-sm text-sm leading-relaxed text-mist" data-i18n-html="footer.blurb">
+                        Halo, saya <span class="font-semibold text-cream">Amarta Sanca Lazuardi</span>.
+                        Saya membuat game sejak SD sampai sekarang, dan bekerja sebagai
+                        full stack developer sambil terus belajar web design.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2.5">
+                        <a href="https://www.instagram.com/hunt_the_past/" target="_blank" rel="noopener" class="social" style="--brand:#e1306c" aria-label="Instagram"><svg viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+                        <a href="https://www.youtube.com/@huntthepast" target="_blank" rel="noopener" class="social" style="--brand:#ff0000" aria-label="YouTube"><svg viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a>
+                        <a href="https://twitter.com/HuntPast" target="_blank" rel="noopener" class="social" style="--brand:#1da1f2" aria-label="Twitter"><svg viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                        <a href="https://hunt-the-past.itch.io/" target="_blank" rel="noopener" class="social" style="--brand:#fa5c5c" aria-label="itch.io"><svg viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M71.92 34.77C50.2 47.67 7.4 96.84 7 109.73v21.34c0 27.06 25.29 50.84 48.25 50.84 27.57 0 50.54-22.85 50.54-50 0 27.12 22.18 50 49.76 50s49-22.85 49-50c0 27.12 23.59 50 51.16 50h.5c27.57 0 51.16-22.85 51.16-50 0 27.12 21.47 50 49 50s49.76-22.85 49.76-50c0 27.12 23 50 50.54 50 23 0 48.25-23.78 48.25-50.84v-21.34c-.4-12.9-43.2-62.07-64.92-75C372.56 32.4 325.76 32 256 32S91.14 33.1 71.92 34.77zm132.32 134.39c-22 38.4-77.9 38.71-99.85.25-13.17 23.14-43.17 32.07-56 27.66-3.87 40.15-13.67 237.13 17.73 269.15 80 18.67 302.08 18.12 379.76 0 31.65-32.27 21.32-232 17.75-269.15-12.92 4.44-42.88-4.6-56-27.66-22 38.52-77.85 38.1-99.85-.24-7.1 12.49-23.05 28.94-51.76 28.94a57.54 57.54 0 0 1-51.75-28.94zm-41.58 53.77c16.47 0 31.09 0 49.22 19.78a436.91 436.91 0 0 1 88.18 0C318.22 223 332.85 223 349.31 223c52.33 0 65.22 77.53 83.87 144.45 17.26 62.15-5.52 63.67-33.95 63.73-42.15-1.57-65.49-32.18-65.49-62.79-39.25 6.43-101.93 8.79-155.55 0 0 30.61-23.34 61.22-65.49 62.79-28.42-.06-51.2-1.58-33.94-63.73 18.67-67 31.56-144.45 83.88-144.45zM256 270.79s-44.38 40.77-52.35 55.21l29-1.17v25.32c0 1.55 21.34.16 23.33.16 11.65.54 23.31 1 23.31-.16v-25.28l29 1.17c-8-14.48-52.35-55.24-52.35-55.24z"/></svg></a>
+                        <a href="https://web.facebook.com/sanca.lazuardi/" target="_blank" rel="noopener" class="social" style="--brand:#4267b2" aria-label="Facebook"><svg viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg></a>
+                        <a href="https://github.com/huntthepast" target="_blank" rel="noopener" class="social" style="--brand:#ffffff" aria-label="GitHub"><svg viewBox="0 0 496 512" aria-hidden="true" focusable="false"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+                        <a href="https://gamejolt.com/@Hunt_the_past" target="_blank" rel="noopener" class="social" style="--brand:#9ff03c" aria-label="Game Jolt"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.353 0v2.824H4.94v2.823H3.53v2.824H2.118v2.823H.706v2.824h8.47v2.823H7.765v2.824H6.353v2.823h1.412v-1.412h1.411v-1.411h1.412v-1.412H12V16.94h1.412v-1.41h1.412v-1.411h1.411v-1.412h1.412v-1.412h1.412V9.882h1.412V8.471h1.411V7.059h-4.235V5.647h1.412V4.235h1.412V2.824h1.411V1.412h1.412V0zm0 22.588H4.94V24h1.412zM7.765 2.824h9.882v1.411h-1.412v1.412h-1.411V7.06h-1.412v1.41H12v1.411h1.412v1.412H12V9.882h-1.412v1.412H9.176V9.882H7.765v1.412H6.353V9.882H4.94V8.471h1.412V5.647h1.412zM6.353 8.47v1.411h1.412v-1.41zm2.823 1.411h1.412v-1.41H9.176zm5.648 0h1.411v1.412h-1.411Z"/></svg></a>
+                    </div>
+                </div>
+
+                <nav aria-label="Navigasi footer">
+                    <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-gold" data-i18n="footer.pages">Halaman</h4>
+                    <ul class="mt-5 space-y-3 text-sm text-mist">
+                        <li><a href="index.html" class="transition-colors duration-200 hover:text-cream" data-i18n="nav.home">Home</a></li>
+                        <li><a href="index.html#games" class="transition-colors duration-200 hover:text-cream" data-i18n="nav.games">Games</a></li>
+                        <li><a href="index.html#website" class="transition-colors duration-200 hover:text-cream" data-i18n="nav.website">Website</a></li>
+                        <li><a href="index.html#contact" class="transition-colors duration-200 hover:text-cream" data-i18n="nav.contact">Kontak</a></li>
+                        <li><a href="recommended.html" class="text-cream" aria-current="page" data-i18n="nav.recommended">Rekomendasi</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="flex flex-col items-center justify-between gap-4 border-t border-cream/10 py-7 text-xs text-mist sm:flex-row">
+                <p>&copy; <span id="year">2026</span> <span data-i18n="footer.copyright">Hunt The Past. Dibuat oleh Amarta Sanca Lazuardi.</span></p>
+                <a href="#top" class="inline-flex items-center gap-2 transition-colors duration-200 hover:text-cream">
+                    <span data-i18n="footer.top">Kembali ke atas</span>
+                    <svg class="icon" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

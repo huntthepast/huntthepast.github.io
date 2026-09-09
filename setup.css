@@ -3,6 +3,7 @@
 /* Explicit template sources — keeps the scanner off the font/image binaries
    and off the generated stylesheet. */
 @source "./index.html";
+@source "./recommended.html";
 @source "./js/**/*.js";
 
 /* ==========================================================================
